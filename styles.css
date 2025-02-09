@@ -1,0 +1,267 @@
+html,
+body,
+hr {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
+
+header {
+  width: 100%;
+}
+
+h2 {
+  font-size: 4em;
+  font-weight: 600;
+  margin: 2rem 0 1.5rem;
+}
+
+h3 {
+  font-size: 3em;
+  font-weight: 600;
+  margin: 0;
+}
+
+svg {
+  height: 1.5em;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 3.75em;
+  max-width: 90em;
+  margin: 0 auto;
+  padding: 2.5em 5em;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  color: black;
+}
+
+.main-menu {
+  display: flex;
+  gap: 3.75em;
+  white-space: nowrap;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2.5em;
+}
+
+@media (max-width: 63em) {
+  .social-icons {
+    display: none;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 50em) {
+  nav {
+    padding: 2em 1em 1em;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+}
+
+hr {
+  opacity: 0.1;
+}
+
+.featured-recipe {
+  display: flex;
+  height: 40em;
+  width: 80em;
+  max-width: 80em;
+  background-color: #e7fafe;
+  border-radius: 3.125em;
+  overflow: hidden;
+}
+
+.featured-recipe-img {
+  width: 41.25em;
+  height: 40em;
+}
+
+.featured-recipe-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3.125em;
+  width: 48.4375%;
+}
+
+.container {
+  margin: 2.5em 0;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2.5em;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.container > * {
+  flex-shrink: 0;
+}
+
+.hot-recipes-badge {
+  display: inline-block;
+  padding: 0.62rem 1.25rem;
+  background-color: white;
+  border-radius: 1.875rem;
+  font-weight: 600;
+  font-size: 0.875em;
+}
+
+.featured-recipe-text {
+  font-size: 1em;
+  line-height: 1.75em;
+  margin-bottom: 1.875em;
+}
+
+.recipe-tag {
+  display: inline-flex;
+  padding: 0 1rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  align-items: center;
+  border-radius: 1.875rem;
+  margin-right: 1rem;
+}
+
+.svg-tag-icon {
+  margin: 0.5rem 0.625rem 0.5rem 0;
+}
+
+.recipe-tag-text {
+  font-size: 0.875em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.featured-recipe-bottom {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.featured-recipe-author {
+  display: flex;
+  align-items: center;
+}
+
+.featured-recipe-author-name {
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.featured-recipe-date {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.875em;
+}
+
+.featured-recipe-author-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-recipe-author-icon {
+  border-radius: 3.125rem;
+  width: 3.125rem;
+  margin-right: 1rem;
+}
+
+.view-recipes-button {
+  display: flex;
+  gap: 0.9375rem;
+  align-content: center;
+  background-color: black;
+  color: white;
+  font-size: 0.875rem;
+  text-decoration: none;
+  padding: 1.125rem 2.25rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.featured-recipe-side-left,
+.featured-recipe-side-right {
+  height: 37.5em;
+}
+
+.categories {
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 7.5em 5em;
+  margin: 0 auto;
+}
+
+.categories-item {
+  grid-column: span 2;
+}
+
+.all-categories-btn {
+  background-color: #e7fafe;
+  border: none;
+  padding: 1.25rem 1.7875rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  justify-self: end;
+  cursor: pointer;
+  grid-column: 1 2;
+}
+
+.category-card-line {
+  grid-column: 2 span;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5rem 0;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.category-card {
+  min-width: 11.25rem;
+  min-height: 12.5rem;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.emoji {
+  font-size: 6.25rem;
+  position: relative;
+}
+
+.emoji::before {
+  position: absolute;
+  content: attr(data-emoji);
+  font-size: 6.25rem;
+  opacity: 0.2;
+  filter: blur(0.625rem);
+  transform: translate(1.25rem, 1.25rem);
+  z-index: -1;
+}
+
+.category-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: auto 0 1.875rem;
+}
