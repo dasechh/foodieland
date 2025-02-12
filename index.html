@@ -109,11 +109,11 @@
             </p>
             <div class="recipe-tags">
               <div class="recipe-tag">
-                <img class="icon" src="icons/header/Timer.svg" />
+                <img class="icon" src="icons/tags/Timer.svg" />
                 <span class="recipe-tag-text">30 Minutes</span>
               </div>
               <div class="recipe-tag">
-                <img class="icon" src="icons/header/ForkKnife.svg" />
+                <img class="icon" src="icons/tags/ForkKnife.svg" />
                 <span class="recipe-tag-text">Chicken</span>
               </div>
             </div>
@@ -189,7 +189,7 @@
       </section>
       <section class="recipes-feed">
         <h3>Simple and tasty recipes</h3>
-        <p>
+        <p class="recipes-feed-text">
           Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqut enim ad minim
         </p>
@@ -206,9 +206,11 @@
     <template id="recipe-card-template">
       <div class="recipe-card">
         <img class="recipe-img" />
-        <button class="recipe-like-btn"></button>
-        <h4 class="recipe-title"></h4>
-        <div class="recipe-tags"></div>
+        <input type="checkbox" class="recipe-like-btn" />
+        <div class="recipe-card-texts">
+          <h4 class="recipe-title"></h4>
+          <div class="recipe-card-tags"></div>
+        </div>
       </div>
     </template>
   </body>

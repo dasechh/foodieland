@@ -31,7 +31,12 @@ const cardsData: Array<{ category: string; color: string; imgSrc: string }> = [
   },
 ];
 
-const recipesFeedImages: Array<{ imgSrc: string; name: string; tags: string[]; id: number }> = [
+const recipesFeedImages: Array<{
+  imgSrc: string;
+  name: string;
+  tags: string[];
+  id: number;
+}> = [
   {
     imgSrc: "/recipe-images/wagyu_beef.jpg",
     name: "Big and Juicy Wagyu Beef Cheeseburger",
@@ -91,24 +96,49 @@ const recipeCardTemplate = document.getElementById(
 
 recipesFeedImages.forEach((data) => {
   if (recipeCardTemplate) {
-    const newCard = recipeCardTemplate.content.cloneNode(true) as DocumentFragment;
+    const newCard = recipeCardTemplate.content.cloneNode(
+      true
+    ) as DocumentFragment;
     const cardElement = newCard.querySelector(".recipe-card") as HTMLElement;
 
-    const cardImage = cardElement.querySelector(".recipe-img") as HTMLImageElement;
+    const cardImage = cardElement.querySelector(
+      ".recipe-img"
+    ) as HTMLImageElement;
     cardImage.src = data.imgSrc;
 
     const cardTitle = cardElement.querySelector(".recipe-title") as HTMLElement;
     cardTitle.textContent = data.name;
 
-    const cardTags = cardElement.querySelector(".recipe-tags") as HTMLElement;
-    data.tags.forEach((tag) => {
+    const cardTags = cardElement.querySelector(
+      ".recipe-card-tags"
+    ) as HTMLElement;
+    data.tags.forEach((tag, index) => {
+      const tagContainer = document.createElement("div");
+      tagContainer.classList.add("recipe-card-tag");
+
       const tagElement = document.createElement("span");
       tagElement.textContent = tag;
       tagElement.classList.add("recipe-tag-text");
-      cardTags.appendChild(tagElement);
+
+      const tagIcon = document.createElement("img");
+      tagIcon.classList.add("icon");
+      tagIcon.src =
+        index === 0 ? "/icons/tags/Timer.svg" : "/icons/tags/ForkKnife.svg";
+
+      tagContainer.appendChild(tagIcon);
+      tagContainer.appendChild(tagElement);
+
+      cardTags.appendChild(tagContainer);
     });
-    const recipeLikeBtn = cardElement.querySelector(".recipe-like-btn") as HTMLElement;
-    const likeSVG = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+
+    const recipeLikeBtn = cardElement.querySelector(
+      ".recipe-like-btn"
+    ) as HTMLElement;
+    const likeSVG = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+
     likeSVG.setAttribute("width", "1.375rem");
     likeSVG.setAttribute("height", "1.125rem");
     likeSVG.setAttribute("viewBox", "0 0 22 18");
@@ -117,16 +147,19 @@ recipesFeedImages.forEach((data) => {
     likeSVG.classList.add("like-svg");
 
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", "M15.5022 8.2786e-06C14.6291 -0.00149138 13.7677 0.200775 12.9865 0.590718C12.2052 0.980661 11.5258 1.54752 11.0022 2.24621C10.293 1.30266 9.30512 0.606001 8.17823 0.254824C7.05134 -0.0963541 5.84256 -0.0842713 4.72291 0.289363C3.60327 0.662997 2.62948 1.37926 1.93932 2.3368C1.24916 3.29434 0.877596 4.44467 0.877197 5.62501C0.877197 12.3621 10.2373 17.6813 10.6357 17.9044C10.7477 17.9671 10.8739 18 11.0022 18C11.1305 18 11.2567 17.9671 11.3687 17.9044C13.0902 16.8961 14.7059 15.7173 16.1914 14.3856C19.4665 11.438 21.1272 8.49047 21.1272 5.62501C21.1255 4.13368 20.5323 2.70393 19.4778 1.6494C18.4233 0.594873 16.9935 0.00169855 15.5022 8.2786e-06Z");
+
+    path.setAttribute(
+      "d",
+      "M15.5022 8.2786e-06C14.6291 -0.00149138 13.7677 0.200775 12.9865 0.590718C12.2052 0.980661 11.5258 1.54752 11.0022 2.24621C10.293 1.30266 9.30512 0.606001 8.17823 0.254824C7.05134 -0.0963541 5.84256 -0.0842713 4.72291 0.289363C3.60327 0.662997 2.62948 1.37926 1.93932 2.3368C1.24916 3.29434 0.877596 4.44467 0.877197 5.62501C0.877197 12.3621 10.2373 17.6813 10.6357 17.9044C10.7477 17.9671 10.8739 18 11.0022 18C11.1305 18 11.2567 17.9671 11.3687 17.9044C13.0902 16.8961 14.7059 15.7173 16.1914 14.3856C19.4665 11.438 21.1272 8.49047 21.1272 5.62501C21.1255 4.13368 20.5323 2.70393 19.4778 1.6494C18.4233 0.594873 16.9935 0.00169855 15.5022 8.2786e-06Z"
+    );
     path.setAttribute("fill", "#DBE2E5");
+
     likeSVG.appendChild(path);
     recipeLikeBtn.appendChild(likeSVG);
-
     recipesFeedContainer.appendChild(cardElement);
   } else {
     throw new Error("Template not found");
   }
-
 });
 
 const cardsContainer = document.getElementsByClassName(
@@ -178,4 +211,18 @@ document.querySelectorAll(".category-card").forEach((card) => {
             ${gradientColor}1A 100%
         )`;
   }
+});
+
+const likeBtns = document.querySelectorAll(".recipe-like-btn");
+likeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const likeSVG = btn.querySelector("svg") as SVGSVGElement;
+    const path = likeSVG.querySelector("path") as SVGPathElement;
+
+    const pathColor = getComputedStyle(path).fill;
+
+    pathColor === "rgb(219, 226, 229)"
+      ? (path.style.fill = "rgb(255, 99, 99)")
+      : (path.style.fill = "rgb(219, 226, 229)");
+  });
 });
