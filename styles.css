@@ -341,6 +341,7 @@ hr {
 
 .recipes-feed-cards {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2.5rem;
 }
@@ -411,4 +412,37 @@ hr {
   gap: 1.5rem;
   padding: 10.565rem 2.75rem 4rem 0;
   width: 44.53125%;
+}
+
+.course-ad-text-half p {
+  max-width: 31.75rem;
+}
+
+.course-ad-image-half {
+  display: flex;
+  position: relative;
+  width: 55.46875%;
+}
+
+.course-ad-background {
+  width: 40.6875rem;
+  height: 31.25rem;
+  background: linear-gradient(180deg, rgba(231, 249, 253, 0) 0%, #E7F9FD 100%);
+  border-radius: 1.875rem;
+  z-index: 1;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.course-ad-img-wrapper {
+  position: relative;
+  width:0;
+  height: 37.3125rem;
+}
+
+.course-ad-img {
+  position: absolute;
+  width: 42.125rem;
+  height: 37.3125rem;
+  z-index: 2;
 }
