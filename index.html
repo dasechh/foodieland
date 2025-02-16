@@ -54,7 +54,7 @@
           <div class="featured-recipe-left">
             <div class="hot-recipes-badge"><span>📜 Hot Recipes</span></div>
             <h2>Spicy delicious chicken wings</h2>
-            <p>
+            <p class="featured-recipe-text">
               Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad
               minim
@@ -101,7 +101,7 @@
               <span>Hot Recipes</span>
             </div>
             <h2>Spicy delicious chicken wings</h2>
-            <p>
+            <p class="featured-recipe-text">
               Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad
               minim
@@ -113,7 +113,7 @@
               </div>
               <div class="recipe-tag">
                 <img class="icon" src="icons/tags/ForkKnife.svg" />
-                <span>Chicken</span>
+                <span class="recipe-tag-text">Chicken</span>
               </div>
             </div>
             <div class="featured-recipe-bottom">
@@ -139,22 +139,21 @@
             alt="Delicious chicken wings"
           />
         </div>
-        <!-- Third recipe -->
         <div class="featured-recipe" id="featured-recipe-3">
           <div class="featured-recipe-left">
             <div class="hot-recipes-badge"><span>📜 Hot Recipes</span></div>
             <h2>Spicy delicious chicken wings</h2>
-            <p>
+            <p class="featured-recipe-text">
               Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad
               minim
             </p>
             <div class="recipe-tags">
               <div class="recipe-tag">
-                <span>30 Minutes</span>
+                <span class="recipe-tag-text">30 Minutes</span>
               </div>
               <div class="recipe-tag">
-                <span class>Chicken</span>
+                <span class="recipe-tag-text">Chicken</span>
               </div>
             </div>
             <div class="featured-recipe-bottom">
@@ -182,7 +181,9 @@
       </section>
       <section class="categories">
         <h3>Categories</h3>
-        <button type="button">View All Categories</button>
+        <button type="button">
+          View All Categories
+        </button>
         <div class="category-card-line"></div>
       </section>
       <section class="recipes-feed">
@@ -193,23 +194,19 @@
         </p>
         <div class="recipes-feed-cards"></div>
       </section>
-      <section class="course-ad-section">
-        <div class="course-ad-text-half">
-          <h3>Everyone can be a<br />chef in their own kitchen</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqut enim<br />ad
-            minim
-          </p>
-          <a href="#" class="learn-more-btn">Learn more</a>
+    <section class="course-ad-section">
+      <div class="course-ad-text-half">
+        <h3>Everyone can be a<br>chef in their own kitchen</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim<br>ad minim </p>
+        <a href="#" class="learn-more-btn">Learn more</a>
+      </div>
+      <div class="course-ad-image-half">
+        <div class="course-ad-img-wrapper">
+          <img class="course-ad-img" src="/chef-with-ingredients.png"/>
         </div>
-        <div class="course-ad-image-half">
-          <div class="course-ad-img-wrapper">
-            <img class="course-ad-img" src="/chef-with-ingredients.png" />
-          </div>
           <div class="course-ad-background"></div>
-        </div>
-      </section>
+      </div>
+    </section>
     </main>
     <template id="category-card-template">
       <div class="category-card">
