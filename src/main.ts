@@ -1,3 +1,5 @@
+import "../styles.scss";
+
 const cardsData: Array<{ category: string; color: string; imgSrc: string }> = [
   {
     category: "Breakfast",
