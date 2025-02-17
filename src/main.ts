@@ -90,10 +90,10 @@ const recipesFeedImages: Array<{
 ];
 
 const recipesFeedContainer = document.getElementsByClassName(
-  "recipes-feed-cards"
+  "feed__cards"
 )[0] as HTMLElement;
 const recipeCardTemplate = document.getElementById(
-  "recipe-card-template"
+  "card-template"
 ) as HTMLTemplateElement;
 
 recipesFeedImages.forEach((data) => {
@@ -101,26 +101,26 @@ recipesFeedImages.forEach((data) => {
     const newCard = recipeCardTemplate.content.cloneNode(
       true
     ) as DocumentFragment;
-    const cardElement = newCard.querySelector(".recipe-card") as HTMLElement;
+    const cardElement = newCard.querySelector(".card") as HTMLElement;
 
     const cardImage = cardElement.querySelector(
-      ".recipe-img"
+      ".card__image"
     ) as HTMLImageElement;
     cardImage.src = data.imgSrc;
 
-    const cardTitle = cardElement.querySelector(".recipe-title") as HTMLElement;
+    const cardTitle = cardElement.querySelector(".card__title") as HTMLElement;
     cardTitle.textContent = data.name;
 
     const cardTags = cardElement.querySelector(
-      ".recipe-card-tags"
+      ".card__tags"
     ) as HTMLElement;
     data.tags.forEach((tag, index) => {
       const tagContainer = document.createElement("div");
-      tagContainer.classList.add("recipe-card-tag");
+      tagContainer.classList.add("card__tag");
 
       const tagElement = document.createElement("span");
       tagElement.textContent = tag;
-      tagElement.classList.add("recipe-tag-text");
+      tagElement.classList.add("card__tag-text");
 
       const tagIcon = document.createElement("img");
       tagIcon.classList.add("icon");
@@ -140,7 +140,7 @@ recipesFeedImages.forEach((data) => {
 });
 
 const cardsContainer = document.getElementsByClassName(
-  "category-card-line"
+  "categories__line"
 )[0] as HTMLElement;
 const cardTemplate = document.getElementById(
   "category-card-template"
@@ -149,9 +149,9 @@ const cardTemplate = document.getElementById(
 cardsData.forEach((data) => {
   if (cardTemplate) {
     const newCard = cardTemplate.content.cloneNode(true) as DocumentFragment;
-    const cardElement = newCard.querySelector(".category-card") as HTMLElement;
+    const cardElement = newCard.querySelector(".categories__card") as HTMLElement;
 
-    (cardElement.querySelector(".category-name") as HTMLElement).textContent =
+    (cardElement.querySelector(".categories__card-name") as HTMLElement).textContent =
       data.category;
 
     const emojiElement = cardElement.querySelector(
@@ -172,7 +172,7 @@ cardsData.forEach((data) => {
   }
 });
 
-document.querySelectorAll(".category-card").forEach((card) => {
+document.querySelectorAll(".categories__card").forEach((card) => {
   const element = card as HTMLElement;
   const gradientColor: string | null = card.getAttribute("data-color");
 
