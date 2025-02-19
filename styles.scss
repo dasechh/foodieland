@@ -77,6 +77,7 @@ nav {
   }
 }
 
+
 .nav__menu {
   display: flex;
   align-items: center;
@@ -99,7 +100,7 @@ nav {
   .nav__social-icons {
     display: none;
   }
-
+  
   nav {
     justify-content: space-between;
   }
@@ -119,25 +120,51 @@ nav {
 
 hr {
   opacity: 0.1;
+  margin-bottom: 2.5rem;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+} 
 
 .icon {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.recipes__item {
-  height: 37.5rem;
-  display: flex;
-  width: 80rem;
-  max-width: 80rem;
-  background-color: $main-color;
-  border-radius: $border-radius-large;
+.recipes {
+  width: 100%;
   overflow: hidden;
 }
 
-.recipes__center {
-  height: 40rem;
+.recipes-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2.5rem;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.recipes__item {
+  display: flex;
+  width: 75rem;
+  max-width: 75rem;
+  background-color: $main-color;
+  border-radius: $border-radius-large;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.recipes__item-center {
+  max-width: 80rem;
 }
 
 .recipes__description {
@@ -157,23 +184,6 @@ hr {
   box-sizing: border-box;
   padding: 3.125rem;
   width: 48.4375%;
-}
-
-.recipes {
-  margin: 2.5rem 0;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 2.5rem;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-
-  > * {
-    flex-shrink: 0;
-  }
 }
 
 .recipes__badge {
@@ -271,8 +281,6 @@ hr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-sizing: border-box;
-  margin: 10rem 0 11.4375rem;
-  padding: 0 5rem;
   justify-self: center;
 }
 
@@ -280,7 +288,6 @@ hr {
   font-family: inherit;
   background-color: $main-color;
   border: none;
-  max-width: 80rem;
   padding: 1.25rem 1.7875rem;
   border-radius: $border-radius-small;
   font-weight: $font-weight-bold;
@@ -364,7 +371,7 @@ hr {
   align-items: center;
   justify-self: center;
   box-sizing: border-box;
-  padding: 0 5rem;
+  transform: translateY(1.25rem);
 
   h3 {
     text-align: center;
@@ -410,33 +417,34 @@ hr {
 }
 
 .course-ad {
-  display: flex;
-  flex-direction: row;
-  justify-self: center;
-  margin: 8.9375rem 0 10rem;
   padding: 0 5rem;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  max-width: 80rem;
-  align-items: center;
-  box-sizing: border-box;
+  justify-content: center;
+  transform: translateY(-1.25rem);
 }
 
 .course-ad__text {
+  width: 100%;
+  max-width: 35.625rem;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   gap: 1.5rem;
-  padding: 10.565rem 2.75rem 4rem 0;
-  width: 44.53125%;
-
-  .course-ad__text-description {
-    max-width: 31.75rem;
-  }
+  margin-bottom: 4.5rem;
+  margin-top: auto;
 }
+
+.course-ad__text-title {
+  max-width: 32.875rem;
+}
+
+.course-ad__text-description {
+  max-width: 31.75rem;
+}
+
 .course-ad__button {
-  text-decoration: none;
-  box-sizing: border-box;
   background-color: black;
   color: white;
   font-size: $font-size-small;
@@ -447,11 +455,13 @@ hr {
   max-width: fit-content;
   cursor: pointer;
 }
+
 .course-ad__image-wrapper {
+  width: 44.375rem;
   display: grid;
-  max-width: 40.6875rem;
   grid-template-rows: 1fr;
   height: min-content;
+  align-self: center;
 }
 
 .course-ad__background {
@@ -459,18 +469,18 @@ hr {
   max-width: 40.6875rem;
   background: $main-color;
   border-radius: $border-radius-medium;
-  z-index: 1;
   align-self: flex-end;
   background: $main-gradient;
   margin-left: 3.6875rem;
-  aspect-ratio: 675 / 597;
+  aspect-ratio: 651 / 500;
 }
 
 .course-ad__image {
   grid-area: 1/1;
   width: 100%;
+  max-width: 42.125rem;
   height: 100%;
   object-fit: contain;
-  z-index: 2;
   align-self: flex-end;
+  justify-self: flex-start;
 }
