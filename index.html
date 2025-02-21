@@ -221,6 +221,31 @@
           <img class="course-ad__image" src="/chef-with-ingredients.png" />
         </div>
       </section>
+      <section class="instagram">
+        <div class="instagram__header">
+          <h2 class="instagram__title">Check out @foodieland on Instagram</h2>
+          <p class="instagram__text">
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqut enim ad minim
+          </p>
+        </div>
+        <div class="instagram__images">
+          <img src="Post.jpg" />
+          <img src="Post-1.jpg" />
+          <img src="Post-2.jpg" />
+          <img src="Post-3.jpg" />
+        </div>
+        <a href="#" class="instagram__button"
+          >Visit Our Instagram <img class="icon" src="icons/header/004-instagram-white.svg"
+        /></a>
+      </section>
+      <section class="recommendations">
+        <div class="recommendations__header">
+          <h3>Try this delicious recipe<br>to make your day</h3>
+          <p class="recommendations__text">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
+        </div>
+        <div class="recommendations__cards"></div>
+      </section>
     </main>
     <template id="category-card-template">
       <div class="categories__card">
@@ -231,6 +256,16 @@
     </template>
     <template id="card-template">
       <div class="card">
+        <img class="card__image" />
+        <input type="checkbox" class="card__like-button" />
+        <div class="card__texts">
+          <h4 class="card__title"></h4>
+          <div class="card__tags"></div>
+        </div>
+      </div>
+    </template>
+    <template id="recommendations-card-template">
+      <div class="card recommendations__card">
         <img class="card__image" />
         <input type="checkbox" class="card__like-button" />
         <div class="card__texts">

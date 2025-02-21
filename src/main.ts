@@ -139,6 +139,57 @@ recipesFeedImages.forEach((data) => {
   }
 });
 
+const recipesRecommendationsContainer = document.querySelector(
+  ".recommendations__cards"
+) as HTMLElement;
+
+const recipeRecommendationTemplate = document.getElementById(
+  "recommendations-card-template"
+) as HTMLTemplateElement;
+
+recipesFeedImages.forEach((data) => {
+  if (recipeRecommendationTemplate) {
+    const newCard = recipeRecommendationTemplate.content.cloneNode(
+      true
+    ) as DocumentFragment;
+    const cardElement = newCard.querySelector(".card") as HTMLElement;
+
+    const cardImage = cardElement.querySelector(
+      ".card__image"
+    ) as HTMLImageElement;
+    cardImage.src = data.imgSrc;
+
+    const cardTitle = cardElement.querySelector(".card__title") as HTMLElement;
+    cardTitle.textContent = data.name;
+
+    const cardTags = cardElement.querySelector(
+      ".card__tags"
+    ) as HTMLElement;
+    data.tags.forEach((tag, index) => {
+      const tagContainer = document.createElement("div");
+      tagContainer.classList.add("card__tag");
+
+      const tagElement = document.createElement("span");
+      tagElement.textContent = tag;
+      tagElement.classList.add("card__tag-text");
+
+      const tagIcon = document.createElement("img");
+      tagIcon.classList.add("icon");
+      tagIcon.src =
+        index === 0 ? "/icons/tags/Timer.svg" : "/icons/tags/ForkKnife.svg";
+
+      tagContainer.appendChild(tagIcon);
+      tagContainer.appendChild(tagElement);
+
+      cardTags.appendChild(tagContainer);
+    });
+
+    recipesRecommendationsContainer.appendChild(cardElement);
+  } else {
+    throw new Error("Template not found");
+  }
+});
+
 const cardsContainer = document.getElementsByClassName(
   "categories__line"
 )[0] as HTMLElement;
