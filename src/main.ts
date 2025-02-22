@@ -89,11 +89,67 @@ const recipesFeedImages: Array<{
   },
 ];
 
+const recipesRecommendationsImages: Array<{
+  imgSrc: string;
+  name: string;
+  tags: string[];
+  id: number;
+}> = [
+  {
+    imgSrc: "/recipe-images/fruit_salad.jpg",
+    name: "Mixed Tropical Fruit Salad with Superfood Boosts",
+    tags: ["30 Minutes", "Healthy"],
+    id: 1,
+  },
+  {
+    imgSrc: "/recipe-images/beef_cheeseburger.jpg",
+    name: "Big and Juicy Wagyu Beef Cheeseburger",
+    tags: ["30 Minutes", "Western"],
+    id: 2,
+  },
+  {
+    imgSrc: "/recipe-images/fried_rice.jpg",
+    name: "Healthy Japanese Fried Rice with Asparagus",
+    tags: ["30 Minutes", "Healthy"],
+    id: 3,
+  },
+  {
+    imgSrc: "/recipe-images/taco_meat.jpg",
+    name: "Cauliflower Walnut Vegetarian Taco Meat",
+    tags: ["30 Minutes", "Eastern"],
+    id: 4,
+  },
+  {
+    imgSrc: "/recipe-images/chicken_salad.jpg",
+    name: "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
+    tags: ["30 Minutes", "Healthy"],
+    id: 5,
+  },
+  {
+    imgSrc: "/recipe-images/spicy_sandwiches.jpg",
+    name: "Barbeque Spicy Sandwiches with Chips ",
+    tags: ["30 Minutes", "Snack"],
+    id: 6,
+  },
+  {
+    imgSrc: "/recipe-images/vegan_lettuce.jpg",
+    name: "Firecracker Vegan Lettuce Wraps - Spicy! ",
+    tags: ["30 Minutes", "Seafood"],
+    id: 7,
+  },
+  {
+    imgSrc: "/recipe-images/ramen_soup.jpg",
+    name: "Chicken Ramen Soup with Mushroom ",
+    tags: ["30 Minutes", "Japanese"],
+    id: 8,
+  },
+];
+
 const recipesFeedContainer = document.getElementsByClassName(
   "feed__cards"
 )[0] as HTMLElement;
 const recipeCardTemplate = document.getElementById(
-  "card-template"
+  "feed-card-template"
 ) as HTMLTemplateElement;
 
 recipesFeedImages.forEach((data) => {
@@ -101,7 +157,7 @@ recipesFeedImages.forEach((data) => {
     const newCard = recipeCardTemplate.content.cloneNode(
       true
     ) as DocumentFragment;
-    const cardElement = newCard.querySelector(".card") as HTMLElement;
+    const cardElement = newCard.querySelector(".feed__card") as HTMLElement;
 
     const cardImage = cardElement.querySelector(
       ".card__image"
@@ -133,7 +189,22 @@ recipesFeedImages.forEach((data) => {
       cardTags.appendChild(tagContainer);
     });
 
+    const elementCount = recipesFeedContainer.childElementCount as number;
+    if (elementCount % 5 === 0 && elementCount !== 0) {
+
+      const adCardElementContainer = document.createElement("a") as HTMLAnchorElement;
+      adCardElementContainer.classList.add("feed__card-ad");
+      adCardElementContainer.href = "#";
+
+      const adCardElement = document.createElement("img") as HTMLImageElement;
+      adCardElement.src = "/recipe-images/advertisement.jpg";
+
+      adCardElementContainer.appendChild(adCardElement);
+      recipesFeedContainer.appendChild(adCardElementContainer);}
+
     recipesFeedContainer.appendChild(cardElement);
+
+
   } else {
     throw new Error("Template not found");
   }
@@ -147,7 +218,7 @@ const recipeRecommendationTemplate = document.getElementById(
   "recommendations-card-template"
 ) as HTMLTemplateElement;
 
-recipesFeedImages.forEach((data) => {
+recipesRecommendationsImages.forEach((data) => {
   if (recipeRecommendationTemplate) {
     const newCard = recipeRecommendationTemplate.content.cloneNode(
       true
@@ -155,23 +226,23 @@ recipesFeedImages.forEach((data) => {
     const cardElement = newCard.querySelector(".card") as HTMLElement;
 
     const cardImage = cardElement.querySelector(
-      ".card__image"
+      ".recommendations__card-image"
     ) as HTMLImageElement;
     cardImage.src = data.imgSrc;
 
-    const cardTitle = cardElement.querySelector(".card__title") as HTMLElement;
+    const cardTitle = cardElement.querySelector(".recommendations__card-title") as HTMLElement;
     cardTitle.textContent = data.name;
 
     const cardTags = cardElement.querySelector(
-      ".card__tags"
+      ".recommendations__card-tags"
     ) as HTMLElement;
     data.tags.forEach((tag, index) => {
       const tagContainer = document.createElement("div");
-      tagContainer.classList.add("card__tag");
+      tagContainer.classList.add("recommendations__card-tag");
 
       const tagElement = document.createElement("span");
       tagElement.textContent = tag;
-      tagElement.classList.add("card__tag-text");
+      tagElement.classList.add("recommendations__card-tag-text");
 
       const tagIcon = document.createElement("img");
       tagIcon.classList.add("icon");
