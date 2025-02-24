@@ -27,6 +27,7 @@ $maximized-width: 90rem;
 $gap-large: 2.5rem;
 $gap-medium: 1.5rem;
 $gap-small: 0.625rem;
+$gap-main: 10rem;
 $pading-horizontal: 5rem;
 $button-width-base: 12.5rem;
 
@@ -137,7 +138,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10rem;
+  gap: $gap-main;
+  margin-bottom: $gap-main;
 }
 
 .icon {
@@ -288,6 +290,7 @@ main {
   border-radius: $border-radius-small;
   background-color: $main-color;
   cursor: pointer;
+  border: none;
 }
 
 .categories__line {
@@ -322,26 +325,27 @@ main {
   font-weight: $font-weight-bold;
 }
 
-  .card__like-button {
-    margin: 0px;
-    width: 3rem;
-    height: 3rem;
-    top: 2.25rem;
-    right: 2.25rem;
-    position: absolute;
-    border-radius: $border-radius-circle;
-    background-size: 50%;
-    background-color: $white-background;
-    background-position: center;
-    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"%3E%3Cpath d="M15.5022 8.2786e-06C14.6291 -0.00149138 13.7677 0.200775 12.9865 0.590718C12.2052 0.980661 11.5258 1.54752 11.0022 2.24621C10.293 1.30266 9.30512 0.606001 8.17823 0.254824C7.05134 -0.0963541 5.84256 -0.0842713 4.72291 0.289363C3.60327 0.662997 2.62948 1.37926 1.93932 2.3368C1.24916 3.29434 0.877596 4.44467 0.877197 5.62501C0.877197 12.3621 10.2373 17.6813 10.6357 17.9044C10.7477 17.9671 10.8739 18 11.0022 18C11.1305 18 11.2567 17.9671 11.3687 17.9044C13.0902 16.8961 14.7059 15.7173 16.1914 14.3856C19.4665 11.438 21.1272 8.49047 21.1272 5.62501C21.1255 4.13368 20.5323 2.70393 19.4778 1.6494C18.4233 0.594873 16.9935 0.00169855 15.5022 8.2786e-06Z" fill="%23DBE2E5"%3E%3C/path%3E%3C/svg%3E');
-    background-repeat: no-repeat;
-    appearance: none;
-    cursor: pointer;
+.card__like-button {
+  margin: 0px;
+  width: 3rem;
+  height: 3rem;
+  top: 2.25rem;
+  right: 2.25rem;
+  position: absolute;
+  border-radius: $border-radius-circle;
+  background-size: 50%;
+  background-color: $white-background;
+  background-position: center;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"%3E%3Cpath d="M15.5022 8.2786e-06C14.6291 -0.00149138 13.7677 0.200775 12.9865 0.590718C12.2052 0.980661 11.5258 1.54752 11.0022 2.24621C10.293 1.30266 9.30512 0.606001 8.17823 0.254824C7.05134 -0.0963541 5.84256 -0.0842713 4.72291 0.289363C3.60327 0.662997 2.62948 1.37926 1.93932 2.3368C1.24916 3.29434 0.877596 4.44467 0.877197 5.62501C0.877197 12.3621 10.2373 17.6813 10.6357 17.9044C10.7477 17.9671 10.8739 18 11.0022 18C11.1305 18 11.2567 17.9671 11.3687 17.9044C13.0902 16.8961 14.7059 15.7173 16.1914 14.3856C19.4665 11.438 21.1272 8.49047 21.1272 5.62501C21.1255 4.13368 20.5323 2.70393 19.4778 1.6494C18.4233 0.594873 16.9935 0.00169855 15.5022 8.2786e-06Z" fill="%23DBE2E5"%3E%3C/path%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  appearance: none;
+  cursor: pointer;
+  border: none;
 
-    &:checked {
-      background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 18" %3E%3Cdefs%3E%3Cfilter id="shadow" x="-50%%" y="-50%%" width="200%%" height="200%%"%3E%3CfeDropShadow dx="0" dy="5" stdDeviation="5" flood-color="rgba(255, 99, 99, 0.2)"/%3E%3C/filter%3E%3C/defs%3E%3Cpath d="M15.5022 8.2786e-06C14.6291 -0.00149138 13.7677 0.200775 12.9865 0.590718C12.2052 0.980661 11.5258 1.54752 11.0022 2.24621C10.293 1.30266 9.30512 0.606001 8.17823 0.254824C7.05134 -0.0963541 5.84256 -0.0842713 4.72291 0.289363C3.60327 0.662997 2.62948 1.37926 1.93932 2.3368C1.24916 3.29434 0.877596 4.44467 0.877197 5.62501C0.877197 12.3621 10.2373 17.6813 10.6357 17.9044C10.7477 17.9671 10.8739 18 11.0022 18C11.1305 18 11.2567 17.9671 11.3687 17.9044C13.0902 16.8961 14.7059 15.7173 16.1914 14.3856C19.4665 11.438 21.1272 8.49047 21.1272 5.62501C21.1255 4.13368 20.5323 2.70393 19.4778 1.6494C18.4233 0.594873 16.9935 0.00169855 15.5022 8.2786e-06Z" fill="%23FF6363" filter="url(%23shadow)"/%3E%3C/svg%3E');
-    }
+  &:checked {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 18" %3E%3Cdefs%3E%3Cfilter id="shadow" x="-50%%" y="-50%%" width="200%%" height="200%%"%3E%3CfeDropShadow dx="0" dy="5" stdDeviation="5" flood-color="rgba(255, 99, 99, 0.2)"/%3E%3C/filter%3E%3C/defs%3E%3Cpath d="M15.5022 8.2786e-06C14.6291 -0.00149138 13.7677 0.200775 12.9865 0.590718C12.2052 0.980661 11.5258 1.54752 11.0022 2.24621C10.293 1.30266 9.30512 0.606001 8.17823 0.254824C7.05134 -0.0963541 5.84256 -0.0842713 4.72291 0.289363C3.60327 0.662997 2.62948 1.37926 1.93932 2.3368C1.24916 3.29434 0.877596 4.44467 0.877197 5.62501C0.877197 12.3621 10.2373 17.6813 10.6357 17.9044C10.7477 17.9671 10.8739 18 11.0022 18C11.1305 18 11.2567 17.9671 11.3687 17.9044C13.0902 16.8961 14.7059 15.7173 16.1914 14.3856C19.4665 11.438 21.1272 8.49047 21.1272 5.62501C21.1255 4.13368 20.5323 2.70393 19.4778 1.6494C18.4233 0.594873 16.9935 0.00169855 15.5022 8.2786e-06Z" fill="%23FF6363" filter="url(%23shadow)"/%3E%3C/svg%3E');
   }
+}
 
 .feed {
   max-width: $maximized-width;
@@ -351,7 +355,7 @@ main {
   justify-self: center;
   box-sizing: border-box;
   transform: translateY(1.25rem);
-  
+
   h3 {
     text-align: center;
   }
@@ -542,7 +546,7 @@ main {
   height: 19.75rem;
 }
 
-.recommendations__card-image{
+.recommendations__card-image {
   width: 100%;
 }
 
@@ -560,6 +564,7 @@ main {
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"%3E%3Cpath d="M15.5022 8.2786e-06C14.6291 -0.00149138 13.7677 0.200775 12.9865 0.590718C12.2052 0.980661 11.5258 1.54752 11.0022 2.24621C10.293 1.30266 9.30512 0.606001 8.17823 0.254824C7.05134 -0.0963541 5.84256 -0.0842713 4.72291 0.289363C3.60327 0.662997 2.62948 1.37926 1.93932 2.3368C1.24916 3.29434 0.877596 4.44467 0.877197 5.62501C0.877197 12.3621 10.2373 17.6813 10.6357 17.9044C10.7477 17.9671 10.8739 18 11.0022 18C11.1305 18 11.2567 17.9671 11.3687 17.9044C13.0902 16.8961 14.7059 15.7173 16.1914 14.3856C19.4665 11.438 21.1272 8.49047 21.1272 5.62501C21.1255 4.13368 20.5323 2.70393 19.4778 1.6494C18.4233 0.594873 16.9935 0.00169855 15.5022 8.2786e-06Z" fill="%23DBE2E5"%3E%3C/path%3E%3C/svg%3E');
   background-repeat: no-repeat;
   appearance: none;
+  border: none;
   cursor: pointer;
 
   &:checked {
@@ -598,7 +603,89 @@ main {
 }
 
 .recommendations {
+  width: 100%;
   max-width: $maximized-width;
   padding: 0 $pading-horizontal;
   box-sizing: border-box;
+}
+
+.newsletter {
+  width: 100%;
+  max-width: 80rem;
+  padding: 5rem $pading-horizontal;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $main-color;
+  border-radius: 3.75rem;
+  gap: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter__header {
+  max-width: 38.75rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: $gap-medium;
+  z-index: 1;
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  background-color: $white-background;
+  padding: 0.625rem;
+  border-radius: 1.5rem;
+  z-index: 1;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.newsletter__input {
+  border: none;
+  max-width: 100%;
+  box-sizing: border-box;
+  width: 18.75rem;
+  padding: 0 1.375rem;
+  font-size: $font-size-small;
+
+  &:focus {
+    outline: none;
+    font-size: $font-size-small;
+  }
+}
+
+.newsletter__button {
+  height: $button-height;
+  width: $button-width-base - 2.5rem;
+  color: $text-white;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-small;
+  background-color: $black-background;
+  border-radius: $border-radius-small;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter__images {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 0;
+  bottom: 0;
+
+  img {
+    user-select: none;
+    max-width: 50%;
+  }
 }
