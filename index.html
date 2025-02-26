@@ -19,7 +19,7 @@
   <body>
     <header>
       <nav>
-        <a class="nav__logo" href="#home">
+        <a class="logo" href="#home">
           <img
             src="icons/header/Foodieland-high.svg"
             alt="Foodieland logo"
@@ -27,14 +27,14 @@
             height="30"
           />
         </a>
-        <div class="nav__menu">
-          <a class="nav__menu-link" href="#home">Home</a>
-          <a class="nav__menu-link" href="#recipes">Recipes</a>
-          <a class="nav__menu-link" href="#blog">Blog</a>
-          <a class="nav__menu-link" href="#contact">Contact</a>
-          <a class="nav__menu-link" href="#about">About us</a>
+        <div class="menu">
+          <a class="menu__link" href="#home">Home</a>
+          <a class="menu__link" href="#recipes">Recipes</a>
+          <a class="menu__link" href="#blog">Blog</a>
+          <a class="menu__link" href="#contact">Contact</a>
+          <a class="menu__link" href="#about">About us</a>
         </div>
-        <div class="nav__social-icons">
+        <div class="social-icons">
           <a href="#">
             <img src="icons/header/001-facebook.svg" alt="facebook page" />
           </a>
@@ -268,15 +268,49 @@
           <button class="newsletter__button" type="submit">Subscribe</button>
         </form>
         <div class="newsletter__images">
-          <img
-            src="newsletter/salad-vegetables.png"
-          />
-          <img
-            src="newsletter/salad-with-eggs.png"
-          />
+          <img src="newsletter/salad-vegetables.png" />
+          <img src="newsletter/salad-with-eggs.png" />
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__top-left">
+          <a class="logo" href="#home">
+            <img
+              src="icons/header/Foodieland-high.svg"
+              alt="Foodieland logo"
+              width="110"
+              height="30"
+            />
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetuipisicing elit</p>
+        </div>
+        <div class="footer__top-right">
+          <div class="menu">
+            <a class="menu__link" href="#recipes">Recipes</a>
+            <a class="menu__link" href="#blog">Blog</a>
+            <a class="menu__link" href="#contact">Contact</a>
+            <a class="menu__link" href="#about">About us</a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer__line"/>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2020 Flowbase. Powered by <a href="#">Webflow</a></p>
+        <div class="social-icons">
+          <a href="#">
+            <img src="icons/header/001-facebook.svg" alt="facebook page" />
+          </a>
+          <a href="#">
+            <img src="icons/header/003-twitter.svg" alt="twitter page" />
+          </a>
+          <a href="#">
+            <img src="icons/header/004-instagram.svg" alt="instagram page" />
+          </a>
+        </div>
+      </div>
+    </footer>
     <template id="category-card-template">
       <div class="categories__card">
         <img class="emoji" alt="Emoji" />
