@@ -145,9 +145,7 @@ const recipesRecommendationsImages: Array<{
   },
 ];
 
-const recipesFeedContainer = document.getElementsByClassName(
-  "feed__cards"
-)[0] as HTMLElement;
+const recipesFeedContainer = document.getElementById("feed") as HTMLElement;
 const recipeCardTemplate = document.getElementById(
   "feed-card-template"
 ) as HTMLTemplateElement;
@@ -167,9 +165,7 @@ recipesFeedImages.forEach((data) => {
     const cardTitle = cardElement.querySelector(".card__title") as HTMLElement;
     cardTitle.textContent = data.name;
 
-    const cardTags = cardElement.querySelector(
-      ".card__tags"
-    ) as HTMLElement;
+    const cardTags = cardElement.querySelector(".card__tags") as HTMLElement;
     data.tags.forEach((tag, index) => {
       const tagContainer = document.createElement("div");
       tagContainer.classList.add("card__tag");
@@ -191,8 +187,9 @@ recipesFeedImages.forEach((data) => {
 
     const elementCount = recipesFeedContainer.childElementCount as number;
     if (elementCount % 5 === 0 && elementCount !== 0) {
-
-      const adCardElementContainer = document.createElement("a") as HTMLAnchorElement;
+      const adCardElementContainer = document.createElement(
+        "a"
+      ) as HTMLAnchorElement;
       adCardElementContainer.classList.add("feed__card-ad");
       adCardElementContainer.href = "#";
 
@@ -200,18 +197,17 @@ recipesFeedImages.forEach((data) => {
       adCardElement.src = "/recipe-images/advertisement.jpg";
 
       adCardElementContainer.appendChild(adCardElement);
-      recipesFeedContainer.appendChild(adCardElementContainer);}
+      recipesFeedContainer.appendChild(adCardElementContainer);
+    }
 
     recipesFeedContainer.appendChild(cardElement);
-
-
   } else {
     throw new Error("Template not found");
   }
 });
 
-const recipesRecommendationsContainer = document.querySelector(
-  ".recommendations__cards"
+const recipesRecommendationsContainer = document.getElementById(
+  "recommendations"
 ) as HTMLElement;
 
 const recipeRecommendationTemplate = document.getElementById(
@@ -230,7 +226,9 @@ recipesRecommendationsImages.forEach((data) => {
     ) as HTMLImageElement;
     cardImage.src = data.imgSrc;
 
-    const cardTitle = cardElement.querySelector(".recommendations__card-title") as HTMLElement;
+    const cardTitle = cardElement.querySelector(
+      ".recommendations__card-title"
+    ) as HTMLElement;
     cardTitle.textContent = data.name;
 
     const cardTags = cardElement.querySelector(
@@ -261,9 +259,7 @@ recipesRecommendationsImages.forEach((data) => {
   }
 });
 
-const cardsContainer = document.getElementsByClassName(
-  "categories__line"
-)[0] as HTMLElement;
+const cardsContainer = document.getElementById("categories") as HTMLElement;
 const cardTemplate = document.getElementById(
   "category-card-template"
 ) as HTMLTemplateElement;
@@ -271,10 +267,13 @@ const cardTemplate = document.getElementById(
 cardsData.forEach((data) => {
   if (cardTemplate) {
     const newCard = cardTemplate.content.cloneNode(true) as DocumentFragment;
-    const cardElement = newCard.querySelector(".categories__card") as HTMLElement;
+    const cardElement = newCard.querySelector(
+      ".categories__card"
+    ) as HTMLElement;
 
-    (cardElement.querySelector(".categories__card-name") as HTMLElement).textContent =
-      data.category;
+    (
+      cardElement.querySelector(".categories__card-name") as HTMLElement
+    ).textContent = data.category;
 
     const emojiElement = cardElement.querySelector(
       ".emoji"
