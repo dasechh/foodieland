@@ -1,35 +1,63 @@
-$main-color: #e7fafe;
+$letter-spacing: -0.04rem;
+
+$primary-background: #e7fafe;
 $white-background: #ffffff;
 $black-background: #000000;
-$text-white: #ffffff;
-$text-black: #000000;
-$text-color-muted: rgba(0, 0, 0, 0.6);
-$dark-background-color: #000000;
-$font-weight-bold: 600;
-$font-weight-medium: 500;
+
+$white-text: #ffffff;
+$black-text: #000000;
+
+$opacity-none: 0;
+$opacity-ultra-low: 0.05;
+$opacity-muted: 0.6;
+
 $font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+
 $font-size-small: 0.875rem;
-$font-size-medium: 1rem;
-$font-size-regular: 1.125rem;
-$letter-spacing: -0.04rem;
+$font-size-regular: 1rem;
+$font-size-medium: 1.125rem;
+
 $border-radius-small: 1rem;
 $border-radius-regular: 1.25rem;
-$border-radius-medium: 1.875rem;
-$border-radius-large: 3.125rem;
+$border-radius-medium: 1.5rem;
+$border-radius-large: 1.875rem;
+$border-radius-extra-large: 3.125rem;
+$border-radius-super-large: 3.75rem;
 $border-radius-circle: 100%;
+
 $main-gradient: linear-gradient(
   180deg,
-  rgba(231, 249, 253, 0) 0%,
-  $main-color 100%
+  $white-background $opacity-none,
+  $primary-background $opacity-none
 );
-$button-height: 3.75rem;
+
 $maximized-width: 90rem;
 $gap-large: 2.5rem;
 $gap-medium: 1.5rem;
 $gap-small: 0.625rem;
 $gap-main: 10rem;
 $pading-horizontal: 5rem;
+
+$button-height: 3.75rem;
 $button-width-base: 12.5rem;
+
+@mixin button($width, $height, $bg-color, $text-color) {
+  height: $height;
+  width: $width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-color;
+  font-size: $font-size-small;
+  font-weight: $font-weight-semi-bold;
+  background-color: $bg-color;
+  border-radius: $border-radius-small;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
 
 html,
 body,
@@ -51,24 +79,24 @@ header {
 h2 {
   margin: 2rem 0 1.5rem;
   font-size: 4rem;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semi-bold;
 }
 
 h3 {
   font-size: 3rem;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semi-bold;
   letter-spacing: $letter-spacing;
 }
 
 h4 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semi-bold;
   letter-spacing: $letter-spacing;
 }
 
 p {
-  color: $text-color-muted;
+  color: rgba($black-text, $opacity-muted);
   line-height: 1.75rem;
   font-weight: $font-weight-regular;
 }
@@ -85,7 +113,7 @@ nav {
   justify-content: space-between;
   box-sizing: border-box;
   padding: 2.5rem $pading-horizontal;
-  color: $text-black;
+  color: $black-text;
   font-weight: $font-weight-medium;
   letter-spacing: calc(#{$letter-spacing} / 2);
 }
@@ -98,7 +126,7 @@ nav {
 }
 
 .menu__link {
-  color: $text-black;
+  color: $black-text;
   text-decoration: none;
 }
 
@@ -168,8 +196,8 @@ main {
   flex-shrink: 0;
   max-width: 75rem;
   aspect-ratio: 2 / 1;
-  background-color: $main-color;
-  border-radius: $border-radius-large;
+  background-color: $primary-background;
+  border-radius: $border-radius-extra-large;
   overflow: hidden;
 }
 
@@ -194,10 +222,10 @@ main {
   display: flex;
   align-items: center;
   gap: 0.8125rem;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semi-bold;
   font-size: $font-size-small;
   background-color: $white-background;
-  border-radius: $border-radius-medium;
+  border-radius: $border-radius-large;
 }
 
 .recipes__tags {
@@ -211,14 +239,14 @@ main {
   display: inline-flex;
   align-items: center;
   gap: $gap-small;
-  border-radius: $border-radius-medium;
-  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: $border-radius-large;
+  background-color: rgba($white-background, $opacity-ultra-low);
 }
 
 .recipes__tag-text {
-  font-size: 0.875rem;
+  font-size: $font-size-small;
   font-weight: $font-weight-medium;
-  color: $text-color-muted;
+  color: rgba($black-text, $opacity-muted);
 }
 
 .recipes__footer {
@@ -237,13 +265,13 @@ main {
 
 .recipes__author-name {
   margin-bottom: 0.5rem;
-  color: $text-black;
-  font-weight: $font-weight-bold;
+  color: $black-text;
+  font-weight: $font-weight-semi-bold;
 }
 
 .recipes__date {
   justify-self: flex-start;
-  color: $text-color-muted;
+  color: rgba($black-text, $opacity-muted);
   font-size: $font-size-small;
 }
 
@@ -254,22 +282,17 @@ main {
 
 .recipes__author-icon {
   width: 3.125rem;
-  border-radius: $border-radius-large;
+  border-radius: $border-radius-extra-large;
 }
 
 .recipes__button {
-  height: $button-height;
-  width: $button-width-base;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include button(
+    $button-width-base,
+    $button-height,
+    $black-background,
+    $white-text
+  );
   gap: 0.9375rem;
-  color: $text-white;
-  font-weight: $font-weight-bold;
-  font-size: $font-size-small;
-  background-color: $black-background;
-  border-radius: $border-radius-small;
-  text-decoration: none;
 }
 
 .categories {
@@ -288,16 +311,13 @@ main {
 }
 
 .categories__button {
-  height: $button-height;
-  width: $button-width-base;
-  justify-self: end;
-  font-size: $font-size-medium;
-  font-weight: $font-weight-bold;
-  border: none;
-  border-radius: $border-radius-small;
-  background-color: $main-color;
-  cursor: pointer;
-  border: none;
+  @include button(
+    $button-width-base,
+    $button-height,
+    $primary-background,
+    $black-text
+  );
+  font-size: $font-size-regular;
 }
 
 .block__list {
@@ -314,8 +334,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $text-black;
-  border-radius: $border-radius-medium;
+  color: $black-text;
+  border-radius: $border-radius-large;
 }
 
 .blurred-emoji {
@@ -328,8 +348,8 @@ main {
 
 .categories__card-name {
   margin: 3.125rem 0 1.875rem;
-  font-size: $font-size-regular;
-  font-weight: $font-weight-bold;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-semi-bold;
 }
 
 .card__like-button {
@@ -381,7 +401,7 @@ main {
   box-sizing: border-box;
   gap: $gap-medium;
   background: $main-gradient;
-  border-radius: $border-radius-medium;
+  border-radius: $border-radius-large;
 }
 
 .card__image {
@@ -442,18 +462,13 @@ main {
 }
 
 .course-ad__button {
-  width: $button-width-base - 1.25rem;
-  height: $button-height;
+  @include button(
+    $button-width-base - 1.25rem,
+    $button-height,
+    $black-background,
+    $white-text
+  );
   margin-top: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $white-background;
-  font-size: $font-size-small;
-  font-weight: $font-weight-bold;
-  border-radius: $border-radius-small;
-  background-color: $black-background;
-  text-decoration: none;
 }
 
 .course-ad__image-wrapper {
@@ -470,7 +485,7 @@ main {
   max-width: 40.6875rem;
   aspect-ratio: 651 / 500;
   align-self: flex-end;
-  border-radius: $border-radius-medium;
+  border-radius: $border-radius-large;
   background: $main-gradient;
 }
 
@@ -509,18 +524,13 @@ main {
 }
 
 .instagram__button {
-  height: $button-height;
-  width: $button-width-base + 1.875rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include button(
+    $button-width-base + 1.875rem,
+    $button-height,
+    $black-background,
+    $white-text
+  );
   gap: 1rem;
-  color: $text-white;
-  font-weight: $font-weight-bold;
-  font-size: $font-size-small;
-  background-color: $black-background;
-  border-radius: $border-radius-small;
-  text-decoration: none;
 }
 
 .recommendations__card {
@@ -556,7 +566,7 @@ main {
 
 .recommendations__card-title {
   margin: 1rem 0;
-  font-size: $font-size-regular;
+  font-size: $font-size-medium;
   line-height: 1.25rem;
 }
 
@@ -599,8 +609,8 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: $main-color;
-  border-radius: 3.75rem;
+  background-color: $primary-background;
+  border-radius: $border-radius-super-large;
   gap: 4rem;
   position: relative;
   overflow: hidden;
@@ -623,7 +633,7 @@ main {
   width: 30rem;
   background-color: $white-background;
   padding: 0.625rem;
-  border-radius: 1.5rem;
+  border-radius: $border-radius-medium;
   z-index: 1;
   box-sizing: border-box;
   max-width: 100%;
@@ -644,16 +654,12 @@ main {
 }
 
 .newsletter__button {
-  height: $button-height;
-  width: $button-width-base - 2.5rem;
-  color: $text-white;
-  font-weight: $font-weight-bold;
-  font-size: $font-size-small;
-  background-color: $black-background;
-  border-radius: $border-radius-small;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
+  @include button(
+    $button-width-base - 2.5rem,
+    $button-height,
+    $black-background,
+    $white-text
+  );
 }
 
 .newsletter__images {
@@ -701,7 +707,6 @@ main {
 }
 
 .footer__top-right {
-
   .menu {
     display: flex;
     justify-content: flex-end;
@@ -731,11 +736,7 @@ main {
   transform: translateX(-50%);
 
   a {
-    color: #FF7967;
+    color: #ff7967;
     text-decoration: none;
   }
 }
-
-// * {
-//   border: 1px solid red;
-// }
