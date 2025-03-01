@@ -114,8 +114,7 @@ nav {
   width: 100%;
   max-width: $maximized-width;
   display: flex;
-  justify-self: center;
-  justify-content: space-between;
+  margin: 0 auto;
   box-sizing: border-box;
   padding: 2.5rem $pading-horizontal;
   color: $black-text;
@@ -126,6 +125,7 @@ nav {
 .menu {
   display: flex;
   align-items: center;
+  margin: 0 auto;
   gap: $gap-medium-large;
   text-align: center;
 }
@@ -196,6 +196,10 @@ main {
   overflow: hidden;
 }
 
+.recipes__image {
+  max-width: 51.5625%;
+}
+
 .recipes__item {
   display: flex;
   flex-shrink: 0;
@@ -223,12 +227,11 @@ main {
 }
 
 .recipes__badge {
-  width: 9.75rem;
   margin-bottom: 2rem;
   padding: 0.625rem 1.25rem;
   display: flex;
+  gap: $gap-small;
   align-items: center;
-  justify-content: space-between;
   box-sizing: border-box;
   font-weight: $font-weight-semi-bold;
   font-size: $font-size-small;
@@ -259,6 +262,7 @@ main {
 
 .recipes__footer {
   width: 100%;
+  max-height: $button-height;
   margin-top: auto;
   display: flex;
   flex-direction: row;
@@ -289,7 +293,7 @@ main {
 }
 
 .recipes__author-icon {
-  width: 3.125rem;
+  height: 5/6 * 100%;
   border-radius: $border-radius-extra-large;
 }
 
@@ -338,8 +342,10 @@ main {
 }
 
 .categories__card {
-  min-width: 11.25rem;
-  min-height: 12.5rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 0 2.5rem 1.875rem;
+  box-sizing: border-box; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -356,7 +362,7 @@ main {
 }
 
 .categories__card-name {
-  margin: 3.125rem 0 1.875rem;
+  margin: 3.125rem 0 0rem;
   font-size: $font-size-medium;
   font-weight: $font-weight-semi-bold;
 }
@@ -519,7 +525,6 @@ main {
 
 .recommendations__card {
   width: 18.125rem;
-  height: 19.75rem;
 }
 
 .recommendations__card-image {
