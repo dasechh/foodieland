@@ -197,18 +197,18 @@
         <div class="block__list" id="categories"></div>
       </section>
       <section class="feed">
-        <h3>Simple and tasty recipes</h3>
-        <p class="feed__text">
-          Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqut enim ad minim
-        </p>
+        <div class="feed__header">
+          <h3>Simple and tasty recipes</h3>
+          <p class="feed__text">
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqut enim ad minim
+          </p>
+        </div>
         <div class="block__list" id="feed"></div>
       </section>
       <section class="course-ad">
         <div class="course-ad__text">
-          <h3 class="course-ad__text-title">
-            Everyone can&nbsp;be&nbsp;a chef&nbsp;in their own kitchen
-          </h3>
+          <h3>Everyone can&nbsp;be&nbsp;a chef&nbsp;in their own kitchen</h3>
           <p class="course-ad__text-description">
             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqut enim<br />ad
@@ -230,10 +230,10 @@
           </p>
         </div>
         <div class="block__list">
-          <img src="Post.jpg" />
-          <img src="Post-1.jpg" />
-          <img src="Post-2.jpg" />
-          <img src="Post-3.jpg" />
+          <img class="instagram__post" src="Post.jpg" />
+          <img class="instagram__post" src="Post-1.jpg" />
+          <img class="instagram__post" src="Post-2.jpg" />
+          <img class="instagram__post" src="Post-3.jpg" />
         </div>
         <a href="#" class="instagram__button"
           >Visit Our Instagram
@@ -295,7 +295,7 @@
           </div>
         </div>
       </div>
-      <hr class="footer__line" />
+      <hr />
       <div class="footer__bottom">
         <p class="footer__copyright">
           © 2020 Flowbase. Powered by <a href="#">Webflow</a>
@@ -333,11 +333,12 @@
     <template id="recommendations-card-template">
       <div class="card recommendations__card">
         <img class="recommendations__card-image" />
-        <input type="checkbox" class="recommendations__card-like-button like-button" />
-        <div class="recommendations__card-texts">
-          <h4 class="recommendations__card-title"></h4>
-          <div class="recommendations__card-tags"></div>
-        </div>
+        <input
+          type="checkbox"
+          class="recommendations__card-like-button like-button"
+        />
+        <h5 class="recommendations__card-title"></h5>
+        <div class="recommendations__card-tags"></div>
       </div>
     </template>
   </body>

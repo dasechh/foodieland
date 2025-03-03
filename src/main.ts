@@ -195,6 +195,7 @@ recipesFeedImages.forEach((data) => {
 
       const adCardElement = document.createElement("img") as HTMLImageElement;
       adCardElement.src = "/recipe-images/advertisement.jpg";
+      adCardElement.classList.add("card__image");
 
       adCardElementContainer.appendChild(adCardElement);
       recipesFeedContainer.appendChild(adCardElementContainer);

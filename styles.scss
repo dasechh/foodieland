@@ -5,10 +5,8 @@ $black-background: #000000;
 $white-text: #ffffff;
 $black-text: #000000;
 
-$opacity-none: 0;
 $opacity-ultra-low: 0.05;
 $opacity-muted: 0.6;
-$opacity-full: 1;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
@@ -34,19 +32,27 @@ $main-gradient: linear-gradient(
   $primary-background 100%
 );
 
-$gap-main-content: 10rem;
+$gap-main: 10rem;
 $gap-large: 5rem;
-$gap-medium-large: 3.75rem;
+$gap-medium-large: 4rem;
 $gap-medium: 2.5rem;
 $gap-small-medium: 1.5rem;
 $gap-small: 1rem;
 $gap-xsmall: 0.625rem;
 
 $maximized-width: 90rem;
+$maximized-width-small: 80rem;
 $pading-horizontal: 5rem;
 
 $button-height: 3.75rem;
 $button-width-base: 12.5rem;
+
+$form-width: 30rem;
+
+$card-width-regular: 18.125rem;
+$card-width-medium: 25rem;
+
+$interactive-icon-size: 3rem;
 
 @mixin button($width, $height, $bg-color, $text-color) {
   height: $height;
@@ -73,17 +79,14 @@ header {
   font-family: "Inter";
   font-size: 16px;
 
-  & h2,
-  & h3,
-  & h4,
   & p {
     margin: 0;
   }
 }
 
 h2 {
-  margin: 2rem 0 1.5rem;
   font-size: 4rem;
+  margin: 0 0 1.5rem;
   font-weight: $font-weight-semi-bold;
 }
 
@@ -91,6 +94,7 @@ h3 {
   font-size: 3rem;
   font-weight: $font-weight-semi-bold;
   letter-spacing: $letter-spacing;
+  margin: 0 0 1.5rem;
 }
 
 h4 {
@@ -98,6 +102,15 @@ h4 {
   line-height: 2rem;
   font-weight: $font-weight-semi-bold;
   letter-spacing: $letter-spacing;
+  margin: 0 0 1.5rem;
+}
+
+h5 {
+  font-size: $font-size-medium;
+  line-height: 1.25rem;
+  font-weight: $font-weight-semi-bold;
+  letter-spacing: $letter-spacing;
+  margin: 0 0 1.5rem;
 }
 
 p {
@@ -168,7 +181,6 @@ nav {
 }
 
 hr {
-  margin-bottom: 2.5rem;
   opacity: 0.1;
 }
 
@@ -176,13 +188,13 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $gap-main-content;
-  margin-bottom: $gap-main-content;
+  gap: $gap-main;
+  margin: $gap-main * 0.25 0 $gap-main;
 }
 
 .icon {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: $interactive-icon-size / 2;
+  width: $interactive-icon-size / 2;
 }
 
 .recipes {
@@ -192,12 +204,7 @@ main {
   justify-content: center;
   box-sizing: border-box;
   flex-wrap: nowrap;
-  gap: $gap-small-medium;
   overflow: hidden;
-}
-
-.recipes__image {
-  max-width: 51.5625%;
 }
 
 .recipes__item {
@@ -212,13 +219,15 @@ main {
 
 .recipes__item-center {
   max-width: 80rem;
+  margin: 0 2.5rem;
 }
 
 .recipes__description {
-  margin: 1.5rem 0 1.875rem;
+  margin: 0 0 1.875rem;
 }
 
 .recipes__content {
+  width: 50%;
   padding: 3.125rem;
   display: flex;
   flex-direction: column;
@@ -276,7 +285,6 @@ main {
 }
 
 .recipes__author-name {
-  margin-bottom: 0.5rem;
   color: $black-text;
   font-weight: $font-weight-semi-bold;
 }
@@ -290,10 +298,11 @@ main {
 .recipes__author-data {
   display: flex;
   flex-direction: column;
+  gap: $gap-xsmall;
 }
 
 .recipes__author-icon {
-  height: 5/6 * 100%;
+  height: $interactive-icon-size;
   border-radius: $border-radius-extra-large;
 }
 
@@ -313,7 +322,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-self: center;
-  gap: $gap-large;
   box-sizing: border-box;
   padding: 0 $pading-horizontal;
 }
@@ -321,6 +329,11 @@ main {
 .categories__header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5rem;
+
+  h3 {
+    margin: 0;
+  }
 }
 
 .categories__button {
@@ -342,15 +355,19 @@ main {
 }
 
 .categories__card {
-  width: fit-content;
-  height: fit-content;
+  width: min-content;
+  height: min-content;
   padding: 0 2.5rem 1.875rem;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: $black-text;
   border-radius: $border-radius-large;
+}
+
+.emoji {
+  margin-bottom: 3rem;
 }
 
 .blurred-emoji {
@@ -362,7 +379,6 @@ main {
 }
 
 .categories__card-name {
-  margin: 3.125rem 0 0rem;
   font-size: $font-size-medium;
   font-weight: $font-weight-semi-bold;
 }
@@ -373,6 +389,7 @@ main {
 }
 
 .feed {
+  width: 100%;
   max-width: $maximized-width;
   display: flex;
   flex-direction: column;
@@ -381,10 +398,11 @@ main {
   box-sizing: border-box;
   padding: 0 $pading-horizontal;
   transform: translateY(1.25rem);
+  text-align: center;
+}
 
-  h3 {
-    text-align: center;
-  }
+.feed__header {
+  margin-bottom: 6rem;
 }
 
 .card {
@@ -394,36 +412,36 @@ main {
 }
 
 .feed__card {
-  height: 27.125rem;
-  width: 31.25%;
+  height: min-content;
+  width: $card-width-medium;
   padding: 1rem;
   box-sizing: border-box;
-  gap: $gap-small-medium;
   background: $main-gradient;
   border-radius: $border-radius-large;
+  text-align: left;
 }
 
 .card__image {
-  border-radius: 1.25rem;
+  border-radius: $border-radius-regular;
+  margin-bottom: 1.5rem;
 }
 
 .feed__text {
   max-width: 55.15625%;
-  margin: 1.5rem 0 6rem;
-  text-align: center;
+  justify-self: center;
 }
 
 .card__texts {
   margin: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: $gap-small-medium;
 }
 
 .card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: $gap-small-medium;
+  margin-bottom: 0.5rem;
 }
 
 .card__tag {
@@ -442,23 +460,25 @@ main {
 }
 
 .course-ad__text {
-  margin-bottom: 4.5rem;
-  margin-top: auto;
+  align-self: center;
   width: 41.09375%;
+  height: min-content;
   display: flex;
   flex-direction: column;
-  gap: $gap-small-medium;
-  margin-right: 2.75rem;
+  margin-right: 3rem;
+}
+
+.course-ad__text-description {
+  margin-bottom: 4.5rem;
 }
 
 .course-ad__button {
   @include button(
-    $button-width-base - 1.25rem,
+    $button-width-base * 0.9,
     $button-height,
     $black-background,
     $white-text
   );
-  margin-top: 3rem;
 }
 
 .course-ad__image-wrapper {
@@ -506,16 +526,19 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $gap-small-medium;
 }
 
 .instagram__text {
   width: 65.625%;
 }
 
+.instagram__post {
+  width: $card-width-regular;
+}
+
 .instagram__button {
   @include button(
-    $button-width-base + 1.875rem,
+    $button-width-base * 1.15,
     $button-height,
     $black-background,
     $white-text
@@ -524,17 +547,13 @@ main {
 }
 
 .recommendations__card {
-  width: 18.125rem;
-}
-
-.recommendations__card-image {
-  width: 100%;
+  width: $card-width-regular;
 }
 
 .like-button {
   margin: 0px;
-  width: 3rem;
-  height: 3rem;
+  width: $interactive-icon-size;
+  height: $interactive-icon-size;
   position: absolute;
   border-radius: $border-radius-circle;
   background-size: 50%;
@@ -556,14 +575,11 @@ main {
   right: 1rem;
 }
 
-.recommendations__card-title {
-  margin: 1rem 0;
-  font-size: $font-size-medium;
-  line-height: 1.25rem;
+.recommendations__card-image {
+  margin-bottom: 1rem;
 }
 
 .recommendations__card-tags {
-  margin-top: 0.5rem;
   display: flex;
   flex-direction: row;
   gap: $gap-small-medium;
@@ -572,6 +588,7 @@ main {
 .recommendations__card-tag {
   display: flex;
   align-items: center;
+  gap: $gap-xsmall;
 }
 
 .recommendations__header {
@@ -579,7 +596,12 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5rem;
+  box-sizing: border-box;
+  margin-bottom: 6rem;
+
+  h3 {
+    margin: 0;
+  }
 }
 
 .recommendations__text {
@@ -590,12 +612,14 @@ main {
   width: 100%;
   max-width: $maximized-width;
   padding: 0 $pading-horizontal;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
 }
 
 .newsletter {
   width: 100%;
-  max-width: 80rem;
+  max-width: $maximized-width-small;
   padding: 5rem $pading-horizontal;
   box-sizing: border-box;
   display: flex;
@@ -603,7 +627,6 @@ main {
   flex-direction: column;
   background-color: $primary-background;
   border-radius: $border-radius-super-large;
-  gap: $gap-large;
   position: relative;
   overflow: hidden;
 }
@@ -612,8 +635,8 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: $gap-small-medium;
   z-index: 1;
+  margin-bottom: 4.5rem;
 }
 
 .newsletter__text {
@@ -631,26 +654,21 @@ main {
   border-radius: $border-radius-medium;
   z-index: 1;
   box-sizing: border-box;
-  max-width: 100%;
+  width: 100%;
+  max-width: $form-width;
 }
 
 .newsletter__input {
   border: none;
-  max-width: 100%;
   box-sizing: border-box;
-  width: 18.75rem;
   padding: 0 1.375rem;
   font-size: $font-size-small;
-
-  &:focus {
-    outline: none;
-    font-size: $font-size-small;
-  }
+  outline: none;
 }
 
 .newsletter__button {
   @include button(
-    $button-width-base - 2.5rem,
+    $button-width-base * 0.8,
     $button-height,
     $black-background,
     $white-text
@@ -676,15 +694,12 @@ main {
 .footer {
   width: 100%;
   display: flex;
+  justify-self: center;
   flex-direction: column;
   padding: 0 $pading-horizontal;
   max-width: $maximized-width;
   box-sizing: border-box;
-  margin: 0 auto 3rem;
-}
-
-.footer__line {
-  margin-bottom: 3rem;
+  margin-bottom: $gap-main * 0.3;
 }
 
 .footer__top {
@@ -715,6 +730,7 @@ main {
   justify-content: flex-end;
   flex-wrap: wrap;
   position: relative;
+  margin-top: 3rem;
 }
 
 .logo {
