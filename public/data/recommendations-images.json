@@ -1,0 +1,51 @@
+[
+    {
+      "imgSrc": "/recipe-images/fruit_salad.jpg",
+      "name": "Mixed Tropical Fruit Salad with Superfood Boosts",
+      "tags": ["30 Minutes", "Healthy"],
+      "id": 1
+    },
+    {
+      "imgSrc": "/recipe-images/beef_cheeseburger.jpg",
+      "name": "Big and Juicy Wagyu Beef Cheeseburger",
+      "tags": ["30 Minutes", "Western"],
+      "id": 2
+    },
+    {
+      "imgSrc": "/recipe-images/fried_rice.jpg",
+      "name": "Healthy Japanese Fried Rice with Asparagus",
+      "tags": ["30 Minutes", "Healthy"],
+      "id": 3
+    },
+    {
+      "imgSrc": "/recipe-images/taco_meat.jpg",
+      "name": "Cauliflower Walnut Vegetarian Taco Meat",
+      "tags": ["30 Minutes", "Eastern"],
+      "id": 4
+    },
+    {
+      "imgSrc": "/recipe-images/chicken_salad.jpg",
+      "name": "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
+      "tags": ["30 Minutes", "Healthy"],
+      "id": 5
+    },
+    {
+      "imgSrc": "/recipe-images/spicy_sandwiches.jpg",
+      "name": "Barbeque Spicy Sandwiches with Chips",
+      "tags": ["30 Minutes", "Snack"],
+      "id": 6
+    },
+    {
+      "imgSrc": "/recipe-images/vegan_lettuce.jpg",
+      "name": "Firecracker Vegan Lettuce Wraps - Spicy!",
+      "tags": ["30 Minutes", "Seafood"],
+      "id": 7
+    },
+    {
+      "imgSrc": "/recipe-images/ramen_soup.jpg",
+      "name": "Chicken Ramen Soup with Mushroom",
+      "tags": ["30 Minutes", "Japanese"],
+      "id": 8
+    }
+  ]
+  

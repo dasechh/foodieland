@@ -33,233 +33,6 @@ const cardsData: Array<{ category: string; color: string; imgSrc: string }> = [
   },
 ];
 
-const recipesFeedImages: Array<{
-  imgSrc: string;
-  name: string;
-  tags: string[];
-  id: number;
-}> = [
-  {
-    imgSrc: "/recipe-images/wagyu_beef.jpg",
-    name: "Big and Juicy Wagyu Beef Cheeseburger",
-    tags: ["30 Minutes", "Snack"],
-    id: 1,
-  },
-  {
-    imgSrc: "/recipe-images/roasted_salmon.jpg",
-    name: "Fresh Lime Roasted Salmon with Ginger Sauce",
-    tags: ["30 Minutes", "Fish"],
-    id: 2,
-  },
-  {
-    imgSrc: "/recipe-images/oatmeal_pancake.jpg",
-    name: "Strawberry Oatmeal Pancake with Honey Syrup",
-    tags: ["30 Minutes", "Breakfast"],
-    id: 3,
-  },
-  {
-    imgSrc: "/recipe-images/mayonnaise_salad.jpg",
-    name: "Fresh and Healthy Mixed Mayonnaise Salad",
-    tags: ["30 Minutes", "Healthy"],
-    id: 4,
-  },
-  {
-    imgSrc: "/recipe-images/chicken_meatballs.jpg",
-    name: "Chicken Meatballs with Cream Cheese",
-    tags: ["30 Minutes", "Meat"],
-    id: 5,
-  },
-  {
-    imgSrc: "/recipe-images/fruity_pancake.jpg",
-    name: "Fruity Pancake with Orange & Blueberry",
-    tags: ["30 Minutes", "Sweet"],
-    id: 6,
-  },
-  {
-    imgSrc: "/recipe-images/chicken_and_rice.jpg",
-    name: "The Best Easy One Pot Chicken and Rice",
-    tags: ["30 Minutes", "Snack"],
-    id: 7,
-  },
-  {
-    imgSrc: "/recipe-images/chicken_and_bacon_pasta.jpg",
-    name: "The Creamiest Creamy Chicken and Bacon Pasta",
-    tags: ["30 Minutes", "Noodles"],
-    id: 8,
-  },
-];
-
-const recipesRecommendationsImages: Array<{
-  imgSrc: string;
-  name: string;
-  tags: string[];
-  id: number;
-}> = [
-  {
-    imgSrc: "/recipe-images/fruit_salad.jpg",
-    name: "Mixed Tropical Fruit Salad with Superfood Boosts",
-    tags: ["30 Minutes", "Healthy"],
-    id: 1,
-  },
-  {
-    imgSrc: "/recipe-images/beef_cheeseburger.jpg",
-    name: "Big and Juicy Wagyu Beef Cheeseburger",
-    tags: ["30 Minutes", "Western"],
-    id: 2,
-  },
-  {
-    imgSrc: "/recipe-images/fried_rice.jpg",
-    name: "Healthy Japanese Fried Rice with Asparagus",
-    tags: ["30 Minutes", "Healthy"],
-    id: 3,
-  },
-  {
-    imgSrc: "/recipe-images/taco_meat.jpg",
-    name: "Cauliflower Walnut Vegetarian Taco Meat",
-    tags: ["30 Minutes", "Eastern"],
-    id: 4,
-  },
-  {
-    imgSrc: "/recipe-images/chicken_salad.jpg",
-    name: "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
-    tags: ["30 Minutes", "Healthy"],
-    id: 5,
-  },
-  {
-    imgSrc: "/recipe-images/spicy_sandwiches.jpg",
-    name: "Barbeque Spicy Sandwiches with Chips ",
-    tags: ["30 Minutes", "Snack"],
-    id: 6,
-  },
-  {
-    imgSrc: "/recipe-images/vegan_lettuce.jpg",
-    name: "Firecracker Vegan Lettuce Wraps - Spicy! ",
-    tags: ["30 Minutes", "Seafood"],
-    id: 7,
-  },
-  {
-    imgSrc: "/recipe-images/ramen_soup.jpg",
-    name: "Chicken Ramen Soup with Mushroom ",
-    tags: ["30 Minutes", "Japanese"],
-    id: 8,
-  },
-];
-
-const recipesFeedContainer = document.getElementById("feed") as HTMLElement;
-const recipeCardTemplate = document.getElementById(
-  "feed-card-template"
-) as HTMLTemplateElement;
-
-recipesFeedImages.forEach((data) => {
-  if (recipeCardTemplate) {
-    const newCard = recipeCardTemplate.content.cloneNode(
-      true
-    ) as DocumentFragment;
-    const cardElement = newCard.querySelector(".feed__card") as HTMLElement;
-
-    const cardImage = cardElement.querySelector(
-      ".card__image"
-    ) as HTMLImageElement;
-    cardImage.src = data.imgSrc;
-
-    const cardTitle = cardElement.querySelector(".card__title") as HTMLElement;
-    cardTitle.textContent = data.name;
-
-    const cardTags = cardElement.querySelector(".card__tags") as HTMLElement;
-    data.tags.forEach((tag, index) => {
-      const tagContainer = document.createElement("div");
-      tagContainer.classList.add("card__tag");
-
-      const tagElement = document.createElement("span");
-      tagElement.textContent = tag;
-      tagElement.classList.add("card__tag-text");
-
-      const tagIcon = document.createElement("img");
-      tagIcon.classList.add("icon");
-      tagIcon.src =
-        index === 0 ? "/icons/tags/Timer.svg" : "/icons/tags/ForkKnife.svg";
-
-      tagContainer.appendChild(tagIcon);
-      tagContainer.appendChild(tagElement);
-
-      cardTags.appendChild(tagContainer);
-    });
-
-    const elementCount = recipesFeedContainer.childElementCount as number;
-    if (elementCount % 5 === 0 && elementCount !== 0) {
-      const adCardElementContainer = document.createElement(
-        "a"
-      ) as HTMLAnchorElement;
-      adCardElementContainer.classList.add("feed__card-ad");
-      adCardElementContainer.href = "#";
-
-      const adCardElement = document.createElement("img") as HTMLImageElement;
-      adCardElement.src = "/recipe-images/advertisement.jpg";
-      adCardElement.classList.add("card__image");
-
-      adCardElementContainer.appendChild(adCardElement);
-      recipesFeedContainer.appendChild(adCardElementContainer);
-    }
-
-    recipesFeedContainer.appendChild(cardElement);
-  } else {
-    throw new Error("Template not found");
-  }
-});
-
-const recipesRecommendationsContainer = document.getElementById(
-  "recommendations"
-) as HTMLElement;
-
-const recipeRecommendationTemplate = document.getElementById(
-  "recommendations-card-template"
-) as HTMLTemplateElement;
-
-recipesRecommendationsImages.forEach((data) => {
-  if (recipeRecommendationTemplate) {
-    const newCard = recipeRecommendationTemplate.content.cloneNode(
-      true
-    ) as DocumentFragment;
-    const cardElement = newCard.querySelector(".card") as HTMLElement;
-
-    const cardImage = cardElement.querySelector(
-      ".recommendations__card-image"
-    ) as HTMLImageElement;
-    cardImage.src = data.imgSrc;
-
-    const cardTitle = cardElement.querySelector(
-      ".recommendations__card-title"
-    ) as HTMLElement;
-    cardTitle.textContent = data.name;
-
-    const cardTags = cardElement.querySelector(
-      ".recommendations__card-tags"
-    ) as HTMLElement;
-    data.tags.forEach((tag, index) => {
-      const tagContainer = document.createElement("div");
-      tagContainer.classList.add("recommendations__card-tag");
-
-      const tagElement = document.createElement("span");
-      tagElement.textContent = tag;
-      tagElement.classList.add("recommendations__card-tag-text");
-
-      const tagIcon = document.createElement("img");
-      tagIcon.classList.add("icon");
-      tagIcon.src =
-        index === 0 ? "/icons/tags/Timer.svg" : "/icons/tags/ForkKnife.svg";
-
-      tagContainer.appendChild(tagIcon);
-      tagContainer.appendChild(tagElement);
-
-      cardTags.appendChild(tagContainer);
-    });
-
-    recipesRecommendationsContainer.appendChild(cardElement);
-  } else {
-    throw new Error("Template not found");
-  }
-});
-
 const cardsContainer = document.getElementById("categories") as HTMLElement;
 const cardTemplate = document.getElementById(
   "category-card-template"
@@ -311,3 +84,156 @@ document.querySelectorAll(".categories__card").forEach((card) => {
         )`;
   }
 });
+
+function loadImages(fileName: string) {
+  return new Promise<
+    { imgSrc: string; name: string; tags: string[]; id: number }[]
+  >((resolve, reject) => {
+    fetch(fileName)
+      .then((response) => {
+        if (!response.ok) {
+          reject("Failed to fetch data");
+          return;
+        }
+        return response.json();
+      })
+      .then((data) => {
+        resolve(data);
+      })
+      .catch((error) => {
+        reject("Error: " + error);
+      });
+  });
+}
+
+function createTag(tag: string, index: number) {
+  const tagContainer = document.createElement("div");
+  tagContainer.classList.add("card__tag");
+
+  const tagElement = document.createElement("span");
+  tagElement.textContent = tag;
+  tagElement.classList.add("card__tag-text");
+
+  const tagIcon = document.createElement("img");
+  tagIcon.classList.add("icon");
+  tagIcon.src =
+    index === 0 ? "/icons/tags/Timer.svg" : "/icons/tags/ForkKnife.svg";
+
+  tagContainer.appendChild(tagIcon);
+  tagContainer.appendChild(tagElement);
+
+  return tagContainer;
+}
+
+function createAdCard(adCardClass: string) {
+  const adCardElementContainer = document.createElement(
+    "a"
+  ) as HTMLAnchorElement;
+  adCardElementContainer.href = "#";
+
+  const adCardElement = document.createElement("img") as HTMLImageElement;
+  adCardElement.src = "/recipe-images/advertisement.jpg";
+  adCardElement.classList.add(adCardClass);
+
+  adCardElementContainer.appendChild(adCardElement);
+  return adCardElementContainer;
+}
+
+function createCard(
+  data: {
+    imgSrc: string;
+    name: string;
+    tags: string[];
+  },
+  templateName: string,
+  cardElementClass: string,
+  cardImageClass: string,
+  cardTitleClass: string,
+  cardTagsClass: string
+): HTMLElement {
+  const recipeCardTemplate = document.getElementById(
+    `${templateName}`
+  ) as HTMLTemplateElement;
+  const newCard = recipeCardTemplate.content.cloneNode(
+    true
+  ) as DocumentFragment;
+  const cardElement = newCard.querySelector(
+    `.${cardElementClass}`
+  ) as HTMLElement;
+
+  const cardImage = cardElement.querySelector(
+    `.${cardImageClass}`
+  ) as HTMLImageElement;
+  cardImage.src = data.imgSrc;
+
+  const cardTitle = cardElement.querySelector(
+    `.${cardTitleClass}`
+  ) as HTMLElement;
+  cardTitle.textContent = data.name;
+
+  const cardTags = cardElement.querySelector(
+    `.${cardTagsClass}`
+  ) as HTMLElement;
+  data.tags.forEach((tag, index) => {
+    const tagContainer = createTag(tag, index);
+    cardTags.appendChild(tagContainer);
+  });
+
+  return cardElement;
+}
+
+async function displayCards(
+  fileName: string,
+  containerId: string,
+  templateId: string,
+  cardClass: string,
+  imageClass: string,
+  titleClass: string,
+  tagsClass: string,
+  addCardClass?: string
+) {
+  try {
+    const images = await loadImages(fileName);
+    const container = document.getElementById(containerId) as HTMLElement;
+
+    images.forEach((data, index) => {
+      const cardElement = createCard(
+        data,
+        templateId,
+        cardClass,
+        imageClass,
+        titleClass,
+        tagsClass
+      );
+
+      if (addCardClass && index % 5 === 0 && index !== 0) {
+        const adCardElementContainer = createAdCard(addCardClass);
+        container.appendChild(adCardElementContainer);
+      }
+
+      container.appendChild(cardElement);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+displayCards(
+  "/data/feed-images.json",
+  "feed",
+  "feed-card-template",
+  "feed__card",
+  "card__image",
+  "card__title",
+  "card__tags",
+  "card__ad-image"
+);
+displayCards(
+  "/data/recommendations-images.json",
+  "recommendations",
+  "recommendations-card-template",
+  "recommendations__card",
+  "recommendations__card-image",
+  "recommendations__card-title",
+  "recommendations__card-tags"
+);

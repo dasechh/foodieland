@@ -1,9 +1,9 @@
-$primary-background: #e7fafe;
-$white-background: #ffffff;
-$black-background: #000000;
+$background-primary: #e7fafe;
+$background-bright: #ffffff;
+$background-dark: #000000;
 
-$white-text: #ffffff;
-$black-text: #000000;
+$text-bright: #ffffff;
+$text-dark: #000000;
 
 $opacity-ultra-low: 0.05;
 $opacity-muted: 0.6;
@@ -18,36 +18,25 @@ $font-size-medium: 1.125rem;
 
 $letter-spacing: -0.04rem;
 
-$border-radius-small: 1rem;
-$border-radius-regular: 1.25rem;
-$border-radius-medium: 1.5rem;
 $border-radius-large: 1.875rem;
-$border-radius-extra-large: 3.125rem;
-$border-radius-super-large: 3.75rem;
-$border-radius-circle: 100%;
 
 $main-gradient: linear-gradient(
   180deg,
-  $white-background 0%,
-  $primary-background 100%
+  $background-bright 0%,
+  $background-primary 100%
 );
 
 $gap-main: 10rem;
-$gap-large: 5rem;
-$gap-medium-large: 4rem;
-$gap-medium: 2.5rem;
 $gap-small-medium: 1.5rem;
 $gap-small: 1rem;
 $gap-xsmall: 0.625rem;
 
-$maximized-width: 90rem;
-$maximized-width-small: 80rem;
+$width-maximized: 90rem;
+$width-maximized-small: 80rem;
 $pading-horizontal: 5rem;
 
 $button-height: 3.75rem;
 $button-width-base: 12.5rem;
-
-$form-width: 30rem;
 
 $card-width-regular: 18.125rem;
 $card-width-medium: 25rem;
@@ -64,7 +53,7 @@ $interactive-icon-size: 3rem;
   font-size: $font-size-small;
   font-weight: $font-weight-semi-bold;
   background-color: $bg-color;
-  border-radius: $border-radius-small;
+  border-radius: 1rem;
   text-decoration: none;
   border: none;
   cursor: pointer;
@@ -114,7 +103,7 @@ h5 {
 }
 
 p {
-  color: rgba($black-text, $opacity-muted);
+  color: rgba($text-dark, $opacity-muted);
   line-height: 1.75rem;
   font-weight: $font-weight-regular;
 }
@@ -125,12 +114,12 @@ a {
 
 nav {
   width: 100%;
-  max-width: $maximized-width;
+  max-width: $width-maximized;
   display: flex;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 2.5rem $pading-horizontal;
-  color: $black-text;
+  color: $text-dark;
   font-weight: $font-weight-medium;
   letter-spacing: calc(#{$letter-spacing} / 2);
 }
@@ -139,12 +128,12 @@ nav {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  gap: $gap-medium-large;
+  gap: 4rem;
   text-align: center;
 }
 
 .menu__link {
-  color: $black-text;
+  color: $text-dark;
   text-decoration: none;
 }
 
@@ -193,8 +182,8 @@ main {
 }
 
 .icon {
-  height: $interactive-icon-size / 2;
-  width: $interactive-icon-size / 2;
+  height: calc($interactive-icon-size / 2);
+  width: calc($interactive-icon-size / 2);
 }
 
 .recipes {
@@ -212,8 +201,8 @@ main {
   flex-shrink: 0;
   max-width: 75rem;
   aspect-ratio: 2 / 1;
-  background-color: $primary-background;
-  border-radius: $border-radius-extra-large;
+  background-color: $background-primary;
+  border-radius: 3.125rem;
   overflow: hidden;
 }
 
@@ -244,7 +233,7 @@ main {
   box-sizing: border-box;
   font-weight: $font-weight-semi-bold;
   font-size: $font-size-small;
-  background-color: $white-background;
+  background-color: $background-bright;
   border-radius: $border-radius-large;
 }
 
@@ -260,13 +249,13 @@ main {
   align-items: center;
   gap: $gap-xsmall;
   border-radius: $border-radius-large;
-  background-color: rgba($black-background, $opacity-ultra-low);
+  background-color: rgba($background-dark, $opacity-ultra-low);
 }
 
 .recipes__tag-text {
   font-size: $font-size-small;
   font-weight: $font-weight-medium;
-  color: rgba($black-text, $opacity-muted);
+  color: rgba($text-dark, $opacity-muted);
 }
 
 .recipes__footer {
@@ -285,13 +274,13 @@ main {
 }
 
 .recipes__author-name {
-  color: $black-text;
+  color: $text-dark;
   font-weight: $font-weight-semi-bold;
 }
 
 .recipes__date {
   justify-self: flex-start;
-  color: rgba($black-text, $opacity-muted);
+  color: rgba($text-dark, $opacity-muted);
   font-size: $font-size-small;
 }
 
@@ -303,22 +292,22 @@ main {
 
 .recipes__author-icon {
   height: $interactive-icon-size;
-  border-radius: $border-radius-extra-large;
+  border-radius: 100%;
 }
 
 .recipes__button {
   @include button(
     $button-width-base,
     $button-height,
-    $black-background,
-    $white-text
+    $background-dark,
+    $text-bright
   );
   gap: $gap-small;
 }
 
 .categories {
   width: 100%;
-  max-width: $maximized-width;
+  max-width: $width-maximized;
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -340,8 +329,8 @@ main {
   @include button(
     $button-width-base,
     $button-height,
-    $primary-background,
-    $black-text
+    $background-primary,
+    $text-dark
   );
   font-size: $font-size-regular;
 }
@@ -351,7 +340,7 @@ main {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: $gap-medium;
+  gap: 2.5rem;
 }
 
 .categories__card {
@@ -362,7 +351,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: $black-text;
+  color: $text-dark;
   border-radius: $border-radius-large;
 }
 
@@ -390,7 +379,7 @@ main {
 
 .feed {
   width: 100%;
-  max-width: $maximized-width;
+  max-width: $width-maximized;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -422,8 +411,13 @@ main {
 }
 
 .card__image {
-  border-radius: $border-radius-regular;
+  border-radius: 1.25rem;
   margin-bottom: 1.5rem;
+}
+
+.card__ad-image {
+  border-radius: 1.25rem;
+  width: $card-width-medium;
 }
 
 .feed__text {
@@ -441,7 +435,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: $gap-small-medium;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .card__tag {
@@ -452,7 +446,7 @@ main {
 
 .course-ad {
   width: 100%;
-  max-width: $maximized-width;
+  max-width: $width-maximized;
   padding: 0 $pading-horizontal;
   display: flex;
   justify-content: center;
@@ -476,8 +470,8 @@ main {
   @include button(
     $button-width-base * 0.9,
     $button-height,
-    $black-background,
-    $white-text
+    $background-dark,
+    $text-bright
   );
 }
 
@@ -518,7 +512,7 @@ main {
   align-items: center;
   background: $main-gradient;
   text-align: center;
-  gap: $gap-large;
+  gap: 5rem;
   overflow: hidden;
 }
 
@@ -540,8 +534,8 @@ main {
   @include button(
     $button-width-base * 1.15,
     $button-height,
-    $black-background,
-    $white-text
+    $background-dark,
+    $text-bright
   );
   gap: $gap-small;
 }
@@ -551,13 +545,13 @@ main {
 }
 
 .like-button {
-  margin: 0px;
+  margin: 0;
   width: $interactive-icon-size;
   height: $interactive-icon-size;
   position: absolute;
-  border-radius: $border-radius-circle;
+  border-radius: 100%;
   background-size: 50%;
-  background-color: $white-background;
+  background-color: $background-bright;
   background-position: center;
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"%3E%3Cpath d="M15.5022 8.2786e-06C14.6291 -0.00149138 13.7677 0.200775 12.9865 0.590718C12.2052 0.980661 11.5258 1.54752 11.0022 2.24621C10.293 1.30266 9.30512 0.606001 8.17823 0.254824C7.05134 -0.0963541 5.84256 -0.0842713 4.72291 0.289363C3.60327 0.662997 2.62948 1.37926 1.93932 2.3368C1.24916 3.29434 0.877596 4.44467 0.877197 5.62501C0.877197 12.3621 10.2373 17.6813 10.6357 17.9044C10.7477 17.9671 10.8739 18 11.0022 18C11.1305 18 11.2567 17.9671 11.3687 17.9044C13.0902 16.8961 14.7059 15.7173 16.1914 14.3856C19.4665 11.438 21.1272 8.49047 21.1272 5.62501C21.1255 4.13368 20.5323 2.70393 19.4778 1.6494C18.4233 0.594873 16.9935 0.00169855 15.5022 8.2786e-06Z" fill="%23DBE2E5"%3E%3C/path%3E%3C/svg%3E');
   background-repeat: no-repeat;
@@ -610,7 +604,7 @@ main {
 
 .recommendations {
   width: 100%;
-  max-width: $maximized-width;
+  max-width: $width-maximized;
   padding: 0 $pading-horizontal;
   display: flex;
   flex-direction: column;
@@ -619,14 +613,14 @@ main {
 
 .newsletter {
   width: 100%;
-  max-width: $maximized-width-small;
+  max-width: $width-maximized-small;
   padding: 5rem $pading-horizontal;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: $primary-background;
-  border-radius: $border-radius-super-large;
+  background-color: $background-primary;
+  border-radius: 3.75rem;
   position: relative;
   overflow: hidden;
 }
@@ -649,13 +643,13 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: $white-background;
+  background-color: $background-bright;
   padding: 0.625rem;
-  border-radius: $border-radius-medium;
+  border-radius: 1.5rem;
   z-index: 1;
   box-sizing: border-box;
   width: 100%;
-  max-width: $form-width;
+  max-width: 30rem;
 }
 
 .newsletter__input {
@@ -670,8 +664,8 @@ main {
   @include button(
     $button-width-base * 0.8,
     $button-height,
-    $black-background,
-    $white-text
+    $background-dark,
+    $text-bright
   );
 }
 
@@ -697,7 +691,7 @@ main {
   justify-self: center;
   flex-direction: column;
   padding: 0 $pading-horizontal;
-  max-width: $maximized-width;
+  max-width: $width-maximized;
   box-sizing: border-box;
   margin-bottom: $gap-main * 0.3;
 }
