@@ -190,11 +190,85 @@
       <section class="categories">
         <div class="categories__header">
           <h3>Categories</h3>
-          <button class="categories__button" type="button">
+          <button
+            class="categories__button"
+            id="categories-button"
+            type="button"
+          >
             View All Categories
           </button>
         </div>
-        <div class="block__list" id="categories"></div>
+        <div class="block__list" id="categories">
+          <div class="categories__card" data-color="#708246">
+            <img
+              class="emoji"
+              src="/icons/categories/image-onigiri.png"
+              alt="Breakfast"
+            />
+            <img
+              class="blurred-emoji"
+              src="/icons/categories/image-onigiri.png"
+            />
+            <div class="categories__card-name">Breakfast</div>
+          </div>
+          <div class="categories__card" data-color="#6CC63F">
+            <img
+              class="emoji"
+              src="/icons/categories/image-lettuce.png"
+              alt="Vegan"
+            />
+            <img
+              class="blurred-emoji"
+              src="/icons/categories/image-lettuce.png"
+            />
+            <div class="categories__card-name">Vegan</div>
+          </div>
+          <div class="categories__card" data-color="#CC261B">
+            <img
+              class="emoji"
+              src="/icons/categories/image-meat.png"
+              alt="Meat"
+            />
+            <img class="blurred-emoji" src="/icons/categories/image-meat.png" />
+            <div class="categories__card-name">Meat</div>
+          </div>
+          <div class="categories__card" data-color="#F09E00">
+            <img
+              class="emoji"
+              src="/icons/categories/image-dessert.png"
+              alt="Dessert"
+            />
+            <img
+              class="blurred-emoji"
+              src="/icons/categories/image-dessert.png"
+            />
+            <div class="categories__card-name">Dessert</div>
+          </div>
+          <div class="categories__card" data-color="#000000">
+            <img
+              class="emoji"
+              src="/icons/categories/image-sandvich.png"
+              alt="Lunch"
+            />
+            <img
+              class="blurred-emoji"
+              src="/icons/categories/image-sandvich.png"
+            />
+            <div class="categories__card-name">Lunch</div>
+          </div>
+          <div class="categories__card" data-color="#000000">
+            <img
+              class="emoji"
+              src="/icons/categories/image-chocolate.png"
+              alt="Chocolate"
+            />
+            <img
+              class="blurred-emoji"
+              src="/icons/categories/image-chocolate.png"
+            />
+            <div class="categories__card-name">Chocolate</div>
+          </div>
+        </div>
       </section>
       <section class="feed">
         <div class="feed__header">
@@ -323,7 +397,19 @@
     <template id="feed-card-template">
       <div class="card feed__card">
         <img class="card__image" />
-        <input type="checkbox" class="feed__card-like-button like-button" />
+        <div class="feed__card-like-button like-button">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.5022 3.00001C15.6291 2.99851 14.7677 3.20077 13.9865 3.59072C13.2052 3.98066 12.5258 4.54752 12.0022 5.24621C11.293 4.30266 10.3051 3.606 9.17823 3.25482C8.05134 2.90365 6.84256 2.91573 5.72291 3.28936C4.60327 3.663 3.62948 4.37926 2.93932 5.3368C2.24916 6.29434 1.8776 7.44467 1.8772 8.62501C1.8772 15.3621 11.2373 20.6813 11.6357 20.9044C11.7477 20.9671 11.8739 21 12.0022 21C12.1305 21 12.2567 20.9671 12.3687 20.9044C14.0902 19.8961 15.7059 18.7173 17.1914 17.3856C20.4665 14.438 22.1272 11.4905 22.1272 8.62501C22.1255 7.13368 21.5323 5.70393 20.4778 4.6494C19.4233 3.59487 17.9935 3.0017 16.5022 3.00001Z"
+            />
+          </svg>
+        </div>
         <div class="card__texts">
           <h4 class="card__title"></h4>
           <div class="card__tags"></div>
@@ -333,10 +419,22 @@
     <template id="recommendations-card-template">
       <div class="card recommendations__card">
         <img class="recommendations__card-image" />
-        <input
-          type="checkbox"
-          class="recommendations__card-like-button like-button"
-        />
+
+
+        <div class="recommendations__card-like-button like-button">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.5022 3.00001C15.6291 2.99851 14.7677 3.20077 13.9865 3.59072C13.2052 3.98066 12.5258 4.54752 12.0022 5.24621C11.293 4.30266 10.3051 3.606 9.17823 3.25482C8.05134 2.90365 6.84256 2.91573 5.72291 3.28936C4.60327 3.663 3.62948 4.37926 2.93932 5.3368C2.24916 6.29434 1.8776 7.44467 1.8772 8.62501C1.8772 15.3621 11.2373 20.6813 11.6357 20.9044C11.7477 20.9671 11.8739 21 12.0022 21C12.1305 21 12.2567 20.9671 12.3687 20.9044C14.0902 19.8961 15.7059 18.7173 17.1914 17.3856C20.4665 14.438 22.1272 11.4905 22.1272 8.62501C22.1255 7.13368 21.5323 5.70393 20.4778 4.6494C19.4233 3.59487 17.9935 3.0017 16.5022 3.00001Z"
+            />
+          </svg>
+        </div>
+
         <h5 class="recommendations__card-title"></h5>
         <div class="recommendations__card-tags"></div>
       </div>

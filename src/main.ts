@@ -27,3 +27,10 @@ displayCards(
   "recommendations__card-title",
   "recommendations__card-tags"
 );
+
+document.addEventListener("click", (event) => {
+  const likeButton = event.target as HTMLElement;
+  if (likeButton && likeButton.classList.contains("like-button")) {
+    likeButton.classList.toggle("like-button__liked");
+  }
+});

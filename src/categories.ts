@@ -71,6 +71,7 @@ function createCategoryCard(data: { category: string; color: string; imgSrc: str
 
   cardElement.dataset.color = data.color;
   cardElement.classList.add("categories__card-generated");
+  
   cardsContainer.appendChild(cardElement);
 }
 
