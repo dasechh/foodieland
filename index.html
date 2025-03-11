@@ -190,85 +190,15 @@
       <section class="categories">
         <div class="categories__header">
           <h3>Categories</h3>
-          <button
-            class="categories__button"
-            id="categories-button"
-            type="button"
-          >
+          <button class="categories__button" id="categories-button">
             View All Categories
           </button>
         </div>
-        <div class="block__list" id="categories">
-          <div class="categories__card" data-color="#708246">
-            <img
-              class="emoji"
-              src="/icons/categories/image-onigiri.png"
-              alt="Breakfast"
-            />
-            <img
-              class="blurred-emoji"
-              src="/icons/categories/image-onigiri.png"
-            />
-            <div class="categories__card-name">Breakfast</div>
-          </div>
-          <div class="categories__card" data-color="#6CC63F">
-            <img
-              class="emoji"
-              src="/icons/categories/image-lettuce.png"
-              alt="Vegan"
-            />
-            <img
-              class="blurred-emoji"
-              src="/icons/categories/image-lettuce.png"
-            />
-            <div class="categories__card-name">Vegan</div>
-          </div>
-          <div class="categories__card" data-color="#CC261B">
-            <img
-              class="emoji"
-              src="/icons/categories/image-meat.png"
-              alt="Meat"
-            />
-            <img class="blurred-emoji" src="/icons/categories/image-meat.png" />
-            <div class="categories__card-name">Meat</div>
-          </div>
-          <div class="categories__card" data-color="#F09E00">
-            <img
-              class="emoji"
-              src="/icons/categories/image-dessert.png"
-              alt="Dessert"
-            />
-            <img
-              class="blurred-emoji"
-              src="/icons/categories/image-dessert.png"
-            />
-            <div class="categories__card-name">Dessert</div>
-          </div>
-          <div class="categories__card" data-color="#000000">
-            <img
-              class="emoji"
-              src="/icons/categories/image-sandvich.png"
-              alt="Lunch"
-            />
-            <img
-              class="blurred-emoji"
-              src="/icons/categories/image-sandvich.png"
-            />
-            <div class="categories__card-name">Lunch</div>
-          </div>
-          <div class="categories__card" data-color="#000000">
-            <img
-              class="emoji"
-              src="/icons/categories/image-chocolate.png"
-              alt="Chocolate"
-            />
-            <img
-              class="blurred-emoji"
-              src="/icons/categories/image-chocolate.png"
-            />
-            <div class="categories__card-name">Chocolate</div>
-          </div>
-        </div>
+        <div class="block__list" id="categories__list"></div>
+        <details id="categories__details" class="categories__details">
+          <div class="block__list" id="categories__details-list"></div>
+          <summary></summary>
+        </details>
       </section>
       <section class="feed">
         <div class="feed__header">
@@ -388,11 +318,11 @@
       </div>
     </footer>
     <template id="category-card-template">
-      <div class="categories__card">
+      <a href="" class="categories__card" onclick="event.preventDefault()">
         <img class="emoji" alt="Emoji" />
         <img class="blurred-emoji" />
         <span class="categories__card-name"></span>
-      </div>
+      </a>
     </template>
     <template id="feed-card-template">
       <div class="card feed__card">
@@ -419,7 +349,6 @@
     <template id="recommendations-card-template">
       <div class="card recommendations__card">
         <img class="recommendations__card-image" />
-
 
         <div class="recommendations__card-like-button like-button">
           <svg
