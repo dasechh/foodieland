@@ -15,21 +15,21 @@ export async function displayCards(
     const container = document.getElementById(containerId) as HTMLElement;
 
     images.forEach((data, index) => {
-      const cardElement = createCard(
-        data,
-        templateId,
-        cardClass,
-        imageClass,
-        titleClass,
-        tagsClass
-      );
-
       if (addCardClass && index % 5 === 0 && index !== 0) {
         const adCardElementContainer = createAdCard(addCardClass);
         container.appendChild(adCardElementContainer);
       }
 
-      container.appendChild(cardElement);
+      container.appendChild(
+        createCard(
+          data,
+          templateId,
+          cardClass,
+          imageClass,
+          titleClass,
+          tagsClass
+        )
+      );
     });
   } catch (error) {
     console.error(error);
@@ -37,24 +37,12 @@ export async function displayCards(
 }
 
 async function loadImages(fileName: string) {
-  return new Promise<
-    { imgSrc: string; name: string; tags: string[]; id: number }[]
-  >((resolve, reject) => {
-    fetch(fileName)
-      .then((response) => {
-        if (!response.ok) {
-          reject("Failed to fetch data");
-          return;
-        }
-        return response.json();
-      })
-      .then((data) => {
-        resolve(data);
-      })
-      .catch((error) => {
-        reject("Error: " + error);
-      });
-  });
+  const response = await fetch(fileName);
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const data = await response.json();
+  return data as { imgSrc: string; name: string; tags: string[]; id: number }[];
 }
 
 function createCard(

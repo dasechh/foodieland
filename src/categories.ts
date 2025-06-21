@@ -70,7 +70,9 @@ function createCategoryCard(data: {
     "category-card-template"
   ) as HTMLTemplateElement;
   const newCard = cardTemplate.content.cloneNode(true) as DocumentFragment;
-  const cardElement = newCard.querySelector(".categories__card") as HTMLAnchorElement;
+  const cardElement = newCard.querySelector(
+    ".categories__card"
+  ) as HTMLAnchorElement;
 
   (
     cardElement.querySelector(".categories__card-name") as HTMLElement
@@ -112,17 +114,18 @@ export function styleCategoryCards() {
 }
 
 export function addCategoryCards() {
-  cardsData.forEach((data, index) => {
-    const cardsContainer = document.getElementById(
-      "categories__list"
-    ) as HTMLElement;
-    const cardsDetails = document.getElementById(
-      "categories__details-list"
-    ) as HTMLElement;
+  const cardsContainer = document.getElementById(
+    "categories__list"
+  ) as HTMLElement;
+  const cardsDetails = document.getElementById(
+    "categories__details-list"
+  ) as HTMLElement;
 
+  cardsData.forEach((data, index) => {
+    const card = createCategoryCard(data);
     index < 6
-      ? cardsContainer.appendChild(createCategoryCard(data))
-      : cardsDetails.appendChild(createCategoryCard(data));
+      ? cardsContainer.appendChild(card)
+      : cardsDetails.appendChild(card);
   });
 }
 
