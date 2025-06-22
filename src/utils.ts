@@ -30,3 +30,7 @@ export function createAdCard(adCardClass: string) {
   adCardElementContainer.appendChild(adCardElement);
   return adCardElementContainer;
 }
+
+export function randomizeArray<T>(array: T[]): T[] {
+  return [...array].sort(() => Math.random() - 0.5);
+}

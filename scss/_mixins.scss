@@ -1,0 +1,33 @@
+@use "sass:color";
+@use "./_variables" as *;
+
+@mixin button($width, $height, $bg-color, $text-color) {
+  height: $height;
+  width: $width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-color;
+  font-size: $font-size-small;
+  font-weight: $font-weight-semi-bold;
+  background-color: $bg-color;
+  border-radius: 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.05s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    box-shadow: 0 0.125rem 0.25rem
+      if(
+        $bg-color == $background-dark,
+        rgba(0, 0, 0, 0.5),
+        rgba(color.adjust($bg-color, $lightness: -15%), 0.5)
+      );
+    transition: all 0.05s ease-in-out;
+  }
+}

@@ -1,0 +1,48 @@
+@use "sass:color";
+
+$background-primary: #e7fafe;
+$background-bright: #ffffff;
+$background-dark: #000000;
+
+$text-bright: #ffffff;
+$text-dark: #000000;
+$text-link: #0052ff;
+
+$opacity-ultra-low: 0.05;
+$opacity-muted: 0.6;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+
+$font-size-small: 0.875rem;
+$font-size-regular: 1rem;
+$font-size-medium: 1.125rem;
+
+$letter-spacing: -0.04rem;
+
+$border-radius-large: 1.875rem;
+
+$main-gradient: linear-gradient(
+  180deg,
+  $background-bright 0%,
+  $background-primary 100%
+);
+
+$gap-main: 10rem;
+$gap-small-medium: 1.5rem;
+$gap-small: 1rem;
+$gap-xsmall: 0.625rem;
+
+$width-maximized: 90rem;
+$width-maximized-small: 80rem;
+
+$padding-horizontal: 5rem;
+
+$button-height: 3.75rem;
+$button-width-base: 12.5rem;
+
+$card-width-regular: 18.125rem;
+$card-width-medium: 25rem;
+
+$interactive-icon-size: 3rem;

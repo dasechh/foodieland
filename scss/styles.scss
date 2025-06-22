@@ -1,80 +1,6 @@
 @use "sass:color";
-
-$background-primary: #e7fafe;
-$background-bright: #ffffff;
-$background-dark: #000000;
-
-$text-bright: #ffffff;
-$text-dark: #000000;
-
-$opacity-ultra-low: 0.05;
-$opacity-muted: 0.6;
-
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-semi-bold: 600;
-
-$font-size-small: 0.875rem;
-$font-size-regular: 1rem;
-$font-size-medium: 1.125rem;
-
-$letter-spacing: -0.04rem;
-
-$border-radius-large: 1.875rem;
-
-$main-gradient: linear-gradient(
-  180deg,
-  $background-bright 0%,
-  $background-primary 100%
-);
-
-$gap-main: 10rem;
-$gap-small-medium: 1.5rem;
-$gap-small: 1rem;
-$gap-xsmall: 0.625rem;
-
-$width-maximized: 90rem;
-$width-maximized-small: 80rem;
-$pading-horizontal: 5rem;
-
-$button-height: 3.75rem;
-$button-width-base: 12.5rem;
-
-$card-width-regular: 18.125rem;
-$card-width-medium: 25rem;
-
-$interactive-icon-size: 3rem;
-
-@mixin button($width, $height, $bg-color, $text-color) {
-  height: $height;
-  width: $width;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: $text-color;
-  font-size: $font-size-small;
-  font-weight: $font-weight-semi-bold;
-  background-color: $bg-color;
-  border-radius: 1rem;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.05s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  &:active {
-    box-shadow: 0 0.125rem 0.25rem
-      if(
-        $bg-color == $background-dark,
-        rgba(0, 0, 0, 0.5),
-        rgba(color.adjust($bg-color, $lightness: -15%), 0.5)
-      );
-    transition: all 0.05s ease-in-out;
-  }
-}
+@use "./_variables" as *;
+@use "./_mixins" as *;
 
 html,
 body,
@@ -135,7 +61,7 @@ nav {
   display: flex;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 2.5rem $pading-horizontal;
+  padding: 2.5rem $padding-horizontal;
   color: $text-dark;
   font-weight: $font-weight-medium;
   letter-spacing: calc(#{$letter-spacing} / 2);
@@ -337,7 +263,7 @@ summary {
   flex-direction: column;
   justify-self: center;
   box-sizing: border-box;
-  padding: 0 $pading-horizontal;
+  padding: 0 $padding-horizontal;
 }
 
 .categories__header {
@@ -439,7 +365,7 @@ summary {
   align-items: center;
   justify-self: center;
   box-sizing: border-box;
-  padding: 0 $pading-horizontal;
+  padding: 0 $padding-horizontal;
   text-align: center;
 }
 
@@ -451,6 +377,15 @@ summary {
   position: relative;
   display: flex;
   flex-direction: column;
+
+  a {
+    color: $text-dark;
+    text-decoration: none;
+
+    &:hover {
+      color: $text-link;
+    }
+  }
 }
 
 .feed__card {
@@ -500,7 +435,7 @@ summary {
 .course-ad {
   width: 100%;
   max-width: $width-maximized;
-  padding: 0 $pading-horizontal;
+  padding: 0 $padding-horizontal;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -558,7 +493,7 @@ summary {
 
 .instagram {
   width: 100%;
-  padding: 0 $pading-horizontal 5rem;
+  padding: 0 $padding-horizontal 5rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -685,7 +620,7 @@ summary {
 .recommendations {
   width: 100%;
   max-width: $width-maximized;
-  padding: 0 $pading-horizontal;
+  padding: 0 $padding-horizontal;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -694,7 +629,7 @@ summary {
 .newsletter {
   width: 100%;
   max-width: $width-maximized-small;
-  padding: 5rem $pading-horizontal;
+  padding: 5rem $padding-horizontal;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -770,7 +705,7 @@ summary {
   display: flex;
   margin: 0 auto $gap-main * 0.3;
   flex-direction: column;
-  padding: 0 $pading-horizontal;
+  padding: 0 $padding-horizontal;
   max-width: $width-maximized;
   box-sizing: border-box;
   margin-bottom: $gap-main * 0.3;

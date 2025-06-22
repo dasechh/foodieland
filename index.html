@@ -187,7 +187,7 @@
           />
         </div>
       </section>
-      <section class="categories">
+      <section class="body-container categories">
         <div class="categories__header">
           <h3>Categories</h3>
           <button class="categories__button" id="categories-button">
@@ -200,7 +200,7 @@
           <summary></summary>
         </details>
       </section>
-      <section class="feed">
+      <section class="body-container feed">
         <div class="feed__header">
           <h3>Simple and tasty recipes</h3>
           <p class="feed__text">
@@ -210,7 +210,7 @@
         </div>
         <div class="block__list" id="feed"></div>
       </section>
-      <section class="course-ad">
+      <section class="body-container course-ad">
         <div class="course-ad__text">
           <h3>Everyone can&nbsp;be&nbsp;a chef&nbsp;in their own kitchen</h3>
           <p class="course-ad__text-description">
@@ -341,7 +341,9 @@
           </svg>
         </div>
         <div class="card__texts">
-          <h4 class="card__title"></h4>
+          <h4>
+            <a href="" class="card__title"></a>
+          </h4>
           <div class="card__tags"></div>
         </div>
       </div>
@@ -349,7 +351,6 @@
     <template id="recommendations-card-template">
       <div class="card recommendations__card">
         <img class="recommendations__card-image" />
-
         <div class="recommendations__card-like-button like-button">
           <svg
             width="24"
@@ -363,8 +364,9 @@
             />
           </svg>
         </div>
-
-        <h5 class="recommendations__card-title"></h5>
+        <h5>
+          <a href="" class="recommendations__card-title"></a>
+        </h5>
         <div class="recommendations__card-tags"></div>
       </div>
     </template>

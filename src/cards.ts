@@ -1,4 +1,4 @@
-import { createTag, createAdCard } from "./utils.ts";
+import { createTag, createAdCard, randomizeArray } from "./utils.ts";
 
 export async function displayCards(
   fileName: string,
@@ -8,18 +8,19 @@ export async function displayCards(
   imageClass: string,
   titleClass: string,
   tagsClass: string,
+  numberOfCards: number,
   addCardClass?: string
 ) {
   try {
-    const images = await loadImages(fileName);
+    const cardsData = await loadCardsData(fileName);
+    const randomCardsData = randomizeArray(cardsData);
     const container = document.getElementById(containerId) as HTMLElement;
 
-    images.forEach((data, index) => {
+    randomCardsData.slice(0, numberOfCards).forEach((data, index) => {
       if (addCardClass && index % 5 === 0 && index !== 0) {
         const adCardElementContainer = createAdCard(addCardClass);
         container.appendChild(adCardElementContainer);
       }
-
       container.appendChild(
         createCard(
           data,
@@ -36,7 +37,7 @@ export async function displayCards(
   }
 }
 
-async function loadImages(fileName: string) {
+async function loadCardsData(fileName: string) {
   const response = await fetch(fileName);
   if (!response.ok) {
     throw new Error("Failed to fetch data");
@@ -46,7 +47,7 @@ async function loadImages(fileName: string) {
 }
 
 function createCard(
-  data: { imgSrc: string; name: string; tags: string[] },
+  data: { imgSrc: string; name: string; tags: string[]; id: number },
   templateName: string,
   cardElementClass: string,
   cardImageClass: string,
@@ -70,8 +71,9 @@ function createCard(
 
   const cardTitle = cardElement.querySelector(
     `.${cardTitleClass}`
-  ) as HTMLElement;
+  ) as HTMLAnchorElement;
   cardTitle.textContent = data.name;
+  cardTitle.href = `recipe-details.html?id=${data.id}`;
 
   const cardTags = cardElement.querySelector(
     `.${cardTagsClass}`
