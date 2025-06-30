@@ -1,7 +1,6 @@
 import { createTag, createAdCard, randomizeArray } from "./utils.ts";
 
 export async function displayCards(
-  fileName: string,
   containerId: string,
   templateId: string,
   cardClass: string,
@@ -12,7 +11,7 @@ export async function displayCards(
   addCardClass?: string
 ) {
   try {
-    const cardsData = await loadCardsData(fileName);
+    const cardsData = await loadCardsData();
     const randomCardsData = randomizeArray(cardsData);
     const container = document.getElementById(containerId) as HTMLElement;
 
@@ -37,13 +36,34 @@ export async function displayCards(
   }
 }
 
-async function loadCardsData(fileName: string) {
-  const response = await fetch(fileName);
-  if (!response.ok) {
-    throw new Error("Failed to fetch data");
-  }
+async function loadCardsData() {
+  const response = await fetch("api/recipes");
+  if (!response.ok) throw new Error("Failed to fetch data");
   const data = await response.json();
-  return data as { imgSrc: string; name: string; tags: string[]; id: number }[];
+  const filteredData: {
+    imgSrc: string;
+    name: string;
+    tags: string[];
+    id: number;
+  }[] = data.map(
+    ({
+      imgSrc,
+      name,
+      tags,
+      id,
+    }: {
+      imgSrc: string;
+      name: string;
+      tags: string[];
+      id: number;
+    }) => ({
+      imgSrc,
+      name,
+      tags,
+      id,
+    })
+  );
+  return filteredData;
 }
 
 function createCard(
@@ -63,6 +83,7 @@ function createCard(
   const cardElement = newCard.querySelector(
     `.${cardElementClass}`
   ) as HTMLElement;
+  cardElement.dataset.cardId = data.id.toString();
 
   const cardImage = cardElement.querySelector(
     `.${cardImageClass}`

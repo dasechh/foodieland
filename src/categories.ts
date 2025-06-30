@@ -149,8 +149,43 @@ export function handleCategoryCardClick() {
 export function handleLikeButton() {
   document.addEventListener("click", (event) => {
     const likeButton = event.target as HTMLElement;
-    if (likeButton && likeButton.classList.contains("like-button")) {
+
+    const parentElementDatasetId = likeButton.parentElement?.dataset.cardId;
+    const sameCards = document.querySelectorAll(
+      `[data-card-id="${parentElementDatasetId}"]`
+    );
+    sameCards.forEach((card) => {
+      const likeButton = card.querySelector(".like-button") as HTMLElement;
       likeButton.classList.toggle("like-button__liked");
+    });
+
+    const savedLikes = localStorage.getItem("savedLikes");
+    const savedLikesArray = JSON.parse(savedLikes || "[]");
+    if (savedLikesArray.includes(parentElementDatasetId)) {
+      savedLikesArray.splice(
+        savedLikesArray.indexOf(parentElementDatasetId),
+        1
+      );
+    } else {
+      savedLikesArray.push(parentElementDatasetId);
     }
+
+    localStorage.setItem("savedLikes", JSON.stringify(savedLikesArray));
+  });
+}
+
+export function restoreLikes() {
+  const savedLikes = localStorage.getItem("savedLikes");
+  const savedLikesArray = JSON.parse(savedLikes || "[]");
+
+  savedLikesArray.forEach((id: string) => {
+    const parentElement = document.querySelector(
+      `[data-card-id="${id}"]`
+    ) as HTMLElement | null;
+    const likeButton = parentElement?.querySelector(
+      ".like-button"
+    ) as HTMLElement;
+
+    likeButton?.classList.add("like-button__liked");
   });
 }
