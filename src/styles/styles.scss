@@ -129,29 +129,13 @@ main {
   width: calc($interactive-icon-size / 2);
 }
 
-.recipes {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  flex-wrap: nowrap;
-  overflow: hidden;
-}
-
 .recipes__item {
   display: flex;
-  flex-shrink: 0;
   max-width: 75rem;
   aspect-ratio: 2 / 1;
   background-color: $background-primary;
   border-radius: 3.125rem;
   overflow: hidden;
-}
-
-.recipes__item-center {
-  max-width: 80rem;
-  margin: 0 2.5rem;
 }
 
 .recipes__description {
@@ -378,6 +362,11 @@ summary {
   display: flex;
   flex-direction: column;
 
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.05s ease-in-out;
+  }
+
   a {
     color: $text-dark;
     text-decoration: none;
@@ -396,6 +385,12 @@ summary {
   background: $main-gradient;
   border-radius: $border-radius-large;
   text-align: left;
+
+  &:hover {
+    box-shadow: 0 0.125rem 1.25rem rgba($background-dark, $opacity-ultra-low)
+        inset,
+      0 0 1.25rem rgba($background-primary, $opacity-muted);
+  }
 }
 
 .card__image {

@@ -1,12 +1,13 @@
-import "../scss/styles.scss";
+import "./styles/styles.scss";
+import { addCategoryCards, styleCategoryCards } from "./modules/categories.ts";
+import { displayCards } from "./modules/cards.ts";
 import {
-  addCategoryCards,
   handleCategoryCardClick,
-  styleCategoryCards,
   handleLikeButton,
   restoreLikes,
-} from "./categories.ts";
-import { displayCards } from "./cards.ts";
+} from "./modules/handlers.ts";
+import Splide from "@splidejs/splide";
+import "@splidejs/splide/css";
 
 async function loadCardsData() {
   await displayCards(
@@ -32,11 +33,23 @@ async function loadCardsData() {
     8
   );
 
+  handleLikeButton();
   restoreLikes();
 }
 
+new Splide(".splide", {
+  type: "loop",
+  perPage: 3,
+  focus: "center",
+  gap: "2.5rem",
+  width: "100%",
+  fixedWidth: "100%",
+  pagination: false,
+  autoplay: true,
+  interval: 6000,
+}).mount();
+
 loadCardsData();
-handleLikeButton();
 addCategoryCards();
 handleCategoryCardClick();
 styleCategoryCards();
