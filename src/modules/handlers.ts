@@ -13,7 +13,7 @@ export function handleLikeButton() {
       );
       sameCards.forEach((card) => {
         const likeButton = card.querySelector(".like-button") as HTMLElement;
-        likeButton.classList.toggle("like-button__liked");
+        likeButton?.classList.toggle("like-button__liked");
       });
 
       const savedLikes = localStorage.getItem("savedLikes");

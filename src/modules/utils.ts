@@ -1,6 +1,11 @@
-export function createTag(tag: string, index: number) {
+export function createTag(
+  tag: string,
+  index: number,
+  tagContainerClass?: string
+) {
   const tagContainer = document.createElement("div");
-  tagContainer.classList.add("card__tag");
+
+  if (tagContainerClass) tagContainer.classList.add(tagContainerClass);
 
   const tagElement = document.createElement("span");
   tagElement.textContent = tag;

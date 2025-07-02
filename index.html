@@ -51,142 +51,7 @@
     <main>
       <section class="splide">
         <div class="splide__track">
-          <ul class="splide__list">
-            <li class="recipes__item splide__slide">
-              <div class="recipes__content">
-                <div class="recipes__badge">
-                  <img class="icon" src="icons/header/image 14.svg" />
-                  <span>Hot Recipes</span>
-                </div>
-                <h2>Spicy delicious chicken wings</h2>
-                <p class="recipes__description">
-                  Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqut
-                  enim ad minim
-                </p>
-                <div class="recipes__tags">
-                  <div class="recipes__tag">
-                    <img class="icon" src="icons/tags/Timer.svg" />
-                    <span class="recipes__tag-text">30 Minutes</span>
-                  </div>
-                  <div class="recipes__tag">
-                    <img class="icon" src="icons/tags/ForkKnife.svg" />
-                    <span class="recipes__tag-text">Chicken</span>
-                  </div>
-                </div>
-                <div class="recipes__footer">
-                  <div class="recipes__author">
-                    <img
-                      class="recipes__author-icon"
-                      src="tg_image_528061146.jpeg"
-                    />
-                    <div class="recipes__author-data">
-                      <span class="recipes__author-name">John Smith</span>
-                      <span class="recipes__date">15 March 2022</span>
-                    </div>
-                  </div>
-                  <a href="#" class="recipes__button"
-                    >View Recipes
-                    <img class="icon" src="icons/header/Vector.svg" />
-                  </a>
-                </div>
-              </div>
-              <img
-                class="recipes__image"
-                src="tg_image_2147082613.jpeg"
-                alt="Delicious chicken wings"
-              />
-            </li>
-            <li class="recipes__item splide__slide">
-              <div class="recipes__content">
-                <div class="recipes__badge">
-                  <img class="icon" src="icons/header/image 14.svg" />
-                  <span>Hot Recipes</span>
-                </div>
-                <h2>Spicy delicious chicken wings</h2>
-                <p class="recipes__description">
-                  Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqut
-                  enim ad minim
-                </p>
-                <div class="recipes__tags">
-                  <div class="recipes__tag">
-                    <img class="icon" src="icons/tags/Timer.svg" />
-                    <span class="recipes__tag-text">30 Minutes</span>
-                  </div>
-                  <div class="recipes__tag">
-                    <img class="icon" src="icons/tags/ForkKnife.svg" />
-                    <span class="recipes__tag-text">Chicken</span>
-                  </div>
-                </div>
-                <div class="recipes__footer">
-                  <div class="recipes__author">
-                    <img
-                      class="recipes__author-icon"
-                      src="tg_image_528061146.jpeg"
-                    />
-                    <div class="recipes__author-data">
-                      <span class="recipes__author-name">John Smith</span>
-                      <span class="recipes__date">15 March 2022</span>
-                    </div>
-                  </div>
-                  <a href="#" class="recipes__button"
-                    >View Recipes
-                    <img class="icon" src="icons/header/Vector.svg" />
-                  </a>
-                </div>
-              </div>
-              <img
-                class="recipes__image"
-                src="tg_image_2147082613.jpeg"
-                alt="Delicious chicken wings"
-              />
-            </li>
-            <li class="recipes__item splide__slide">
-              <div class="recipes__content">
-                <div class="recipes__badge">
-                  <img class="icon" src="icons/header/image 14.svg" />
-                  <span>Hot Recipes</span>
-                </div>
-                <h2>Spicy delicious chicken wings</h2>
-                <p class="recipes__description">
-                  Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqut
-                  enim ad minim
-                </p>
-                <div class="recipes__tags">
-                  <div class="recipes__tag">
-                    <img class="icon" src="icons/tags/Timer.svg" />
-                    <span class="recipes__tag-text">30 Minutes</span>
-                  </div>
-                  <div class="recipes__tag">
-                    <img class="icon" src="icons/tags/ForkKnife.svg" />
-                    <span class="recipes__tag-text">Chicken</span>
-                  </div>
-                </div>
-                <div class="recipes__footer">
-                  <div class="recipes__author">
-                    <img
-                      class="recipes__author-icon"
-                      src="tg_image_528061146.jpeg"
-                    />
-                    <div class="recipes__author-data">
-                      <span class="recipes__author-name">John Smith</span>
-                      <span class="recipes__date">15 March 2022</span>
-                    </div>
-                  </div>
-                  <a href="#" class="recipes__button"
-                    >View Recipes
-                    <img class="icon" src="icons/header/Vector.svg" />
-                  </a>
-                </div>
-              </div>
-              <img
-                class="recipes__image"
-                src="tg_image_2147082613.jpeg"
-                alt="Delicious chicken wings"
-              />
-            </li>
+          <ul class="splide__list" id="splide__list">
           </ul>
         </div>
       </section>
@@ -320,6 +185,34 @@
         </div>
       </div>
     </footer>
+    <template id="featured-card-template">
+      <li class="recipes__item splide__slide">
+        <div class="recipes__content">
+          <div class="recipes__badge">
+            <img class="icon" src="icons/header/image 14.svg" />
+            <span>Hot Recipes</span>
+          </div>
+          <a><h2 class="recipes__title"></h2>
+          <p class="recipes__description"></p>
+          <div class="recipes__tags">
+          </div>
+          <div class="recipes__footer">
+            <div class="recipes__author">
+              <img class="recipes__author-icon" src="" />
+              <div class="recipes__author-data">
+                <span class="recipes__author-name"></span>
+                <span class="recipes__date"></span>
+              </div>
+            </div>
+            <a href="#" class="recipes__button"
+              >View Recipes
+              <img class="icon" src="icons/header/Vector.svg" />
+            </a>
+          </div>
+        </div>
+        <img class="recipes__image" src="" />
+      </li>
+    </template>
     <template id="category-card-template">
       <a href="" class="categories__card" onclick="event.preventDefault()">
         <img class="emoji" alt="Emoji" />
