@@ -131,7 +131,7 @@ main {
 
 .recipes__item {
   display: flex;
-  max-width: 75rem;
+  max-width: $width-maximized-small;
   aspect-ratio: 2 / 1;
   background-color: $background-primary;
   border-radius: 3.125rem;
@@ -386,7 +386,6 @@ summary {
 }
 
 .feed__card {
-  height: min-content;
   width: $card-width-medium;
   padding: 1rem;
   box-sizing: border-box;
@@ -404,6 +403,8 @@ summary {
 .card__image {
   border-radius: 1.25rem;
   margin-bottom: 1.5rem;
+  max-height: 15.625rem;
+  object-fit: cover;
 }
 
 .card__ad-image {
@@ -427,12 +428,23 @@ summary {
   flex-wrap: wrap;
   gap: $gap-small-medium;
   margin-bottom: 1rem;
+  margin-top: auto;
 }
 
 .card__tag {
   display: flex;
   align-items: center;
   gap: $gap-xsmall;
+}
+
+.card__title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  min-height: 4rem;
 }
 
 .course-ad {
@@ -582,6 +594,16 @@ summary {
   }
 }
 
+.recommendations__card-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  min-height: 2.5rem;
+}
+
 .recommendations__card-like-button {
   top: 1rem;
   right: 1rem;
@@ -589,6 +611,10 @@ summary {
 
 .recommendations__card-image {
   margin-bottom: 1rem;
+  max-height: 12.5rem;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  pointer-events: none;
 }
 
 .recommendations__card-tags {

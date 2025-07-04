@@ -1,48 +1,37 @@
 import { createTag, createAdCard, randomizeArray } from "./utils.ts";
+import {
+  smallCardData,
+  largeCardData,
+  DisplayCardsOptions,
+  CreateCardOptions,
+} from "../types/interfaces.ts";
 
-export async function displayCards(
-  containerId: string,
-  templateId: string,
-  cardClass: string,
-  imageClass: string,
-  titleClass: string,
-  tagsClass: string,
-  numberOfCards: number,
-  addCardClass?: string,
-  cardSize: "small" | "large" = "small",
-  cardDescriptionClass?: string,
-  authorImageClass?: string,
-  authorNameClass?: string,
-  recipeDateClass?: string,
-  tagContainerClass?: string
-) {
+export async function displayCards(options: DisplayCardsOptions) {
   try {
-    const cardsData = await loadCardsData();
+    const cardsData = await loadCardsData(options.requiredTags);
     const randomCardsData = randomizeArray(cardsData);
-    const container = document.getElementById(containerId) as
+    const container = document.getElementById(options.containerId) as
       | HTMLElement
       | HTMLUListElement;
 
-    randomCardsData.slice(0, numberOfCards).forEach((data, index) => {
-      if (addCardClass && index % 5 === 0 && index !== 0) {
-        const adCardElementContainer = createAdCard(addCardClass);
+    randomCardsData.slice(0, options.numberOfCards).forEach((data, index) => {
+      if (options.addCardClass && index % 5 === 0 && index !== 0) {
+        const adCardElementContainer = createAdCard(options.addCardClass);
         container.appendChild(adCardElementContainer);
       }
       container.appendChild(
-        createCard(
-          data,
-          templateId,
-          cardClass,
-          imageClass,
-          titleClass,
-          tagsClass,
-          cardSize,
-          cardDescriptionClass,
-          authorImageClass,
-          authorNameClass,
-          recipeDateClass,
-          tagContainerClass
-        )
+        createCard(data, {
+          templateName: options.templateId,
+          cardClass: options.cardClass,
+          imageClass: options.imageClass,
+          titleClass: options.titleClass,
+          tagsClass: options.tagsClass,
+          cardDescriptionClass: options.cardDescriptionClass,
+          authorImageClass: options.authorImageClass,
+          authorNameClass: options.authorNameClass,
+          recipeDateClass: options.recipeDateClass,
+          tagContainerClass: options.tagContainerClass,
+        })
       );
     });
   } catch (error) {
@@ -50,125 +39,109 @@ export async function displayCards(
   }
 }
 
-async function loadCardsData(cardSize: "small" | "large" = "large") {
+async function loadCardsData(requiredTags: string[] = []) {
   const response = await fetch("api/recipes");
   if (!response.ok) throw new Error("Failed to fetch data");
   const data = await response.json();
 
-  if (cardSize === "small") {
-    return data.map(
-      ({
-        imgSrc,
-        name,
-        tags,
-        id,
-      }: {
-        imgSrc: string;
-        name: string;
-        tags: string[];
-        id: number;
-      }) => ({
-        imgSrc,
-        name,
-        tags,
-        id,
-      })
-    );
-  } else {
-    return data.map(
-      ({
-        imgSrc,
-        name,
-        tags,
-        description,
-        author,
-        authorImg,
-        date,
-        id,
-      }: {
-        imgSrc: string;
-        name: string;
-        tags: string[];
-        description: string;
-        author: string;
-        authorImg: string;
-        date: string;
-        id: number;
-      }) => ({
-        imgSrc,
-        name,
-        tags,
-        description,
-        author,
-        authorImg,
-        date,
-        id,
-      })
-    );
-  }
+  const filteredData = data.filter((item: any) => {
+    if (requiredTags.length === 0) return true;
+    return requiredTags.every((tag: string) => item.info_tags.includes(tag));
+  });
+
+  return filteredData as (smallCardData | largeCardData)[];
 }
 
 function createCard(
-  data: any,
-  templateName: string,
-  cardElementClass: string,
-  cardImageClass: string,
-  cardTitleClass: string,
-  cardTagsClass: string,
-  cardSize: "small" | "large",
-  cardDescriptionClass?: string,
-  authorImageClass?: string,
-  authorNameClass?: string,
-  recipeDateClass?: string,
-  tagContainerClass?: string
+  data: smallCardData | largeCardData,
+  options: CreateCardOptions
 ): HTMLElement {
   const CardTemplate = document.getElementById(
-    templateName
+    options.templateName
   ) as HTMLTemplateElement;
   const newCard = CardTemplate.content.cloneNode(true) as DocumentFragment;
   const cardElement = newCard.querySelector(
-    `.${cardElementClass}`
+    `.${options.cardClass}`
   ) as HTMLElement;
-  cardElement.dataset.cardId = data.id.toString();
-
-  const cardImage = cardElement.querySelector(
-    `.${cardImageClass}`
-  ) as HTMLImageElement;
-  cardImage.src = data.imgSrc;
-
-  const cardTitle = cardElement.querySelector(
-    `.${cardTitleClass}`
-  ) as HTMLAnchorElement;
-  cardTitle.textContent = data.name;
-  cardTitle.href = `recipe-details.html?id=${data.id}`;
-
-  const cardTags = cardElement.querySelector(
-    `.${cardTagsClass}`
-  ) as HTMLElement;
-  data.tags.forEach((tag: string, index: number) => {
-    const tagContainer = createTag(tag, index, tagContainerClass);
-    cardTags.appendChild(tagContainer);
-  });
-
-  if (cardSize === "large") {
-    const cardDescription = cardElement.querySelector(
-      `.${cardDescriptionClass}`
-    ) as HTMLParagraphElement;
-    const authorImage = cardElement.querySelector(
-      `.${authorImageClass}`
-    ) as HTMLImageElement;
-    const authorName = cardElement.querySelector(
-      `.${authorNameClass}`
-    ) as HTMLSpanElement;
-    const recipeDate = cardElement.querySelector(
-      `.${recipeDateClass}`
-    ) as HTMLSpanElement;
-
-    cardDescription.textContent = data.description || "";
-    authorImage.src = data.authorImg || "";
-    authorName.textContent = data.author || "";
-    recipeDate.textContent = data.date || "";
+  if (cardElement) {
+    cardElement.dataset.cardId = data.id.toString();
   }
 
+  const cardImage = cardElement.querySelector(
+    `.${options.imageClass}`
+  ) as HTMLImageElement;
+  if (cardImage) {
+    cardImage.src = data.imgSrc;
+  }
+
+  const cardTitle = cardElement.querySelector(
+    `.${options.titleClass}`
+  ) as HTMLAnchorElement;
+  if (cardTitle) {
+    cardTitle.textContent = data.name;
+    cardTitle.href = `recipe-details.html?id=${data.id}`;
+  }
+
+  const cardTags = cardElement.querySelector(
+    `.${options.tagsClass}`
+  ) as HTMLElement;
+
+  if (cardTags) {
+    const fragment = document.createDocumentFragment();
+    data.tags.forEach((tag: string, index: number) => {
+      const tagContainer = createTag(tag, index, options.tagContainerClass);
+      fragment.appendChild(tagContainer);
+    });
+    cardTags.appendChild(fragment);
+  }
+
+  if (isLargeCardData(data)) {
+    if (options.cardDescriptionClass) {
+      const cardDescription = cardElement.querySelector(
+        `.${options.cardDescriptionClass}`
+      ) as HTMLParagraphElement;
+      if (cardDescription) {
+        cardDescription.textContent = data.description || "";
+      }
+    }
+
+    if (options.authorImageClass) {
+      const authorImage = cardElement.querySelector(
+        `.${options.authorImageClass}`
+      ) as HTMLImageElement;
+      if (authorImage) {
+        authorImage.src = data.authorImg || "";
+      }
+    }
+
+    if (options.authorNameClass) {
+      const authorName = cardElement.querySelector(
+        `.${options.authorNameClass}`
+      ) as HTMLSpanElement;
+      if (authorName) {
+        authorName.textContent = data.author || "";
+      }
+    }
+
+    if (options.recipeDateClass) {
+      const recipeDate = cardElement.querySelector(
+        `.${options.recipeDateClass}`
+      ) as HTMLSpanElement;
+      if (recipeDate) {
+        recipeDate.textContent = data.date || "";
+      }
+    }
+  }
   return cardElement;
+}
+
+function isLargeCardData(
+  data: smallCardData | largeCardData
+): data is largeCardData {
+  return (
+    "description" in data &&
+    "author" in data &&
+    "authorImg" in data &&
+    "date" in data
+  );
 }
