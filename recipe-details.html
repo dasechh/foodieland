@@ -48,20 +48,14 @@
       </nav>
     </header>
     <hr />
-    <section class="recipe-details">
-      <div class="recipe-details__header">
-        <h1 class="recipe-details__title">Health Japanese Fried Rice</h1>
-        <div class="recipes__author">
-          <img class="recipes__author-icon" src="tg_image_528061146.jpeg" />
-          <div class="recipes__author-data">
-            <span class="recipes__author-name">John Smith</span>
-            <span class="recipes__date">15 March 2022</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="cooking-guide-container">
+      <section class="recipe-details"></section>
+      <section class="recipe-ingredients"></section>
+      <aside class="other-recipes">
+        <span>Other recipes</span>
+      </aside>
+    </div>
   </body>
-
   <footer class="footer">
     <div class="footer__top">
       <div class="footer__top-left">
@@ -102,5 +96,43 @@
       </div>
     </div>
   </footer>
+
+  <template id="recipe-details">
+    <div class="recipe-details__header">
+      <h1 class="recipe-details__title">Health Japanese Fried Rice</h1>
+      <div class="recipe-details__summary">
+        <div class="recipes__author">
+          <img class="recipes__author-icon" src="tg_image_528061146.jpeg" />
+          <div class="recipes__author-data">
+            <span class="recipes__author-name">John Smith</span>
+            <span class="recipes__date">15 March 2022</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recipe-details__main">
+      <video src="" controls></video>
+      <div class="recipe-details__nutrition">
+        <h4></h4>
+        <ul class="recipe-details__nutrition-list"></ul>
+        <p class="recipe-details__nutrition-text"></p>
+      </div>
+    </div>
+    <p class="recipe-details__description"></p>
+  </template>
+
+  <template id="recipe-ingredients">
+    <h3>Ingredients</h3>
+    <ul class="recipe-ingredients__list"></ul>
+  </template>
+
+  <template id="other-recipe">
+    <img src="" alt="" />
+    <div class="other-recipe__text">
+      <h4></h4>
+      <span></span>
+    </div>
+  </template>
+
   <script type="module" src="src/recipe-details.ts"></script>
 </html>
