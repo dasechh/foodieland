@@ -11,26 +11,48 @@ export interface largeCardData extends smallCardData {
   date: string;
 }
 
-interface BaseCardOptions {
-  cardClass: string;
-  imageClass: string;
-  titleClass: string;
-  tagsClass: string;
-  cardDescriptionClass?: string;
-  authorImageClass?: string;
-  authorNameClass?: string;
-  recipeDateClass?: string;
-  tagContainerClass?: string;
+export interface fullCardData extends largeCardData {
+  nutrition: nutrition;
+  largeDescription: string;
+  ingredients: string[];
+  steps: recipeStep[];
+  videoSrc: string;
 }
 
-export interface DisplayCardsOptions extends BaseCardOptions {
-  containerId: string;
+interface nutrition {
+  calories: nutritionValue;
+  fat: nutritionValue;
+  protein: nutritionValue;
+  carbs: nutritionValue;
+}
+
+interface nutritionValue {
+  name: string;
+  value: number;
+}
+interface recipeStep {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+export interface displayCardsOptions {
   templateId: string;
-  numberOfCards: number;
-  addCardClass?: string;
+  containerId: string;
+  numberOfCards?: number;
+  cardClass: string;
+  adCardClass?: string;
+  titleClass: string;
+  imageClass?: string;
   requiredTags?: string[];
-}
-
-export interface CreateCardOptions extends BaseCardOptions {
-  templateName: string;
+  requiredIDs?: number[];
+  tagsClass?: string;
+  tagContainerClass?: string;
+  cardDescriptionClass?: string;
+  largeDescriptionClass?: string;
+  recipeDateClass?: string;
+  authorImgClass?: string;
+  authorNameClass?: string;
+  videoClass?: string;
+  ulContainerClass?: string;
 }

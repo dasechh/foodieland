@@ -12,15 +12,15 @@ import "@splidejs/splide/css";
 document.addEventListener("DOMContentLoaded", () => {
   async function loadCardsData() {
     await displayCards({
-      containerId: "feed",
       templateId: "feed-card-template",
       cardClass: "feed__card",
-      imageClass: "card__image",
       titleClass: "card__title",
+      imageClass: "card__image",
       tagsClass: "card__tags",
-      numberOfCards: 8,
-      addCardClass: "card__ad-image",
       tagContainerClass: "card__tag",
+      containerId: "feed",
+      numberOfCards: 8,
+      adCardClass: "card__ad-image",
     });
 
     await displayCards({
@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
       tagsClass: "recipes__tags",
       numberOfCards: 3,
       cardDescriptionClass: "recipes__description",
-      authorImageClass: "recipes__author-icon",
-      authorNameClass: "recipes__author-name",
       recipeDateClass: "recipes__date",
       tagContainerClass: "recipes__tag",
       requiredTags: ["Featured"],
+      authorImgClass: "recipes__author-icon",
+      authorNameClass: "recipes__author-name"
     });
 
     await displayCards({
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     new Splide(".splide", {
       type: "loop",
       perPage: 3,
+      arrows: false,
       focus: "center",
       gap: "2.5rem",
       width: "100%",
