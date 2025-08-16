@@ -60,7 +60,7 @@ async function loadCardsData(
   const filteredData = data.filter((item: any) => {
     const matchedTags =
       requiredTags.length === 0 ||
-      requiredTags.every((tag) => item.info_tags.includes(tag));
+      requiredTags.every((tag) => item.tags?.includes(tag));
     const matchedIDs =
       requiredIDs.length === 0 ||
       requiredIDs.includes(item.id);
@@ -106,7 +106,7 @@ function createCard(
 
   if (cardTags) {
     const fragment = document.createDocumentFragment();
-    data.tags.forEach((tag: string, index: number) => {
+    data.tags.slice(0, 2).forEach((tag: string, index: number) => {
       const tagContainer = createTag(tag, index, options.tagContainerClass);
       fragment.appendChild(tagContainer);
     });
@@ -204,7 +204,7 @@ function determineCardSize(data: smallCardData | largeCardData | fullCardData) {
 }
 
 function createTag(tag: string, index: number, tagContainerClass?: string) {
-  const tagContainer = document.createElement("div");
+  const tagContainer = document.createElement("a");
 
   if (tagContainerClass) tagContainer.classList.add(tagContainerClass);
 
