@@ -19,6 +19,12 @@ export interface fullCardData extends largeCardData {
   videoSrc: string;
 }
 
+export interface categoryCardData {
+  category: string;
+  color: string;
+  imgSrc: string;
+}
+
 interface nutrition {
   calories: nutritionValue;
   fat: nutritionValue;
