@@ -8,7 +8,7 @@ export interface largeCardData extends smallCardData {
   description: string;
   author: string;
   authorImg: string;
-  date: string;
+  date: string; 
 }
 
 export interface fullCardData extends largeCardData {

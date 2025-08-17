@@ -44,34 +44,29 @@ export class featuredCard {
 
     li.dataset.cardId = this.options.id.toString();
 
-    const cardImage = li.querySelector(".recipes__image") as HTMLImageElement;
-    cardImage.src = this.options.imgSrc;
+    (li.querySelector(".recipes__image") as HTMLImageElement).src =
+      this.options.imgSrc;
 
-    const cardTitle = li.querySelector(".recipes__title") as HTMLHeadingElement;
-    cardTitle.textContent = this.options.name;
+    (li.querySelector(".recipes__title") as HTMLHeadingElement).textContent =
+      this.options.name;
+
+    (
+      li.querySelector(".recipes__description") as HTMLParagraphElement
+    ).textContent = this.options.description;
+
+    (li.querySelector(".recipes__author-name") as HTMLSpanElement).textContent =
+      this.options.author;
+
+    (li.querySelector(".recipes__author-icon") as HTMLImageElement).src =
+      this.options.authorImg;
+
+    (li.querySelector(".recipes__date") as HTMLSpanElement).textContent =
+      this.options.date;
 
     const tagsWrapper = li.querySelector("recipes__tags");
     this.options.tags.slice(0, 2).forEach((tag: string, index: number) => {
       tagsWrapper?.appendChild(createTag(tag, index, ".recipes__tags"));
     });
-
-    const cardDescription = li.querySelector(
-      ".recipes__description"
-    ) as HTMLParagraphElement;
-    cardDescription.textContent = this.options.description;
-
-    const cardAuthorName = li.querySelector(
-      ".recipes__author-name"
-    ) as HTMLSpanElement;
-    cardAuthorName.textContent = this.options.author;
-
-    const cardAuthorImg = li.querySelector(
-      ".recipes__author-icon"
-    ) as HTMLImageElement;
-    cardAuthorImg.src = this.options.authorImg;
-
-    const cardDate = li.querySelector(".recipes__date") as HTMLSpanElement;
-    cardDate.textContent = this.options.date;
 
     return li;
   }
