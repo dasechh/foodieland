@@ -49,7 +49,7 @@ export async function displayCards(options: displayCardsOptions) {
   }
 }
 
-async function loadCardsData(
+export async function loadCardsData(
   requiredTags: string[] = [],
   requiredIDs: number[] = []
 ) {
@@ -203,7 +203,7 @@ function determineCardSize(data: smallCardData | largeCardData | fullCardData) {
   }
 }
 
-function createTag(tag: string, index: number, tagContainerClass?: string) {
+export function createTag(tag: string, index: number, tagContainerClass?: string) {
   const tagContainer = document.createElement("a");
 
   if (tagContainerClass) tagContainer.classList.add(tagContainerClass);
@@ -237,6 +237,6 @@ function createAdCard(adCardClass: string) {
   return adCardElementContainer;
 }
 
-function randomizeArray<T>(array: T[]): T[] {
+export function randomizeArray<T>(array: T[]): T[] {
   return [...array].sort(() => Math.random() - 0.5);
 }

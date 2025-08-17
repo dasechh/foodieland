@@ -1,5 +1,5 @@
 import "./styles/styles.scss";
-import { displayCards } from "./modules/cards";
+import { displayCards } from "../../modules/cards";
 
 document.addEventListener("DOMContentLoaded", () => {
     async function loadCardsData() {

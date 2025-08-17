@@ -1,11 +1,11 @@
 import "./styles/styles.scss";
-import { addCategoryCards, styleCategoryCards } from "./modules/categories.ts";
-import { displayCards } from "./modules/cards.ts";
+import { addCategoryCards, styleCategoryCards } from "../../modules/categories.ts";
+import { displayCards } from "../../modules/cards.ts";
 import {
   handleCategoryCardClick,
   handleLikeButton,
   restoreLikes,
-} from "./modules/handlers.ts";
+} from "../../modules/handlers.ts";
 import Splide from "@splidejs/splide";
 import "@splidejs/splide/css";
 
