@@ -1,5 +1,5 @@
-import { largeCardData } from "../../types/interfaces";
-import { createTag } from "../../modules/cards";
+import { largeCardData } from '../../types/interfaces';
+import { createTag } from './tag';
 
 export class featuredCard {
   private liElement: HTMLLIElement;
@@ -13,7 +13,7 @@ export class featuredCard {
           </div>
           <a><h2 class="recipes__title"></h2></a>
           <p class="recipes__description"></p>
-          <div class="recipes__tags">
+          <div class="recipes__tags tag">
           </div>
           <div class="recipes__footer">
             <div class="recipes__author">
@@ -38,34 +38,29 @@ export class featuredCard {
   }
 
   private createCard(): HTMLLIElement {
-    const tempDiv = document.createElement("div");
+    const tempDiv = document.createElement('div');
     tempDiv.innerHTML = featuredCard.template;
-    const li = tempDiv.querySelector("li") as HTMLLIElement;
+    const li = tempDiv.querySelector('li') as HTMLLIElement;
 
     li.dataset.cardId = this.options.id.toString();
 
-    (li.querySelector(".recipes__image") as HTMLImageElement).src =
-      this.options.imgSrc;
+    (li.querySelector('.recipes__image') as HTMLImageElement).src = this.options.imgSrc;
 
-    (li.querySelector(".recipes__title") as HTMLHeadingElement).textContent =
-      this.options.name;
+    (li.querySelector('.recipes__title') as HTMLHeadingElement).textContent = this.options.name;
 
-    (
-      li.querySelector(".recipes__description") as HTMLParagraphElement
-    ).textContent = this.options.description;
+    (li.querySelector('.recipes__description') as HTMLParagraphElement).textContent =
+      this.options.description;
 
-    (li.querySelector(".recipes__author-name") as HTMLSpanElement).textContent =
+    (li.querySelector('.recipes__author-name') as HTMLSpanElement).textContent =
       this.options.author;
 
-    (li.querySelector(".recipes__author-icon") as HTMLImageElement).src =
-      this.options.authorImg;
+    (li.querySelector('.recipes__author-icon') as HTMLImageElement).src = this.options.authorImg;
 
-    (li.querySelector(".recipes__date") as HTMLSpanElement).textContent =
-      this.options.date;
+    (li.querySelector('.recipes__date') as HTMLSpanElement).textContent = this.options.date;
 
-    const tagsWrapper = li.querySelector("recipes__tags");
+    const tagsWrapper = li.querySelector('.recipes__tags');
     this.options.tags.slice(0, 2).forEach((tag: string, index: number) => {
-      tagsWrapper?.appendChild(createTag(tag, index, ".recipes__tags"));
+      tagsWrapper?.appendChild(createTag(tag, index, 'recipes__tag'));
     });
 
     return li;

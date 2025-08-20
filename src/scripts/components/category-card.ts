@@ -1,4 +1,4 @@
-import { categoryCardData } from "../../types/interfaces";
+import { categoryCardData } from '../../types/interfaces';
 
 export class categoryCard {
   private anchorElement: HTMLAnchorElement;
@@ -16,29 +16,24 @@ export class categoryCard {
   }
 
   private createCard(): HTMLAnchorElement {
-    const tempDiv = document.createElement("div");
+    const tempDiv = document.createElement('div');
     tempDiv.innerHTML = categoryCard.template;
-    const anchor = tempDiv.querySelector("a") as HTMLAnchorElement;
+    const anchor = tempDiv.querySelector('a') as HTMLAnchorElement;
 
-    (
-      anchor.querySelector(".categories__card-name") as HTMLSpanElement
-    ).textContent = this.options.category;
+    (anchor.querySelector('.categories__card-name') as HTMLSpanElement).textContent =
+      this.options.category;
 
     anchor.style.backgroundImage = this.options.imgSrc;
 
-    (anchor.querySelector(".emoji") as HTMLImageElement).src =
-      this.options.imgSrc;
-    (anchor.querySelector(".emoji") as HTMLImageElement).alt =
-      this.options.category;
+    (anchor.querySelector('.emoji') as HTMLImageElement).src = this.options.imgSrc;
+    (anchor.querySelector('.emoji') as HTMLImageElement).alt = this.options.category;
 
-    (anchor.querySelector(".blurred-emoji") as HTMLImageElement).src =
-      this.options.imgSrc;
+    (anchor.querySelector('.blurred-emoji') as HTMLImageElement).src = this.options.imgSrc;
 
     anchor.href = `#recipes?category=${this.options.category}`;
 
-    if (this.options.color === "#000000") {
-      anchor.style.backgroundImage =
-        "linear-gradient(180deg, #00000000 24%, #0000000D 100%)";
+    if (this.options.color === '#000000') {
+      anchor.style.backgroundImage = 'linear-gradient(180deg, #00000000 24%, #0000000D 100%)';
     } else {
       anchor.style.backgroundImage = `linear-gradient(180deg, ${this.options.color}00 24%, ${this.options.color}1A 100%)`;
     }

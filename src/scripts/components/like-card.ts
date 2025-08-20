@@ -1,7 +1,7 @@
-import { smallCardData } from "../../types/interfaces";
-import { createTag } from "../../modules/cards";
+import { smallCardData } from '../../types/interfaces';
+import { createTag } from './tag';
 
-type cardSize = "medium" | "large";
+type cardSize = 'medium' | 'large';
 
 export class likeCard {
   private divElement: HTMLDivElement;
@@ -22,10 +22,12 @@ export class likeCard {
             />
           </svg>
         </div>
+        <div class="card__texts">
           <h{{HEADER_LEVEL}}>
             <a href="" data-role="title"></a>
           </h{{HEADER_LEVEL}}>
           <div data-role="tags-wrapper"></div>
+        </div>
       </div>
     `;
 
@@ -35,53 +37,49 @@ export class likeCard {
 
   private static selectors = {
     large: {
-      container: ".feed__card",
-      image: ".card__image",
-      like: ".feed__card-like-button",
-      title: ".card__title",
-      tags: ".card__tags",
+      container: 'feed__card',
+      image: 'card__image',
+      like: 'feed__card-like-button',
+      title: 'card__title',
+      tags: 'card__tag',
     },
     medium: {
-      container: ".recommendations__card",
-      image: ".recommendations__card-image",
-      like: ".recommendations__card-like-button",
-      title: ".recommend ations__card-title",
-      tags: ".recommendations__card-tags",
+      container: 'recommendations__card',
+      image: 'recommendations__card-image',
+      like: 'recommendations__card-like-button',
+      title: 'recommendations__card-title',
+      tags: 'recommendations__card-tag',
     },
   };
 
   private createCard(): HTMLDivElement {
-    const { container, image, like, title, tags } =
-      likeCard.selectors[this.size];
+    const { container, image, like, title, tags } = likeCard.selectors[this.size];
 
-    const headerLevel = this.size === "large" ? "4" : "5";
-    const template = likeCard.template.replace(
-      "/{{HEADER_LEVEL}}/g",
-      headerLevel
-    );
+    const headerLevel = this.size === 'large' ? '4' : '5';
+    const template = likeCard.template.replace(/{{HEADER_LEVEL}}/g, headerLevel);
 
-    const tempDiv = document.createElement("div");
+    const tempDiv = document.createElement('div');
     tempDiv.innerHTML = template;
-    const div = tempDiv.querySelector("div") as HTMLDivElement;
+    const div = tempDiv.querySelector('div') as HTMLDivElement;
 
     div.dataset.cardId = this.options.id.toString();
 
-    (div.querySelector("data-role=container") as HTMLDivElement).classList.add(
-      container
-    );
+    div.classList.add(container);
 
-    const imgEl = div.querySelector("[data-role=image]") as HTMLImageElement;
+    const imgEl = div.querySelector('[data-role=image]') as HTMLImageElement;
     imgEl.src = this.options.imgSrc;
     imgEl.classList.add(image);
 
-    (div.querySelector("data-role=like") as HTMLDivElement).classList.add(like);
+    (div.querySelector('[data-role=like]') as HTMLDivElement).classList.add(like);
 
-    const titleEl = div.querySelector("[data-role=title]") as HTMLAnchorElement;
+    const titleEl = div.querySelector('[data-role=title]') as HTMLAnchorElement;
     titleEl.textContent = this.options.name;
     titleEl.classList.add(title);
+    titleEl.href = `recipe-details.html?id=${this.options.id.toString()}`;
 
-    const tagsWrapper = div.querySelector("[data-role=tags-wrapper]");
+    const tagsWrapper = div.querySelector('[data-role=tags-wrapper]');
     tagsWrapper?.classList.add(tags);
+    tagsWrapper?.classList.add('tag');
 
     this.options.tags.slice(0, 2).forEach((tag: string, index: number) => {
       tagsWrapper?.appendChild(createTag(tag, index, tags));

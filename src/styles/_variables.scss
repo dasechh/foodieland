@@ -1,4 +1,4 @@
-@use "sass:color";
+@use 'sass:color';
 
 $background-primary: #e7fafe;
 $background-bright: #ffffff;
@@ -23,11 +23,7 @@ $letter-spacing: -0.04rem;
 
 $border-radius-large: 1.875rem;
 
-$main-gradient: linear-gradient(
-  180deg,
-  $background-bright 0%,
-  $background-primary 100%
-);
+$main-gradient: linear-gradient(180deg, $background-bright 0%, $background-primary 100%);
 
 $gap-main: 10rem;
 $gap-small-medium: 1.5rem;

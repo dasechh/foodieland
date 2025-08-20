@@ -1,6 +1,6 @@
-@use "sass:color";
-@use "./_variables" as *;
-@use "./_mixins" as *;
+@use 'sass:color';
+@use './_variables' as *;
+@use './_mixins' as *;
 
 html,
 body,
@@ -8,7 +8,7 @@ hr,
 header {
   margin: 0;
   padding: 0;
-  font-family: "Inter";
+  font-family: 'Inter';
   font-size: 16px;
 
   & p {
@@ -127,6 +127,7 @@ main {
 .icon {
   height: calc($interactive-icon-size / 2);
   width: calc($interactive-icon-size / 2);
+  display: block;
 }
 
 .recipes__item {
@@ -166,12 +167,13 @@ main {
   font-size: $font-size-small;
   background-color: $background-bright;
   border-radius: $border-radius-large;
+  filter: drop-shadow(0.625rem 1.25rem 2.5rem rgba($background-dark, $opacity-ultra-low));
 }
 
 .recipes__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: $gap-small;
+  gap: $gap-xsmall;
 }
 
 .recipes__title {
@@ -235,12 +237,7 @@ main {
 }
 
 .recipes__button {
-  @include button(
-    $button-width-base,
-    $button-height,
-    $background-dark,
-    $text-bright
-  );
+  @include button($button-width-base, $button-height, $background-dark, $text-bright);
   gap: $gap-small;
 }
 
@@ -285,12 +282,7 @@ summary {
 }
 
 .categories__button {
-  @include button(
-    $button-width-base,
-    $button-height,
-    $background-primary,
-    $text-dark
-  );
+  @include button($button-width-base, $button-height, $background-primary, $text-dark);
   font-size: $font-size-regular;
 }
 
@@ -319,8 +311,7 @@ summary {
   &:hover {
     transform: scale(1.1);
     transition: transform 0.05s ease-in-out;
-    box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.015) inset,
-      0 0 1.25rem rgba(0, 0, 0, 0.065);
+    box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.015) inset, 0 0 1.25rem rgba(0, 0, 0, 0.065);
   }
 }
 
@@ -394,13 +385,13 @@ summary {
   text-align: left;
 
   &:hover {
-    box-shadow: 0 0.125rem 1.25rem rgba($background-dark, $opacity-ultra-low)
-        inset,
+    box-shadow: 0 0.125rem 1.25rem rgba($background-dark, $opacity-ultra-low) inset,
       0 0 1.25rem rgba($background-primary, $opacity-muted);
   }
 }
 
 .card__image {
+  display: block;
   border-radius: 1.25rem;
   margin-bottom: 1.5rem;
   max-height: 15.625rem;
@@ -421,6 +412,7 @@ summary {
   margin: 0 0.5rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .card__tags {
@@ -431,10 +423,16 @@ summary {
   margin-top: auto;
 }
 
+.tag {
+  font-size: $font-size-small;
+  letter-spacing: calc($letter-spacing / 2);
+}
+
 .card__tag {
   display: flex;
   align-items: center;
   gap: $gap-xsmall;
+  font-size: $font-size-small;
 }
 
 .card__title {
@@ -470,12 +468,7 @@ summary {
 }
 
 .course-ad__button {
-  @include button(
-    $button-width-base * 0.9,
-    $button-height,
-    $background-dark,
-    $text-bright
-  );
+  @include button($button-width-base * 0.9, $button-height, $background-dark, $text-bright);
 }
 
 .course-ad__image-wrapper {
@@ -534,12 +527,7 @@ summary {
 }
 
 .instagram__button {
-  @include button(
-    $button-width-base * 1.15,
-    $button-height,
-    $background-dark,
-    $text-bright
-  );
+  @include button($button-width-base * 1.15, $button-height, $background-dark, $text-bright);
   gap: $gap-small;
 }
 
@@ -704,12 +692,7 @@ summary {
 }
 
 .newsletter__button {
-  @include button(
-    $button-width-base * 0.8,
-    $button-height,
-    $background-dark,
-    $text-bright
-  );
+  @include button($button-width-base * 0.8, $button-height, $background-dark, $text-bright);
 }
 
 .newsletter__images {

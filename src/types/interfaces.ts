@@ -8,7 +8,7 @@ export interface largeCardData extends smallCardData {
   description: string;
   author: string;
   authorImg: string;
-  date: string; 
+  date: string;
 }
 
 export interface fullCardData extends largeCardData {
@@ -40,25 +40,4 @@ interface recipeStep {
   title: string;
   description: string;
   image?: string;
-}
-
-export interface displayCardsOptions {
-  templateId: string;
-  containerId: string;
-  numberOfCards?: number;
-  cardClass: string;
-  adCardClass?: string;
-  titleClass: string;
-  imageClass?: string;
-  requiredTags?: string[];
-  requiredIDs?: number[];
-  tagsClass?: string;
-  tagContainerClass?: string;
-  cardDescriptionClass?: string;
-  largeDescriptionClass?: string;
-  recipeDateClass?: string;
-  authorImgClass?: string;
-  authorNameClass?: string;
-  videoClass?: string;
-  ulContainerClass?: string;
 }
