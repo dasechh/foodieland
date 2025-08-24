@@ -1,67 +1,75 @@
-import { largeCardData } from '../../types/interfaces';
+import { LargeCardData } from '../../types/interfaces';
 import { createTag } from './tag';
+import { AuthorCard } from './author-card';
 
-export class featuredCard {
+export class FeaturedCard {
   private liElement: HTMLLIElement;
 
-  private static template = `
-          <li class="recipes__item splide__slide">
-        <div class="recipes__content">
-          <div class="recipes__badge">
-            <img class="icon" src="icons/header/image 14.svg" />
-            <span>Hot Recipes</span>
-          </div>
-          <a><h2 class="recipes__title"></h2></a>
-          <p class="recipes__description"></p>
-          <div class="recipes__tags tag">
-          </div>
-          <div class="recipes__footer">
-            <div class="recipes__author">
-              <img class="recipes__author-icon" src="" />
-              <div class="recipes__author-data">
-                <span class="recipes__author-name"></span>
-                <span class="recipes__date"></span>
-              </div>
-            </div>
-            <a href="#" class="recipes__button"
-              >View Recipes
-              <img class="icon" src="icons/header/Vector.svg" />
-            </a>
-          </div>
-        </div>
-        <img class="recipes__image" src="" />
-      </li>
-    `;
-
-  constructor(private options: largeCardData) {
+  constructor(private options: LargeCardData) {
     this.liElement = this.createCard();
   }
 
   private createCard(): HTMLLIElement {
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = featuredCard.template;
-    const li = tempDiv.querySelector('li') as HTMLLIElement;
-
+    const li = document.createElement('li');
+    li.classList.add('recipes__item', 'splide__slide');
     li.dataset.cardId = this.options.id.toString();
 
-    (li.querySelector('.recipes__image') as HTMLImageElement).src = this.options.imgSrc;
+    const fragment = document.createDocumentFragment();
 
-    (li.querySelector('.recipes__title') as HTMLHeadingElement).textContent = this.options.name;
+    const content = document.createElement('div');
+    content.classList.add('recipes__content');
 
-    (li.querySelector('.recipes__description') as HTMLParagraphElement).textContent =
-      this.options.description;
+    const largeImage = document.createElement('img');
+    largeImage.classList.add('recipes__image');
+    largeImage.src = this.options.imgSrc;
 
-    (li.querySelector('.recipes__author-name') as HTMLSpanElement).textContent =
-      this.options.author;
+    const mainTag = createTag('Hot Recipes', 'icons/header/image 14.svg', 'recipes__badge');
+    fragment.appendChild(mainTag);
 
-    (li.querySelector('.recipes__author-icon') as HTMLImageElement).src = this.options.authorImg;
+    const titleAnchor = document.createElement('a');
+    const title = document.createElement('h2');
+    title.classList.add('recipes__title');
+    title.textContent = this.options.name;
+    titleAnchor.appendChild(title);
+    fragment.appendChild(titleAnchor);
 
-    (li.querySelector('.recipes__date') as HTMLSpanElement).textContent = this.options.date;
+    const description = document.createElement('p');
+    description.textContent = this.options.description;
+    description.classList.add('recipes__description');
+    fragment.appendChild(description);
 
-    const tagsWrapper = li.querySelector('.recipes__tags');
-    this.options.tags.slice(0, 2).forEach((tag: string, index: number) => {
-      tagsWrapper?.appendChild(createTag(tag, index, 'recipes__tag'));
+    const tagContainer = document.createElement('div');
+    tagContainer.classList.add('recipes__tags', 'tag');
+
+    this.options.tags.forEach((tagItem) => {
+      const tagElement = createTag(tagItem.tag, tagItem.tagIconSrc, 'recipes__tag');
+      tagContainer.appendChild(tagElement);
     });
+
+    fragment.appendChild(tagContainer);
+
+    const cardFooter = document.createElement('div');
+    cardFooter.classList.add('recipes__footer');
+
+    const authorCard = new AuthorCard(this.options);
+    cardFooter.appendChild(authorCard.element);
+
+    const button = document.createElement('a');
+    button.href = `recipe-details.html?id=${this.options.id}`;
+    button.classList.add('recipes__button');
+    button.textContent = 'View Recipe';
+
+    const buttonIcon = document.createElement('img');
+    buttonIcon.src = 'icons/header/Vector.svg';
+    buttonIcon.classList.add('icon');
+    button.appendChild(buttonIcon);
+
+    cardFooter.appendChild(button);
+    fragment.appendChild(cardFooter);
+
+    content.appendChild(fragment);
+
+    li.append(content, largeImage);
 
     return li;
   }

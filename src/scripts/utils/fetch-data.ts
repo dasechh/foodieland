@@ -1,8 +1,8 @@
 import {
-  categoryCardData,
-  fullCardData,
-  largeCardData,
-  smallCardData,
+  CategoryCardData,
+  FullCardData,
+  LargeCardData,
+  SmallCardData,
 } from '../../types/interfaces';
 
 export async function loadCardsData(
@@ -17,12 +17,14 @@ export async function loadCardsData(
 
   const filteredData = data.filter((item: any) => {
     const matchedTags =
-      requiredTags.length === 0 || requiredTags.every((tag) => item.tags?.includes(tag));
+      requiredTags.length === 0 ||
+      requiredTags.every((tag) => item.tags?.some((t: any) => t.tag === tag));
+
     const matchedIDs = requiredIDs.length === 0 || requiredIDs.includes(item.id);
     return matchedTags && matchedIDs;
   });
 
   const limitedData = filteredData.slice(0, dataCount);
 
-  return limitedData as smallCardData[] | largeCardData[] | fullCardData[] | categoryCardData[];
+  return limitedData as SmallCardData[] | LargeCardData[] | FullCardData[] | CategoryCardData[];
 }

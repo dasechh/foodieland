@@ -3,11 +3,20 @@
     {
       "imgSrc": "/recipe-images/fruit_salad.jpg",
       "name": "Mixed Tropical Fruit Salad with Superfood Boosts",
-      "tags": ["30 Minutes", "Healthy"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
         "Calories": {
@@ -31,50 +40,151 @@
           "unit": "mg"
         }
       },
-      "videoSrc": "https://vkvideo.ru/video_ext.php?oid=-219252372&id=456241155&hd=2&autoplay=1",
       "id": 1
     },
     {
       "imgSrc": "/recipe-images/beef_cheeseburger.jpg",
       "name": "Big and Juicy Wagyu Beef Cheeseburger",
-      "tags": ["30 Minutes", "Western"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A mouthwatering wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 2
     },
     {
       "imgSrc": "/recipe-images/fried_rice.jpg",
       "name": "Healthy Japanese Fried Rice with Asparagus",
-      "tags": ["30 Minutes", "Healthy"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A quick and healthy Japanese fried rice dish featuring tender asparagus and a medley of vegetables, perfect for a nutritious lunch or dinner.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 3
     },
     {
       "imgSrc": "/recipe-images/taco_meat.jpg",
       "name": "Cauliflower Walnut Vegetarian Taco Meat",
-      "tags": ["30 Minutes", "Eastern"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A delicious and hearty vegetarian taco meat made from cauliflower and walnuts, seasoned with spices, perfect for tacos or as a filling in wraps.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 4
     },
     {
       "imgSrc": "/recipe-images/chicken_salad.jpg",
       "name": "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
-      "tags": ["30 Minutes", "Healthy"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A colorful and nutritious rainbow chicken salad topped with a delightful almond honey mustard dressing, ideal for a light lunch or dinner.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "id": 5
     },
@@ -83,131 +193,497 @@
       "name": "Barbeque Spicy Sandwiches with Chips",
       "tags": ["30 Minutes", "Snack"],
       "description": "Spicy barbeque sandwiches served with crispy chips, perfect for a quick snack or a casual meal with friends.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 6
     },
     {
       "imgSrc": "/recipe-images/vegan_lettuce.jpg",
       "name": "Firecracker Vegan Lettuce Wraps",
-      "tags": ["30 Minutes", "Seafood"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "Spicy firecracker vegan lettuce wraps filled with a flavorful mix of vegetables and spices, perfect for a light and healthy meal.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 7
     },
     {
       "imgSrc": "/recipe-images/ramen_soup.jpg",
       "name": "Chicken Ramen Soup with Mushroom",
-      "tags": ["30 Minutes", "Japanese"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A comforting chicken ramen soup with mushrooms, packed with flavor and ready in just 30 minutes, perfect for a quick dinner.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 8
     },
     {
       "imgSrc": "/recipe-images/wagyu_beef.jpg",
       "name": "Big and Juicy Wagyu Beef Cheeseburger",
-      "tags": ["30 Minutes", "Snack"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A succulent wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 9
     },
     {
       "imgSrc": "/recipe-images/roasted_salmon.jpg",
       "name": "Fresh Lime Roasted Salmon with Ginger Sauce",
-      "tags": ["30 Minutes", "Fish"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "Freshly roasted salmon served with a tangy ginger sauce, perfect for a light and flavorful meal.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 10
     },
     {
       "imgSrc": "/recipe-images/oatmeal_pancake.jpg",
       "name": "Strawberry Oatmeal Pancake with Honey Syrup",
-      "tags": ["30 Minutes", "Breakfast"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A delicious strawberry oatmeal pancake topped with a sweet and creamy honey syrup, perfect for a healthy and satisfying breakfast.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 11
     },
     {
       "imgSrc": "/recipe-images/mayonnaise_salad.jpg",
       "name": "Fresh and Healthy Mixed Mayonnaise Salad",
-      "tags": ["30 Minutes", "Healthy"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A fresh and healthy mixed mayonnaise salad, perfect for a light lunch or side dish.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 12
     },
     {
       "imgSrc": "/recipe-images/chicken_meatballs.jpg",
       "name": "Chicken Meatballs with Cream Cheese",
-      "tags": ["30 Minutes", "Meat"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "Tender chicken meatballs filled with cream cheese, seasoned to perfection, ideal for a quick and delicious meal.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 13
     },
     {
       "imgSrc": "/recipe-images/fruity_pancake.jpg",
       "name": "Fruity Pancake with Orange & Blueberry",
-      "tags": ["30 Minutes", "Sweet"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A delicious fruity pancake topped with fresh orange and blueberry, perfect for a healthy breakfast.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 14
     },
     {
       "imgSrc": "/recipe-images/chicken_and_rice.jpg",
       "name": "The Best Easy One Pot Chicken and Rice",
-      "tags": ["30 Minutes", "Snack"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A simple and flavorful one pot chicken and rice dish, perfect for a quick and satisfying meal.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 15
     },
     {
       "imgSrc": "/recipe-images/chicken_and_bacon_pasta.jpg",
       "name": "The Creamiest Creamy Chicken and Bacon Pasta",
-      "tags": ["30 Minutes", "Noodles"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "A rich and creamy chicken and bacon pasta dish, bursting with flavor and ready in just 30 minutes, perfect for a comforting dinner.",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 16
     },
     {
       "imgSrc": "/tg_image_2147082613.jpeg",
       "name": "Spicy delicious chicken wings",
-      "tags": ["30 Minutes", "Chicken", "Featured"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        },
+        {
+          "tag": "Featured"
+        }
+      ],
       "description": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
-      "author": "John Doe",
+      "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
-      "date": "15 March 2022",
+      "recipeDate": "15 March 2022",
       "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": {
+          "value": 219.9,
+          "unit": "kcal"
+        },
+        "Total Fat": {
+          "value": 10.7,
+          "unit": "g"
+        },
+        "Protein": {
+          "value": 7.9,
+          "unit": "g"
+        },
+        "Carbohydrate": {
+          "value": 22.3,
+          "unit": "g"
+        },
+        "Cholesterol": {
+          "value": 37.4,
+          "unit": "mg"
+        }
+      },
       "id": 17
     }
   ]

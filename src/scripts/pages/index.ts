@@ -1,27 +1,38 @@
 import { loadSection } from '../utils/load-section';
 import { loadCardsData } from '../utils/fetch-data';
-import { categoryCard } from '../components/category-card';
-import { featuredCard } from '../components/featured-card';
-import { likeCard } from '../components/like-card';
-import { largeCardData, smallCardData } from '../../types/interfaces';
+import { CategoryCard } from '../components/category-card';
+import { FeaturedCard } from '../components/featured-card';
+import { LikeCard } from '../components/like-card';
+import { LargeCardData, SmallCardData } from '../../types/interfaces';
 import { handleLikeButtons, handleCategoryCardClick, restoreLikes } from '../utils/handlers';
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
 import { categoriesData } from '../../../data/categories';
 
 async function init() {
-  await loadSection('splide-carousel', 'main'); // Loads featured recipes carousel
-  const featuredData = (await loadCardsData(['Featured'], [], 3, 'recipes')) as largeCardData[];
+  await Promise.all([
+    loadSection('splide-carousel', 'main'),
+    loadSection('categories', 'main'),
+    loadSection('feed', 'main'),
+    loadSection('course-ad', 'main'),
+    loadSection('insta-ad', 'main'),
+    loadSection('recommendations', 'main'),
+    loadSection('newsletter', 'main'),
+  ]);
+
+  const [featuredData, feedData, recommendationsData] = await Promise.all([
+    loadCardsData(['Featured'], [], 3, 'recipes') as Promise<LargeCardData[]>,
+    loadCardsData(undefined, undefined, 9, 'recipes') as Promise<SmallCardData[]>,
+    loadCardsData(undefined, undefined, 8, 'recipes') as Promise<SmallCardData[]>,
+  ]);
 
   featuredData.forEach((element) => {
-    const card = new featuredCard(element);
+    const card = new FeaturedCard(element);
     document.querySelector('#splide__list')?.appendChild(card.element);
   });
 
-  await loadSection('categories', 'main'); // Loads categories section
-
   categoriesData.forEach((element, index) => {
-    const card = new categoryCard(element);
+    const card = new CategoryCard(element);
     const container =
       index < 6
         ? document.querySelector('#categories__list')
@@ -30,32 +41,15 @@ async function init() {
     container?.appendChild(card.element);
   });
 
-  await loadSection('feed', 'main'); // Loads feed section
-  const feedData = (await loadCardsData(undefined, undefined, 9, 'recipes')) as smallCardData[];
-
   feedData.forEach((element) => {
-    const card = new likeCard(element, 'large');
+    const card = new LikeCard(element, 'large');
     document.querySelector('#feed')?.appendChild(card.element);
   });
 
-  await loadSection('course-ad', 'main'); // Loads course ad section
-
-  await loadSection('insta-ad', 'main'); // Loads insta ad section
-
-  await loadSection('recommendations', 'main'); // Loads recommendatrions section
-  const recommendationsData = (await loadCardsData(
-    undefined,
-    undefined,
-    8,
-    'recipes'
-  )) as smallCardData[];
-
   recommendationsData.forEach((element) => {
-    const card = new likeCard(element, 'medium');
+    const card = new LikeCard(element, 'medium');
     document.querySelector('#recommendations')?.appendChild(card.element);
   });
-
-  await loadSection('newsletter', 'main'); // Loads newsletter section
 
   const splideElement = document.querySelector('.splide');
   if (splideElement) {

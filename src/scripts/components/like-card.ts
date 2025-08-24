@@ -1,9 +1,9 @@
-import { smallCardData } from '../../types/interfaces';
+import { SmallCardData } from '../../types/interfaces';
 import { createTag } from './tag';
 
 type cardSize = 'medium' | 'large';
 
-export class likeCard {
+export class LikeCard {
   private divElement: HTMLDivElement;
 
   private static template = `
@@ -31,7 +31,7 @@ export class likeCard {
       </div>
     `;
 
-  constructor(private options: smallCardData, private size: cardSize) {
+  constructor(private options: SmallCardData, private size: cardSize) {
     this.divElement = this.createCard();
   }
 
@@ -41,22 +41,24 @@ export class likeCard {
       image: 'card__image',
       like: 'feed__card-like-button',
       title: 'card__title',
-      tags: 'card__tag',
+      tagClass: 'recipes__tag',
+      tagsClass: 'recipes__tags',
     },
     medium: {
       container: 'recommendations__card',
       image: 'recommendations__card-image',
       like: 'recommendations__card-like-button',
       title: 'recommendations__card-title',
-      tags: 'recommendations__card-tag',
+      tagClass: 'recommendations__card-tag',
+      tagsClass: 'recommendations__card-tags',
     },
   };
 
   private createCard(): HTMLDivElement {
-    const { container, image, like, title, tags } = likeCard.selectors[this.size];
+    const { container, image, like, title, tagClass, tagsClass } = LikeCard.selectors[this.size];
 
     const headerLevel = this.size === 'large' ? '4' : '5';
-    const template = likeCard.template.replace(/{{HEADER_LEVEL}}/g, headerLevel);
+    const template = LikeCard.template.replace(/{{HEADER_LEVEL}}/g, headerLevel);
 
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = template;
@@ -78,11 +80,11 @@ export class likeCard {
     titleEl.href = `recipe-details.html?id=${this.options.id.toString()}`;
 
     const tagsWrapper = div.querySelector('[data-role=tags-wrapper]');
-    tagsWrapper?.classList.add(tags);
-    tagsWrapper?.classList.add('tag');
+    tagsWrapper?.classList.add('tag', tagsClass);
 
-    this.options.tags.slice(0, 2).forEach((tag: string, index: number) => {
-      tagsWrapper?.appendChild(createTag(tag, index, tags));
+    this.options.tags.forEach((tagItem) => {
+      const tagElement = createTag(tagItem.tag, tagItem.tagIconSrc, tagClass);
+      tagsWrapper?.appendChild(tagElement);
     });
 
     return div;
