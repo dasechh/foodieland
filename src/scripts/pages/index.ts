@@ -1,8 +1,9 @@
 import { loadSection } from '../utils/load-section';
 import { loadCardsData } from '../utils/fetch-data';
-import { CategoryCard } from '../components/category-card';
-import { FeaturedCard } from '../components/featured-card';
-import { LikeCard } from '../components/like-card';
+import { CategoryCard } from '../components/CategoryCard';
+import { FeaturedCard } from '../components/FeaturedCard';
+import { RecipeCard } from '../components/RecipeCard';
+
 import { LargeCardData, SmallCardData } from '../../types/interfaces';
 import { handleLikeButtons, handleCategoryCardClick, restoreLikes } from '../utils/handlers';
 import Splide from '@splidejs/splide';
@@ -42,12 +43,12 @@ async function init() {
   });
 
   feedData.forEach((element) => {
-    const card = new LikeCard(element, 'large');
+    const card = new RecipeCard(element, 'large');
     document.querySelector('#feed')?.appendChild(card.element);
   });
 
   recommendationsData.forEach((element) => {
-    const card = new LikeCard(element, 'medium');
+    const card = new RecipeCard(element, 'medium');
     document.querySelector('#recommendations')?.appendChild(card.element);
   });
 
