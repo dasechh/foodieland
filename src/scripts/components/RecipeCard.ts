@@ -7,31 +7,6 @@ type cardSize = 'medium' | 'large';
 export class RecipeCard {
   private divElement: HTMLDivElement;
 
-  private static template = `
-      <div data-role="container" class="card">
-        <img data-role="image" />
-        <button data-role="like" class="like-button">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16.5022 3.00001C15.6291 2.99851 14.7677 3.20077 13.9865 3.59072C13.2052 3.98066 12.5258 4.54752 12.0022 5.24621C11.293 4.30266 10.3051 3.606 9.17823 3.25482C8.05134 2.90365 6.84256 2.91573 5.72291 3.28936C4.60327 3.663 3.62948 4.37926 2.93932 5.3368C2.24916 6.29434 1.8776 7.44467 1.8772 8.62501C1.8772 15.3621 11.2373 20.6813 11.6357 20.9044C11.7477 20.9671 11.8739 21 12.0022 21C12.1305 21 12.2567 20.9671 12.3687 20.9044C14.0902 19.8961 15.7059 18.7173 17.1914 17.3856C20.4665 14.438 22.1272 11.4905 22.1272 8.62501C22.1255 7.13368 21.5323 5.70393 20.4778 4.6494C19.4233 3.59487 17.9935 3.0017 16.5022 3.00001Z"
-            />
-          </svg>
-        </button>
-        <div class="card__texts">
-          <h{{HEADER_LEVEL}}>
-            <a href="" data-role="title"></a>
-          </h{{HEADER_LEVEL}}>
-          <div data-role="tags-wrapper"></div>
-        </div>
-      </div>
-    `;
-
   constructor(private options: SmallCardData, private size: cardSize) {
     this.divElement = this.createCard();
   }
@@ -55,38 +30,63 @@ export class RecipeCard {
     },
   };
 
+  private createImage(): HTMLImageElement {
+    const { image } = RecipeCard.selectors[this.size];
+    const img = document.createElement('img');
+    img.src = this.options.imgSrc;
+    img.alt = this.options.name;
+    img.classList.add(image);
+    return img;
+  }
+
+  private createTextsElement(): HTMLDivElement {
+    const div = document.createElement('div');
+    div.classList.add('card__texts');
+
+    div.append(this.createHeader(), this.createTagsWrapper());
+
+    return div;
+  }
+
+  private createTagsWrapper(): HTMLDivElement {
+    const { tagsClass, tagClass } = RecipeCard.selectors[this.size];
+    const div = document.createElement('div');
+    div.classList.add('tag', tagsClass);
+
+    div.append(
+      ...this.options.tags.map((tagItem) => createTag(tagItem.tag, tagItem.tagIconSrc, tagClass))
+    );
+
+    return div;
+  }
+
+  private createHeader(): HTMLHeadingElement {
+    const { title } = RecipeCard.selectors[this.size];
+    const headerLevel = this.size === 'large' ? 'h4' : 'h5';
+
+    const headerEl = document.createElement(headerLevel);
+    const a = document.createElement('a');
+
+    a.textContent = this.options.name;
+    a.classList.add(title);
+    a.href = `recipe-details.html?id=${this.options.id.toString()}`;
+
+    headerEl.appendChild(a);
+    return headerEl;
+  }
+
   private createCard(): HTMLDivElement {
-    const { container, image, like, title, tagClass, tagsClass } = RecipeCard.selectors[this.size];
+    const { container, like } = RecipeCard.selectors[this.size];
 
-    const headerLevel = this.size === 'large' ? '4' : '5';
-    const template = RecipeCard.template.replace(/{{HEADER_LEVEL}}/g, headerLevel);
-
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = template;
-    const div = tempDiv.querySelector('div') as HTMLDivElement;
-
+    const div = document.createElement('div');
     div.dataset.cardId = this.options.id.toString();
+    div.classList.add(container, 'card');
 
-    div.classList.add(container);
+    const likeButton = new LikeButton(this.options.id.toString());
 
-    const imgEl = div.querySelector('[data-role=image]') as HTMLImageElement;
-    imgEl.src = this.options.imgSrc;
-    imgEl.classList.add(image);
+    div.append(this.createImage(), likeButton.element, this.createTextsElement());
 
-    (div.querySelector('[data-role=like]') as HTMLDivElement).classList.add(like);
-
-    const titleEl = div.querySelector('[data-role=title]') as HTMLAnchorElement;
-    titleEl.textContent = this.options.name;
-    titleEl.classList.add(title);
-    titleEl.href = `recipe-details.html?id=${this.options.id.toString()}`;
-
-    const tagsWrapper = div.querySelector('[data-role=tags-wrapper]');
-    tagsWrapper?.classList.add('tag', tagsClass);
-
-    this.options.tags.forEach((tagItem) => {
-      const tagElement = createTag(tagItem.tag, tagItem.tagIconSrc, tagClass);
-      tagsWrapper?.appendChild(tagElement);
-    });
+    likeButton.element.classList.add(like);
 
     return div;
   }

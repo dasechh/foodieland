@@ -7,6 +7,19 @@ export class NutritionTable {
     this.divElement = this.createCard();
   }
 
+  private createNutritionItem(key: string, value: string, name: string): HTMLLIElement {
+    const li = document.createElement('li');
+
+    const keySpan = document.createElement('span');
+    keySpan.textContent = key;
+
+    const valueSpan = document.createElement('span');
+    valueSpan.textContent = `${value} ${name}`;
+
+    li.append(keySpan, valueSpan);
+    return li;
+  }
+
   private createCard(): HTMLDivElement {
     const tempDiv = document.createElement('div');
     tempDiv.classList.add('recipe-details__nutrition');
@@ -18,22 +31,10 @@ export class NutritionTable {
     ul.classList.add('recipe-details__nutrition-list');
 
     Object.entries(this.options).forEach(([key, { value, name }]) => {
-      const li = document.createElement('li');
-
-      const keySpan = document.createElement('span');
-      keySpan.textContent = key;
-
-      const valueSpan = document.createElement('span');
-      valueSpan.textContent = `${value} ${name}`;
-
-      li.append(keySpan, valueSpan);
-      ul.appendChild(li);
+      ul.appendChild(this.createNutritionItem(key, value, name));
     });
 
-    const fragment = document.createDocumentFragment();
-    fragment.append(header, ul);
-
-    tempDiv.appendChild(fragment);
+    tempDiv.append(header, ul);
     return tempDiv;
   }
 

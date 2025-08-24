@@ -1,5 +1,5 @@
 export class LikeButton {
-  private likeButton: HTMLDivElement;
+  private likeButton: HTMLButtonElement;
   private liked: boolean = false;
   private cardId: string;
 
@@ -49,12 +49,15 @@ export class LikeButton {
     }
   }
 
-  private createButton(cardId: string): HTMLDivElement {
-    const button = document.createElement('div');
+  private createButton(cardId: string): HTMLButtonElement {
+    const button = document.createElement('button');
     button.classList.add('like-button');
     button.dataset.cardId = String(cardId);
 
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', '24');
+    svg.setAttribute('height', '24');
+    svg.setAttribute('viewBox', '0 0 24 24');
     svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
 
     const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -68,7 +71,7 @@ export class LikeButton {
     return button;
   }
 
-  public get element(): HTMLDivElement {
+  public get element(): HTMLButtonElement {
     return this.likeButton;
   }
 }
