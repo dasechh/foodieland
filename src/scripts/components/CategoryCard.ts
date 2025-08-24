@@ -5,6 +5,23 @@ export class CategoryCard {
 
   constructor(private options: CategoryCardData) {
     this.anchorElement = this.createCard();
+    this.init();
+  }
+
+  private init() {
+    this.anchorElement.addEventListener('click', () => {
+      this.switchContent();
+    });
+  }
+
+  private switchContent() {
+    const text: string = this.anchorElement.textContent?.trim() || '';
+
+    if (text === 'View All Categories') {
+      this.anchorElement.textContent = 'Hide Categories';
+    } else {
+      this.anchorElement.textContent = 'View All Categories';
+    }
   }
 
   private createCard(): HTMLAnchorElement {
@@ -35,7 +52,7 @@ export class CategoryCard {
     fragment.append(emojiElement, blurredEmojiElement, categoryCardName);
 
     a.appendChild(fragment);
-    
+
     return a;
   }
 

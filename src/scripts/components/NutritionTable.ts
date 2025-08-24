@@ -1,6 +1,6 @@
 import { Nutrition } from '../../types/interfaces';
 
-export class NutritionCard {
+export class NutritionTable {
   private divElement: HTMLDivElement;
 
   constructor(private options: Nutrition) {

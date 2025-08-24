@@ -1,6 +1,6 @@
 import { LargeCardData } from '../../types/interfaces';
 import { createTag } from './tag';
-import { AuthorCard } from './author-card';
+import { AuthorCard } from './AuthorCard';
 
 export class FeaturedCard {
   private liElement: HTMLLIElement;
@@ -33,10 +33,12 @@ export class FeaturedCard {
     titleAnchor.appendChild(title);
     fragment.appendChild(titleAnchor);
 
-    const description = document.createElement('p');
-    description.textContent = this.options.description;
-    description.classList.add('recipes__description');
-    fragment.appendChild(description);
+    if (this.options.description) {
+      const description = document.createElement('p');
+      description.textContent = this.options.description;
+      description.classList.add('recipes__description');
+      fragment.appendChild(description);
+    }
 
     const tagContainer = document.createElement('div');
     tagContainer.classList.add('recipes__tags', 'tag');
@@ -51,8 +53,12 @@ export class FeaturedCard {
     const cardFooter = document.createElement('div');
     cardFooter.classList.add('recipes__footer');
 
-    const authorCard = new AuthorCard(this.options);
-    cardFooter.appendChild(authorCard.element);
+    try {
+      const authorCard = new AuthorCard(this.options);
+      cardFooter.appendChild(authorCard.element);
+    } catch (error) {
+      console.error('Ошибка при создании AuthorCard:', error);
+    }
 
     const button = document.createElement('a');
     button.href = `recipe-details.html?id=${this.options.id}`;
