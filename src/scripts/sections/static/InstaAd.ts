@@ -1,4 +1,8 @@
-<section class="instagram">
+import { Section } from '../Section';
+
+export class InstaAdSection extends Section {
+  constructor() {
+    const template: string = `
   <div class="instagram__header">
     <h2 class="instagram__title">Check out @foodieland on Instagram</h2>
     <p class="instagram__text">
@@ -15,5 +19,8 @@
   <a href="#" class="instagram__button"
     >Visit Our Instagram
     <img class="icon" src="icons/header/004-instagram-white.svg"
-  /></a>
-</section>
+  /></a>`;
+
+    super('section', ['instagram'], template);
+  }
+}

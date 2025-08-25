@@ -1,5 +1,10 @@
-export function createTag(tag: string, index: number, tagContainerClass?: string) {
+export function createTag(
+  tag: string,
+  tagIconSrc?: string,
+  tagContainerClass?: string
+): HTMLAnchorElement {
   const tagContainer = document.createElement('a');
+  tagContainer.href = '#';
 
   if (tagContainerClass) tagContainer.classList.add(tagContainerClass);
 
@@ -9,10 +14,9 @@ export function createTag(tag: string, index: number, tagContainerClass?: string
 
   const tagIcon = document.createElement('img');
   tagIcon.classList.add('icon');
-  tagIcon.src = index === 0 ? '/icons/tags/Timer.svg' : '/icons/tags/ForkKnife.svg';
+  tagIcon.src = tagIconSrc || '/icons/tags/ForkKnife.svg';
 
-  tagContainer.appendChild(tagIcon);
-  tagContainer.appendChild(tagElement);
+  tagContainer.append(tagIcon, tagElement);
 
   return tagContainer;
 }

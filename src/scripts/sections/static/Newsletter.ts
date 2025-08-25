@@ -1,4 +1,8 @@
-<section class="newsletter">
+import { Section } from '../Section';
+
+export class NewsletterSection extends Section {
+  constructor() {
+    const template: string = `
   <div class="newsletter__header">
     <h3>Deliciousness to your inbox</h3>
     <p class="newsletter__text">
@@ -18,5 +22,8 @@
   <div class="newsletter__images">
     <img src="newsletter/salad-vegetables.png" />
     <img src="newsletter/salad-with-eggs.png" />
-  </div>
-</section>
+  </div>`;
+
+    super('section', ['newsletter'], template);
+  }
+}

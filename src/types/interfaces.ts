@@ -1,41 +1,54 @@
-export interface smallCardData {
+export interface SmallCardData {
   imgSrc: string;
   name: string;
-  tags: string[];
+  tags: tagData[];
   id: number;
 }
-export interface largeCardData extends smallCardData {
-  description: string;
-  author: string;
-  authorImg: string;
-  date: string;
+
+interface tagData {
+  tag: string;
+  tagIconSrc?: string;
 }
 
-export interface fullCardData extends largeCardData {
-  nutrition: nutrition;
+export interface LargeCardData extends SmallCardData {
+  description: string;
+  authorName: string;
+  authorImg: string;
+  recipeDate: string;
+}
+
+export interface FullCardData extends LargeCardData {
+  nutrition: Nutrition;
   largeDescription: string;
   ingredients: string[];
   steps: recipeStep[];
-  videoSrc: string;
 }
 
-export interface categoryCardData {
+export interface CategoryCardData {
   category: string;
   color: string;
   imgSrc: string;
 }
 
-interface nutrition {
-  calories: nutritionValue;
-  fat: nutritionValue;
-  protein: nutritionValue;
-  carbs: nutritionValue;
+export interface AuthorCardData {
+  authorName: string;
+  recipeDate: string;
+  authorImg: string;
 }
 
-interface nutritionValue {
-  name: string;
+interface NutritionValue {
   value: number;
+  name: string;
 }
+
+export interface Nutrition {
+  calories: NutritionValue;
+  fat: NutritionValue;
+  protein: NutritionValue;
+  carbohydrate: NutritionValue;
+  cholesterol: NutritionValue;
+}
+
 interface recipeStep {
   title: string;
   description: string;

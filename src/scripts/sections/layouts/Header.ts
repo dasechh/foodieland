@@ -1,6 +1,10 @@
-<header>
+import { Section } from '../Section';
+
+export class HeaderSection extends Section {
+  constructor() {
+    const template: string = `
   <nav>
-    <a class="logo" href="#home">
+    <a class="logo" href="/">
       <img
         src="icons/header/Foodieland-high.svg"
         alt="Foodieland logo"
@@ -9,7 +13,7 @@
       />
     </a>
     <div class="menu">
-      <a class="menu__link" href="#home">Home</a>
+      <a class="menu__link" href="/">Home</a>
       <a class="menu__link" href="#recipes">Recipes</a>
       <a class="menu__link" href="#blog">Blog</a>
       <a class="menu__link" href="#contact">Contact</a>
@@ -27,5 +31,8 @@
       </a>
     </div>
   </nav>
-  <hr />
-</header>
+  <hr />`;
+
+    super('header', [], template);
+  }
+}

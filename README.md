@@ -69,10 +69,12 @@ This project is under active development. Some features are still being implemen
 - [ ] Blog section for articles, tips, and news
 - [ ] Contact Us page with form and relevant information
 - [ ] Search functionality across recipes, categories, and blog posts
+- [ ] Deployment of frontend to Vercel
+- [x] Backend integration — connect to a real API, hosted on Railway
 - [ ] Performance optimizations and code cleanup
 
 ## 📌 Author
 
 **Andrey Kosarev**  
-📧 [kosarev-2004@mail.ru](mailto:kosarev-2004@mail.ru)
+📧 [kosarev-2004@mail.ru](mailto:kosarev-2004@mail.ru)  
 💼 [GitHub](https://github.com/dasechh)
