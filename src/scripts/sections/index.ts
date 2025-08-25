@@ -1,0 +1,10 @@
+export { HeaderSection } from './layouts/Header';
+export { MainSection } from './layouts/Main';
+export { FeaturedSection } from './dynamic/FeaturedCarousel';
+export { CategoriesSection } from './static/Categories';
+export { FeedSection } from './dynamic/Feed';
+export { CourseAdSection } from './static/CourseAd';
+export { InstaAdSection } from './static/InstaAd';
+export { RecSection } from './dynamic/Recommendations';
+export { NewsletterSection } from './static/Newsletter';
+export { FooterSection } from './layouts/Footer';

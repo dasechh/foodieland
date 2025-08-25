@@ -1,4 +1,8 @@
-<header>
+import { Section } from '../Section';
+
+export class HeaderSection extends Section {
+  constructor() {
+    const template: string = `
   <nav>
     <a class="logo" href="/">
       <img
@@ -27,5 +31,8 @@
       </a>
     </div>
   </nav>
-  <hr />
-</header>
+  <hr />`;
+
+    super('header', [], template);
+  }
+}

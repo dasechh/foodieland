@@ -1,4 +1,8 @@
-<footer class="footer">
+import { Section } from "../Section";
+
+export class FooterSection extends Section {
+  constructor() {
+    const template: string = `
   <div class="footer__top">
     <div class="footer__top-left">
       <a class="logo" href="#home">
@@ -36,5 +40,8 @@
         <img src="icons/header/004-instagram.svg" alt="instagram page" />
       </a>
     </div>
-  </div>
-</footer>
+  </div>`;
+
+    super('footer', ['footer'], template);
+  }
+}

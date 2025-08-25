@@ -11,6 +11,9 @@
         {
           "tag": "Healthy",
           "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        },
+        {
+          "tag": "Featured"
         }
       ],
       "description": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
@@ -53,6 +56,9 @@
         {
           "tag": "Healthy",
           "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        },
+        {
+          "tag": "Featured"
         }
       ],
       "description": "A mouthwatering wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
@@ -191,7 +197,16 @@
     {
       "imgSrc": "/recipe-images/spicy_sandwiches.jpg",
       "name": "Barbeque Spicy Sandwiches with Chips",
-      "tags": ["30 Minutes", "Snack"],
+      "tags": [
+        {
+          "tag": "30 Minutes",
+          "tagIconSrc": "/icons/tags/Timer.svg"
+        },
+        {
+          "tag": "Healthy",
+          "tagIconSrc": "/icons/tags/ForkKnife.svg"
+        }
+      ],
       "description": "Spicy barbeque sandwiches served with crispy chips, perfect for a quick snack or a casual meal with friends.",
       "authorName": "John Doe",
       "authorImg": "tg_image_528061146.jpeg",
