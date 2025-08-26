@@ -1,0 +1,56 @@
+@use "../../styles/_variables" as *;
+@use "../../styles/mixins" as *;
+
+.recipes__image {
+  width: 50%;
+}
+
+.recipes__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recipes__description {
+  margin: 0 0 1.875rem;
+}
+
+.recipes__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-xsmall;
+}
+
+.recipes__footer {
+  width: 100%;
+  max-height: $button-height;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.recipes__button {
+  @include button($button-width-base, $button-height, $background-dark, $text-bright);
+  gap: $gap-small;
+}
+
+.recipes__item {
+  display: flex;
+  max-width: $width-maximized-small;
+  aspect-ratio: 2 / 1;
+  background-color: $background-primary;
+  border-radius: 3.125rem;
+  overflow: hidden;
+}
+
+.recipes__content {
+  width: 50%;
+  padding: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}

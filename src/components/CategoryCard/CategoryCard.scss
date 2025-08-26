@@ -1,0 +1,41 @@
+@use "../../styles/_variables" as *;
+
+.categories__card {
+  width: min-content;
+  height: min-content;
+  padding: 1.875rem 2.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $text-dark;
+  border-radius: $border-radius-large;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.05s ease-in-out;
+    box-shadow: 0 0.125rem 1.25rem rgba(0, 0, 0, 0.015) inset, 0 0 1.25rem rgba(0, 0, 0, 0.065);
+  }
+}
+
+.emoji {
+  width: 6.25rem;
+  margin-bottom: 3rem;
+  pointer-events: none;
+}
+
+.blurred-emoji {
+  width: 6.25rem;
+  position: absolute;
+  filter: blur(0.625rem);
+  opacity: 0.2;
+  transform: translate(1.25rem, 1.25rem);
+  z-index: -1;
+}
+
+.categories__card-name {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-semi-bold;
+}

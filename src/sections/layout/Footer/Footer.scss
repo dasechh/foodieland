@@ -1,0 +1,55 @@
+@use "../../../styles/variables" as *;
+
+footer {
+  width: 100%;
+  display: flex;
+  margin: 0 auto $gap-main * 0.3;
+  flex-direction: column;
+  padding: 0 $padding-horizontal;
+  max-width: $width-maximized;
+  box-sizing: border-box;
+  margin-bottom: $gap-main * 0.3;
+}
+
+.footer__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.footer__top-left {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-small;
+}
+
+.footer__top-right {
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.footer__copyright {
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  a {
+    color: #ff7967;
+  }
+}

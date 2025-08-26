@@ -1,0 +1,34 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.instagram {
+  width: 100%;
+  padding: 0 $padding-horizontal 5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $main-gradient;
+  text-align: center;
+  gap: 5rem;
+  overflow: hidden;
+}
+
+.instagram__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instagram__text {
+  width: 65.625%;
+}
+
+.instagram__post {
+  width: $card-width-regular;
+}
+
+.instagram__button {
+  @include button($button-width-base * 1.15, $button-height, $background-dark, $text-bright);
+  gap: $gap-small;
+}

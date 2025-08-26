@@ -1,0 +1,29 @@
+@use '../../styles/_variables' as *;
+
+.recipes__author {
+  display: flex;
+  align-items: center;
+  gap: $gap-small;
+}
+
+.recipes__author-icon {
+  height: $interactive-icon-size;
+  border-radius: 100%;
+}
+
+.recipes__author-data {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-xsmall;
+}
+
+.recipes__author-name {
+  color: $text-dark;
+  font-weight: $font-weight-semi-bold;
+}
+
+.recipes__date {
+  justify-self: flex-start;
+  color: rgba($text-dark, $opacity-muted);
+  font-size: $font-size-small;
+}

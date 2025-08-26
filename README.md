@@ -70,7 +70,7 @@ This project is under active development. Some features are still being implemen
 - [ ] Contact Us page with form and relevant information
 - [ ] Search functionality across recipes, categories, and blog posts
 - [ ] Deployment of frontend to Vercel
-- [x] Backend integration — connect to a real API, hosted on Railway
+- [ ] Backend integration — connect to a real API, hosted on Railway
 - [ ] Performance optimizations and code cleanup
 
 ## 📌 Author
