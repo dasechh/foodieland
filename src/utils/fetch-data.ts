@@ -3,7 +3,7 @@ import {
   FullCardData,
   LargeCardData,
   SmallCardData,
-} from '../../types/interfaces';
+} from '../types/interfaces';
 
 export async function loadCardsData(
   requiredTags: string[] = [],
