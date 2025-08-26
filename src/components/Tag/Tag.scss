@@ -1,0 +1,37 @@
+@use "../../styles/_variables" as *;
+
+.recipes__tag {
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: $gap-xsmall;
+  border-radius: $border-radius-large;
+  background-color: rgba($background-dark, $opacity-ultra-low);
+  color: rgba($text-dark, $opacity-muted);
+}
+
+.recommendations__card-tag {
+  display: flex;
+  align-items: center;
+  gap: $gap-xsmall;
+  font-weight: $font-weight-medium;
+  color: rgba($text-dark, $opacity-muted);
+}
+
+.recipes__badge {
+  margin-bottom: 2rem;
+  padding: 0.625rem 1.25rem;
+  display: flex;
+  gap: $gap-small;
+  align-items: center;
+  box-sizing: border-box;
+  font-weight: $font-weight-semi-bold;
+  background-color: $background-bright;
+  border-radius: $border-radius-large;
+  filter: drop-shadow(0.625rem 1.25rem 2.5rem rgba($background-dark, $opacity-ultra-low));
+}
+
+.tag {
+  font-size: $font-size-small;
+  letter-spacing: calc($letter-spacing / 2);
+}

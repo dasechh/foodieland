@@ -1,0 +1,22 @@
+@use "../../../styles/variables" as *;
+
+.feed {
+  width: 100%;
+  max-width: $width-maximized;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  box-sizing: border-box;
+  padding: 0 $padding-horizontal;
+  text-align: center;
+}
+
+.feed__header {
+  margin-bottom: 6rem;
+}
+
+.feed__text {
+  max-width: 55.15625%;
+  margin: 0 auto;
+}

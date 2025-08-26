@@ -1,0 +1,27 @@
+@use "../../../styles/variables" as *;
+
+.recommendations {
+  width: 100%;
+  max-width: $width-maximized;
+  padding: 0 $padding-horizontal;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.recommendations__text {
+  width: 48.4375%;
+}
+
+.recommendations__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 6rem;
+
+  h3 {
+    margin: 0;
+  }
+}

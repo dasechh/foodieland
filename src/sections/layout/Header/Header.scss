@@ -1,0 +1,17 @@
+@use "../../../styles/variables" as *;
+
+nav {
+  width: 100%;
+  max-width: $width-maximized;
+  display: flex;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 2.5rem $padding-horizontal;
+  color: $text-dark;
+  font-weight: $font-weight-medium;
+  letter-spacing: calc(#{$letter-spacing} / 2);
+}
+
+hr {
+  opacity: 0.1;
+}

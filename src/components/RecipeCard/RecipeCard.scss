@@ -1,0 +1,100 @@
+@use '../../styles/_variables' as *;
+
+.card__texts {
+  margin: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.05s ease-in-out;
+  }
+
+  a {
+    &:hover {
+      color: $text-link;
+    }
+  }
+}
+
+.feed__card {
+  width: $card-width-medium;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: $main-gradient;
+  border-radius: $border-radius-large;
+  text-align: left;
+
+  &:hover {
+    box-shadow: 0 0.125rem 1.25rem rgba($background-dark, $opacity-ultra-low) inset,
+      0 0 1.25rem rgba($background-primary, $opacity-muted);
+  }
+}
+
+.card__image {
+  display: block;
+  border-radius: 1.25rem;
+  margin-bottom: 1.5rem;
+  max-height: 15.625rem;
+  object-fit: cover;
+}
+
+.feed__card-like-button {
+  top: 2.25rem;
+  right: 2.25rem;
+}
+
+.card__title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  min-height: 4rem;
+}
+
+.recipes__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap-xsmall;
+}
+
+.recommendations__card {
+  width: $card-width-regular;
+}
+
+.recommendations__card-image {
+  margin-bottom: 1rem;
+  max-height: 12.5rem;
+  object-fit: cover;
+  border-radius: 1.25rem;
+}
+
+.recommendations__card-like-button {
+  top: 1rem;
+  right: 1rem;
+}
+
+.recommendations__card-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  min-height: 2.5rem;
+}
+
+.recommendations__card-tags {
+  display: flex;
+  flex-direction: row;
+  gap: $gap-small-medium;
+}
