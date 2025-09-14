@@ -6,7 +6,7 @@ export class HeaderSection extends Section {
   <nav>
     <a class="logo" href="/">
       <img
-        src="icons/header/Foodieland-high.svg"
+        src="icons/navigation/Foodieland-high.svg"
         alt="Foodieland logo"
         width="110"
         height="30"
@@ -21,13 +21,13 @@ export class HeaderSection extends Section {
     </div>
     <div class="social-icons">
       <a href="#">
-        <img src="icons/header/001-facebook.svg" alt="facebook page" />
+        <img src="icons/navigation/001-facebook.svg" alt="facebook page" />
       </a>
       <a href="#">
-        <img src="icons/header/003-twitter.svg" alt="twitter page" />
+        <img src="icons/navigation/003-twitter.svg" alt="twitter page" />
       </a>
       <a href="#">
-        <img src="icons/header/004-instagram.svg" alt="instagram page" />
+        <img src="icons/navigation/004-instagram.svg" alt="instagram page" />
       </a>
     </div>
   </nav>

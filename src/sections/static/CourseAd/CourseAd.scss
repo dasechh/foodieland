@@ -1,31 +1,29 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
 
 .course-ad {
   width: 100%;
   max-width: $width-maximized;
-  padding: 0 $padding-horizontal;
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
+  align-self: center;
+  margin: $margin-vertical 0;
 }
 
 .course-ad__text {
-  align-self: center;
+  align-self: flex-end;
   width: 41.09375%;
   height: min-content;
   display: flex;
   flex-direction: column;
-  margin-right: 3rem;
+  margin: 0 2.5rem 4.5rem 0;
 }
 
 .course-ad__text-description {
   margin-bottom: 4.5rem;
+  text-wrap: balance;
+  
 }
 
-.course-ad__button {
-  @include button($button-width-base * 0.9, $button-height, $background-dark, $text-bright);
-}
 .course-ad__image-wrapper {
   width: 55.46875%;
   height: min-content;
@@ -51,4 +49,8 @@
   align-self: flex-end;
   justify-self: flex-start;
   object-fit: contain;
+}
+
+.course-ad__title {
+  margin-bottom: 1.5rem;
 }

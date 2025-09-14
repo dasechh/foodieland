@@ -1,4 +1,5 @@
 import { Section } from '../../Section';
+import { createButton } from '../../../components/Button';
 
 export class InstaAdSection extends Section {
   constructor() {
@@ -11,16 +12,19 @@ export class InstaAdSection extends Section {
     </p>
   </div>
   <div class="block__list">
-    <img class="instagram__post" src="Post.jpg" />
-    <img class="instagram__post" src="Post-1.jpg" />
-    <img class="instagram__post" src="Post-2.jpg" />
-    <img class="instagram__post" src="Post-3.jpg" />
-  </div>
-  <a href="#" class="instagram__button"
-    >Visit Our Instagram
-    <img class="icon" src="icons/header/004-instagram-white.svg"
-  /></a>`;
+    <img class="instagram__post" src="/promo/insta-post-1.jpg" />
+    <img class="instagram__post" src="/promo/insta-post-2.jpg" />
+    <img class="instagram__post" src="/promo/insta-post-3.jpg" />
+    <img class="instagram__post" src="/promo/insta-post-4.jpg" />
+  </div>`;
 
     super('section', ['instagram'], template);
+
+    this.init();
+  }
+
+  init() {
+    const button = createButton('instagram__button', 'visit-insta') as HTMLAnchorElement;
+    this.element.appendChild(button);
   }
 }

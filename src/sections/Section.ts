@@ -4,7 +4,7 @@ export class Section {
     constructor(tagName: string, classNames: string[], template: string) {
         this.sectionEl = document.createElement(tagName);
 
-        if (classNames.length > 0) {
+        if (classNames.length > 0 && classNames) {
             this.sectionEl.classList.add(...classNames);
         }
         this.sectionEl.innerHTML = template;

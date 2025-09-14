@@ -1,2 +1,2 @@
-import './tag.scss';
+import './Tag.scss';
 export * from './Tag';

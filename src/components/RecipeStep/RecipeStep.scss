@@ -1,0 +1,38 @@
+@use '../../styles/_variables' as *;
+
+.directions__list-item {
+  display: flex;
+  flex-direction: column;
+  > :not(label) {
+    padding-left: 3rem;
+  }
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba($text-dark, $opacity-ultra-low * 2);
+  margin-top: 3rem;
+}
+
+.directions__list-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $gap-small-medium;
+  font-size: $font-size-large;
+  font-weight: $font-weight-semi-bold;
+  margin-bottom: 1.5rem;
+}
+
+.directions__list-img {
+  margin: 3rem 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.directions__list-description {
+  line-height: 1.625rem;
+}
+
+.directions__no-data {
+  margin-top: $margin-vertical;
+  line-height: 1.625rem;
+}

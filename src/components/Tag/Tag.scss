@@ -1,7 +1,9 @@
-@use "../../styles/_variables" as *;
+@use '../../styles/_variables' as *;
 
 .recipes__tag {
   padding: 0.5rem 1rem;
+  height: 2.5rem;
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   gap: $gap-xsmall;
@@ -33,5 +35,13 @@
 
 .tag {
   font-size: $font-size-small;
-  letter-spacing: calc($letter-spacing / 2);
+}
+
+.recipes-summary__tag {
+  padding-left: 2rem;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: $gap-xsmall;
+  color: rgba($text-dark, $opacity-muted);
 }

@@ -1,0 +1,99 @@
+@use "../../../styles/variables" as *;
+
+.recipe-details {
+    display: flex;
+    margin-top: $margin-vertical;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    align-content: center;
+}
+
+.recipe-details__media {
+    flex: 1 1 auto;
+    border: none;
+    border-radius: $border-radius-large;
+    width: 100%;
+    height: 37.5rem;
+    object-fit: cover;
+    object-position: center;
+    max-width: 52.5rem;
+}
+
+.recipe-details__main {
+    width: 100%;
+    max-width: $width-maximized;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    height: fit-content;
+    max-height: 75rem;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+.recipe-details__buttons {
+    display: flex;
+    max-width: fit-content;
+    gap: $gap-small * 2;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+}
+
+.recipe-details__button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap-small;
+    font-size: 0.75rem;
+    letter-spacing: 0.075rem;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+}
+
+.recipe-details__button-text{
+    font-weight: $font-weight-medium;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+}
+
+.recipe-details__header-left {
+    max-width: 65.625%;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-details__header {
+    width: 100%;
+    max-width: $width-maximized;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.recipe-details__summary {
+    display: flex;
+    gap: $gap-small * 2;
+    
+
+    > *:not(:first-child) {
+        border-left: 1px solid rgba($text-dark, $opacity-ultra-low * 2);
+    }
+}
+
+.recipe-details__description {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: $width-maximized;
+}
+
+.recipe-details__title{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}

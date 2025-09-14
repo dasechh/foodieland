@@ -1,14 +1,21 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 footer {
   width: 100%;
   display: flex;
-  margin: 0 auto $gap-main * 0.3;
+  margin: $margin-vertical * 3 auto 1.5rem;
   flex-direction: column;
-  padding: 0 $padding-horizontal;
   max-width: $width-maximized;
   box-sizing: border-box;
   margin-bottom: $gap-main * 0.3;
+
+  .menu {
+    font-weight: $font-weight-medium;
+
+    .menu__link {
+      font-weight: $font-weight-regular;
+    }
+  }
 }
 
 .footer__top {
@@ -23,6 +30,10 @@ footer {
   display: flex;
   flex-direction: column;
   gap: $gap-small;
+
+  p {
+    line-height: 1.75rem;
+  }
 }
 
 .footer__top-right {
@@ -48,6 +59,8 @@ footer {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  font-size: $font-size-medium;
+  font-weight: $font-weight-medium;
 
   a {
     color: #ff7967;

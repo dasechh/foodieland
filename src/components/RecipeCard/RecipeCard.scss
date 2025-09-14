@@ -1,16 +1,17 @@
 @use '../../styles/_variables' as *;
 
 .card__texts {
-  margin: 0 0.5rem;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  gap: $gap-small-medium;
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
+  text-wrap: balance;
 
   &:hover {
     transform: scale(1.05);
@@ -36,14 +37,19 @@
     box-shadow: 0 0.125rem 1.25rem rgba($background-dark, $opacity-ultra-low) inset,
       0 0 1.25rem rgba($background-primary, $opacity-muted);
   }
+
+  .card__texts {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .card__image {
   display: block;
   border-radius: 1.25rem;
   margin-bottom: 1.5rem;
-  max-height: 15.625rem;
+  height: 15.625rem;
   object-fit: cover;
+  background-color: white;
 }
 
 .feed__card-like-button {
@@ -59,6 +65,9 @@
   -webkit-line-clamp: 2;
   line-clamp: 2;
   min-height: 4rem;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-large;
+  line-height: 2rem;
 }
 
 .recipes__tags {
@@ -76,6 +85,7 @@
   max-height: 12.5rem;
   object-fit: cover;
   border-radius: 1.25rem;
+  height: 100%;
 }
 
 .recommendations__card-like-button {
@@ -91,9 +101,14 @@
   -webkit-line-clamp: 2;
   line-clamp: 2;
   min-height: 2.5rem;
+  font-weight: $font-weight-semi-bold;
+  letter-spacing: $letter-spacing;
+  font-size: $font-size-medium;
+  line-height: 1.625rem;
 }
 
 .recommendations__card-tags {
+  margin-top: auto;
   display: flex;
   flex-direction: row;
   gap: $gap-small-medium;

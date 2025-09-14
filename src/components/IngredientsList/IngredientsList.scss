@@ -1,0 +1,34 @@
+@use '../../styles/_variables' as *;
+
+.ingredients__list {
+  border: none;
+  padding: 0;
+  width: 100%;
+  transform: translateY(-1rem);
+}
+
+.ingredients__list-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: $gap-small-medium;
+  font-size: $font-size-medium;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba($text-dark, $opacity-ultra-low * 2);
+  letter-spacing: $letter-spacing * 0.5;
+
+  &.checked {
+    text-decoration: line-through;
+    color: rgba($text-dark, $opacity-muted * 0.5);
+  }
+}
+
+.ingredients__list-legend {
+  font-size: $font-size-large;
+  font-weight: $font-weight-semi-bold;
+  letter-spacing: $letter-spacing;
+}
+
+.ingredients__header {
+  font-size: 2.25rem;
+}

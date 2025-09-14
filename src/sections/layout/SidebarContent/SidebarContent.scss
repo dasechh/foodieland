@@ -1,0 +1,16 @@
+@use "../../../styles/variables" as *;
+
+.content-with-sidebar {
+    width: 100%;
+    max-width: $width-maximized;
+    display: flex;
+    align-self: center;
+}
+
+.sidebar__main-content {
+    display: flex;
+    flex-direction: column;
+    width: 65.625%;
+    max-width: 52.5rem;
+    gap: 1rem;
+}

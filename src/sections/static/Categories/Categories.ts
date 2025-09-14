@@ -1,6 +1,7 @@
 import { CategoryCardData } from '../../../types/interfaces';
 import { CategoryCard } from '../../../components/CategoryCard';
 import { Section } from '../../Section';
+import { createButton } from '../../../components/Button';
 
 const categoriesData: CategoryCardData[] = [
   { category: 'Breakfast', color: '#708246', imgSrc: '/icons/categories/image-onigiri.png' },
@@ -27,10 +28,7 @@ export class CategoriesSection extends Section {
 
   constructor() {
     const template: string = `<div class="categories__header">
-        <h3>Categories</h3>
-        <button class="categories__button">
-          View All Categories
-        </button>
+        <h2>Categories</h2>
         </div>
       <div class="block__list categories__list"></div>`;
 
@@ -39,8 +37,10 @@ export class CategoriesSection extends Section {
     this.init();
   }
 
-  private createButton() {
-    const button = this.sectionEl.querySelector<HTMLButtonElement>('.categories__button');
+  private createButton() {  
+    const button = createButton('categories__button', 'view-categories') as HTMLButtonElement;
+    const buttonContainer = this.sectionEl.querySelector<HTMLDivElement>('.categories__header');
+    buttonContainer?.appendChild(button);
 
     button?.addEventListener('click', () => {
       this.open = !this.open;

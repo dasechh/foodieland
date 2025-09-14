@@ -7,7 +7,7 @@ export class FooterSection extends Section {
     <div class="footer__top-left">
       <a class="logo" href="#home">
         <img
-          src="icons/header/Foodieland-high.svg"
+          src="icons/navigation/Foodieland-high.svg"
           alt="Foodieland logo"
           width="110"
           height="30"
@@ -31,13 +31,13 @@ export class FooterSection extends Section {
     </p>
     <div class="social-icons">
       <a href="#">
-        <img src="icons/header/001-facebook.svg" alt="facebook page" />
+        <img src="icons/navigation/001-facebook.svg" alt="facebook page" />
       </a>
       <a href="#">
-        <img src="icons/header/003-twitter.svg" alt="twitter page" />
+        <img src="icons/navigation/003-twitter.svg" alt="twitter page" />
       </a>
       <a href="#">
-        <img src="icons/header/004-instagram.svg" alt="instagram page" />
+        <img src="icons/navigation/004-instagram.svg" alt="instagram page" />
       </a>
     </div>
   </div>`;

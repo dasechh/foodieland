@@ -1,17 +1,49 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 nav {
   width: 100%;
   max-width: $width-maximized;
   display: flex;
   margin: 0 auto;
+  padding: 2.5rem 0;
   box-sizing: border-box;
-  padding: 2.5rem $padding-horizontal;
   color: $text-dark;
   font-weight: $font-weight-medium;
-  letter-spacing: calc(#{$letter-spacing} / 2);
+  justify-content: space-between;
+}
+
+.social-icons {
+  width: 10rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2.5rem;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.menu {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  gap: 3.75rem;
 }
 
 hr {
   opacity: 0.1;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  width: 10rem;
+
+  img {
+    width: 6.875rem;
+    vertical-align: middle;
+    height: 1.875rem;
+  }
 }
