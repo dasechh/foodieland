@@ -28,7 +28,7 @@ export class RecipeOverviewSection extends Section {
       tagContainer.classList.add('recipes__tags');
 
       this.data.tags.forEach((tagItem) => {
-        const tagElement = createTag(tagItem.tag, tagItem.tagIconSrc, 'recipes-summary__tag');
+        const tagElement = createTag(tagItem.tag, tagItem.tagIcon, 'recipes-summary__tag');
         tagContainer.appendChild(tagElement);
       });
     }

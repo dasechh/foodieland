@@ -1,14 +1,13 @@
-import { tagData } from '../../types/interfaces';
+import { tagData, cardSize } from '../../types/interfaces';
 import { createTag, createButton } from '../../components';
 import { toggleState, setStorageState } from '../../utils/stateManager';
-
-type cardSize = 'medium' | 'large' | 'small';
+import defaultImage from '../../assets/images/image-placeholder.webp';
 
 export class RecipeCard {
   private divElement: HTMLDivElement;
 
   constructor(
-    private imgSrc: string = '/recipe-images/placeholder.webp',
+    private imgSrc: string = defaultImage,
     private name: string = 'No name',
     private tags: tagData[] = [],
     private id: number = -1,
@@ -49,6 +48,7 @@ export class RecipeCard {
     const { image } = RecipeCard.selectors[this.size];
     const img = document.createElement('img');
     img.src = this.imgSrc;
+    img.onerror = () => (img.src = defaultImage);
     img.alt = this.name;
     img.classList.add(image);
     return img;
@@ -83,7 +83,7 @@ export class RecipeCard {
       div.append(
         ...this.tags
           .slice(0, tagsCount)
-          .map((tagItem) => createTag(tagItem.tag, tagItem.tagIconSrc, tagClass))
+          .map((tagItem) => createTag(tagItem.tag, tagItem.tagIcon, tagClass))
       );
       return div;
     } else {

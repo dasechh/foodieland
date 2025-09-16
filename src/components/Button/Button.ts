@@ -1,7 +1,12 @@
+import goIcon from '../../assets/icons/buttons/go.svg';
+import instaIcon from '../../assets/icons/buttons/insta.svg';
+import printIcon from '../../assets/icons/buttons/print.svg';
+import shareIcon from '../../assets/icons/buttons/share.svg';
+
 const variants = {
   'view-recipes': {
     text: 'View Recipe',
-    iconSrc: 'icons/buttons/go.svg',
+    iconSrc: goIcon,
     type: HTMLAnchorElement,
   },
   'learn-more': {
@@ -10,15 +15,15 @@ const variants = {
   },
   'visit-insta': {
     text: 'Visit Our Instagram',
-    iconSrc: 'icons/buttons/insta.svg',
+    iconSrc: instaIcon,
     type: HTMLAnchorElement,
   },
   print: {
-    iconSrc: 'icons/buttons/print.svg',
+    iconSrc: printIcon,
     type: HTMLButtonElement,
   },
   share: {
-    iconSrc: 'icons/buttons/share.svg',
+    iconSrc: shareIcon,
     type: HTMLButtonElement,
   },
   subscribe: { text: 'Subscribe', type: HTMLButtonElement },

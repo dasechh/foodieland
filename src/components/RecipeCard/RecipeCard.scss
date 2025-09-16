@@ -12,17 +12,6 @@
   display: flex;
   flex-direction: column;
   text-wrap: balance;
-
-  &:hover {
-    transform: scale(1.05);
-    transition: transform 0.05s ease-in-out;
-  }
-
-  a {
-    &:hover {
-      color: $text-link;
-    }
-  }
 }
 
 .feed__card {
@@ -34,7 +23,7 @@
   text-align: left;
 
   &:hover {
-    box-shadow: 0 0.125rem 1.25rem rgba($background-dark, $opacity-ultra-low) inset,
+    box-shadow: 0 0.125rem 1.25rem rgba($background-dark, $opacity-ultra-low * 0.7) inset,
       0 0 1.25rem rgba($background-primary, $opacity-muted);
   }
 

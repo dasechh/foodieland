@@ -1,16 +1,15 @@
-import { Section } from '../../Section';
+import { Section } from '../../Section'
+import logoSrc from '../../../assets/icons/navigation/Foodieland-high.svg'
+import fbIcon from '../../../assets/icons/navigation/001-facebook.svg'
+import twIcon from '../../../assets/icons/navigation/003-twitter.svg'
+import igIcon from '../../../assets/icons/navigation/004-instagram.svg'
 
 export class HeaderSection extends Section {
   constructor() {
     const template: string = `
   <nav>
     <a class="logo" href="/">
-      <img
-        src="icons/navigation/Foodieland-high.svg"
-        alt="Foodieland logo"
-        width="110"
-        height="30"
-      />
+      <img src="${logoSrc}" alt="Foodieland logo" width="110" height="30" />
     </a>
     <div class="menu">
       <a href="/">Home</a>
@@ -20,19 +19,13 @@ export class HeaderSection extends Section {
       <a href="#about">About us</a>
     </div>
     <div class="social-icons">
-      <a href="#">
-        <img src="icons/navigation/001-facebook.svg" alt="facebook page" />
-      </a>
-      <a href="#">
-        <img src="icons/navigation/003-twitter.svg" alt="twitter page" />
-      </a>
-      <a href="#">
-        <img src="icons/navigation/004-instagram.svg" alt="instagram page" />
-      </a>
+      <a href="#"><img src="${fbIcon}" alt="facebook page" /></a>
+      <a href="#"><img src="${twIcon}" alt="twitter page" /></a>
+      <a href="#"><img src="${igIcon}" alt="instagram page" /></a>
     </div>
   </nav>
-  <hr />`;
+  <hr />`
 
-    super('header', [], template);
+    super('header', [], template)
   }
 }

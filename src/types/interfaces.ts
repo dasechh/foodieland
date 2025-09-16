@@ -24,8 +24,9 @@ export function defaultSmallData(): SmallRecipeData {
 
 export interface tagData {
   tag: string;
-  tagIconSrc?: string;
+  tagIcon?: string;
 }
+
 
 export interface MediumRecipeData extends SmallRecipeData, Directions {
   nutrition: Nutrition;
@@ -85,3 +86,5 @@ export type CardRouteMap = {
   smallCardInfo: SmallRecipeData;
   mediumCardInfo: MediumRecipeData;
 };
+
+export type cardSize = 'medium' | 'large' | 'small';

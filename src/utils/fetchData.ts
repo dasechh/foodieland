@@ -11,7 +11,6 @@ export async function loadRecipeData<T extends cardRoute>(
   const response = await fetch(`api/${route}`);
   if (!response.ok) throw new Error('Failed to fetch data');
   const data: CardRouteMap[T][] = await response.json();
-  console.log('item.id type:', typeof data[0].id, data[0].id);
 
   const filteredData = data.filter((item) => {
     const matchedTags =

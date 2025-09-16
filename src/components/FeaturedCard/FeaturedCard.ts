@@ -2,6 +2,7 @@ import { createTag } from '../Tag';
 import { AuthorCard } from '../AuthorCard';
 import { createButton } from '../Button';
 import { defaultSmallData, SmallRecipeData } from '../../types/interfaces';
+import defaultImage from '../../assets/images/image-placeholder.webp';
 
 export class FeaturedCard {
   private liElement: HTMLLIElement;
@@ -14,6 +15,7 @@ export class FeaturedCard {
     const img = document.createElement('img');
     img.classList.add('recipes__image');
     img.src = this.options.imgSrc;
+    img.onerror = () => (img.src = defaultImage);
     return img;
   }
 
@@ -37,7 +39,7 @@ export class FeaturedCard {
       tagContainer.classList.add('featured-recipes__tags');
 
       this.options.tags.forEach((tagItem) => {
-        const tagElement = createTag(tagItem.tag, tagItem.tagIconSrc, 'recipes__tag');
+        const tagElement = createTag(tagItem.tag, tagItem.tagIcon, 'recipes__tag');
         tagContainer.appendChild(tagElement);
       });
 
@@ -74,7 +76,7 @@ export class FeaturedCard {
     const content = document.createElement('div');
     content.classList.add('recipes__content');
 
-    const mainTag = createTag('Hot Recipes', 'icons/tags/scroll.svg', 'recipes__badge');
+    const mainTag = createTag('Hot Recipes', 'featured', 'recipes__badge');
 
     const fragment = document.createDocumentFragment();
 

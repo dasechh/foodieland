@@ -12,7 +12,9 @@ import { defaultMediumData, MediumRecipeData } from '../types/interfaces';
 const main = document.querySelector('main') as HTMLElement;
 const thisId = Number(new URLSearchParams(window.location.search).get('id')) || -1;
 
-const data = (await loadRecipeData([], [thisId], 1, 'mediumCardInfo'))[0] || defaultMediumData() as MediumRecipeData ;
+const data =
+  (await loadRecipeData([], [thisId], 1, 'mediumCardInfo'))[0] ||
+  (defaultMediumData() as MediumRecipeData);
 
 const sections = [
   new RecipeOverviewSection(data),
@@ -21,10 +23,9 @@ const sections = [
       new IngredientsSection(data.ingredients, thisId).element,
       new DirectionsSection(data.steps, thisId).element,
     ],
-    []
+    [new RecSection(4, 'small').element]
   ),
   new NewsletterSection(),
-  new RecSection(4),
 ];
 
 sections.forEach((section) => {

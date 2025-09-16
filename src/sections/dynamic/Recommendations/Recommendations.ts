@@ -1,28 +1,43 @@
 import { loadRecipeData } from '../../../utils/fetchData';
 import { RecipeCard } from '../../../components';
-import { defaultSmallData, SmallRecipeData } from '../../../types/interfaces';
+import { defaultSmallData, SmallRecipeData, cardSize } from '../../../types/interfaces';
 import { Section } from '../../Section';
 
 export class RecSection extends Section {
   private data: SmallRecipeData[] = [defaultSmallData()];
 
-  private cardCount: number;
-
-  constructor(count: number) {
-    const template: string = `
-
-  <div class="block__list"></div>`;
+  constructor(private cardCount: number, private size: 'small' | 'big') {
+    const template: string = ``;
 
     super('section', ['recommendations'], template);
-    this.cardCount = count;
+
     this.init();
   }
 
   private addContent() {
-    const heading: HTMLHeadingElement = document.createElement('h2');
+    const selectors = {
+      small: {
+        headingLevel: 'h3',
+        headingClass: 'other__heading',
+        headingText: 'Other Recipe',
+        blockClass: 'other__block',
+        cardSize: 'small',
+      },
+      big: {
+        headingLevel: 'h2',
+        headingClass: 'other__heading',
+        headingText: 'You may like this recipe too',
+        blockClass: 'block__list',
+        cardSize: 'medium',
+      },
+    };
+
+    const { headingLevel, headingClass, headingText, blockClass, cardSize } = selectors[this.size];
+
+    const heading: HTMLElement = document.createElement(headingLevel);
     const fragment: DocumentFragment = document.createDocumentFragment();
 
-    if (this.cardCount > 5) {
+    if (this.cardCount > 5 && this.size === 'big') {
       const container: HTMLDivElement = document.createElement('div');
       container.classList.add('recommendations__header');
 
@@ -36,13 +51,14 @@ export class RecSection extends Section {
       container.append(heading, textSection);
       fragment.append(container);
     } else {
-      heading.textContent = 'You may like this recipe too';
-      heading.classList.add('recommendations__header');
+      heading.textContent = headingText;
+      heading.classList.add(headingClass);
       fragment.appendChild(heading);
     }
     this.sectionEl.prepend(fragment);
 
-    const container = this.sectionEl.querySelector<HTMLDivElement>('.block__list');
+    const container = document.createElement('div');
+    container.classList.add(blockClass);
     container?.append(
       ...this.data.map(
         (element) =>
@@ -51,11 +67,13 @@ export class RecSection extends Section {
             element.name,
             element.tags,
             element.id,
-            'medium',
+            cardSize as cardSize,
             element.authorName
           ).element
       )
     );
+
+    this.sectionEl.append(container);
   }
 
   private async init() {

@@ -16,7 +16,7 @@ const sections = [
   new FeedSection(),
   new CourseAdSection(),
   new InstaAdSection(),
-  new RecSection(8),
+  new RecSection(8, 'big'),
   new NewsletterSection(),
 ];
 

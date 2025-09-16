@@ -1,5 +1,6 @@
 import { Directions } from '../../types/interfaces';
 import { CustomCheckbox } from '../Checkbox';
+import placeholderImage from '../../assets/images/image-placeholder.webp';
 
 export class RecipeDirection {
   constructor(private step: Directions['steps'][number], private id: number) {}
@@ -44,7 +45,8 @@ export class RecipeDirection {
         } else if (item.imgSrc) {
           const img: HTMLImageElement = document.createElement('img');
           img.classList.add('directions__list-img');
-          img.src = item.imgSrc || 'recipe-images/placeholder.webp';
+          img.src = item.imgSrc || placeholderImage;
+          img.onerror = () => (img.src = placeholderImage);
           img.alt = item.alt || '';
           fragment.appendChild(img);
           lastP = null;

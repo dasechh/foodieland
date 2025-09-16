@@ -3,22 +3,35 @@ import { CategoryCard } from '../../../components/CategoryCard';
 import { Section } from '../../Section';
 import { createButton } from '../../../components/Button';
 
+import onigiriImg from '../../../assets/icons/categories/image-onigiri.png';
+import lettuceImg from '../../../assets/icons/categories/image-lettuce.png';
+import meatImg from '../../../assets/icons/categories/image-meat.png';
+import dessertImg from '../../../assets/icons/categories/image-dessert.png';
+import sandvichImg from '../../../assets/icons/categories/image-sandvich.png';
+import chocolateImg from '../../../assets/icons/categories/image-chocolate.png';
+import spaghettiImg from '../../../assets/icons/categories/spaghetti_1f35d.png';
+import saladImg from '../../../assets/icons/categories/green-salad_1f957.png';
+import pizzaImg from '../../../assets/icons/categories/pizza_1f355.png';
+import lobsterImg from '../../../assets/icons/categories/lobster_1f99e.png';
+import potImg from '../../../assets/icons/categories/pot-of-food_1f372.png';
+import beverageImg from '../../../assets/icons/categories/teacup-without-handle_1f375.png';
+
 const categoriesData: CategoryCardData[] = [
-  { category: 'Breakfast', color: '#708246', imgSrc: '/icons/categories/image-onigiri.png' },
-  { category: 'Vegan', color: '#6CC63F', imgSrc: '/icons/categories/image-lettuce.png' },
-  { category: 'Meat', color: '#CC261B', imgSrc: '/icons/categories/image-meat.png' },
-  { category: 'Dessert', color: '#F09E00', imgSrc: '/icons/categories/image-dessert.png' },
-  { category: 'Lunch', color: '#000000', imgSrc: '/icons/categories/image-sandvich.png' },
-  { category: 'Chocolate', color: '#000000', imgSrc: '/icons/categories/image-chocolate.png' },
-  { category: 'Pasta', color: '#F4A300', imgSrc: '/icons/categories/spaghetti_1f35d.png' },
-  { category: 'Salads', color: '#62C752', imgSrc: '/icons/categories/green-salad_1f957.png' },
-  { category: 'Pizza', color: '#FF6F61', imgSrc: '/icons/categories/pizza_1f355.png' },
-  { category: 'Seafood', color: '#1D5E6C', imgSrc: '/icons/categories/lobster_1f99e.png' },
-  { category: 'Soup', color: '#F2A8B6', imgSrc: '/icons/categories/pot-of-food_1f372.png' },
+  { category: 'Breakfast', color: '#708246', imgSrc: onigiriImg },
+  { category: 'Vegan', color: '#6CC63F', imgSrc: lettuceImg },
+  { category: 'Meat', color: '#CC261B', imgSrc: meatImg },
+  { category: 'Dessert', color: '#F09E00', imgSrc: dessertImg },
+  { category: 'Lunch', color: '#000000', imgSrc: sandvichImg },
+  { category: 'Chocolate', color: '#000000', imgSrc: chocolateImg },
+  { category: 'Pasta', color: '#F4A300', imgSrc: spaghettiImg },
+  { category: 'Salads', color: '#62C752', imgSrc: saladImg },
+  { category: 'Pizza', color: '#FF6F61', imgSrc: pizzaImg },
+  { category: 'Seafood', color: '#1D5E6C', imgSrc: lobsterImg },
+  { category: 'Soup', color: '#F2A8B6', imgSrc: potImg },
   {
     category: 'Beverage',
     color: '#00B4B4',
-    imgSrc: '/icons/categories/teacup-without-handle_1f375.png',
+    imgSrc: beverageImg,
   },
 ];
 
@@ -37,7 +50,7 @@ export class CategoriesSection extends Section {
     this.init();
   }
 
-  private createButton() {  
+  private createButton() {
     const button = createButton('categories__button', 'view-categories') as HTMLButtonElement;
     const buttonContainer = this.sectionEl.querySelector<HTMLDivElement>('.categories__header');
     buttonContainer?.appendChild(button);

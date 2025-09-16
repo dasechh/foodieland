@@ -1,7 +1,9 @@
+import defaultAuthor from '../../assets/images/default-author.webp';
+
 export class AuthorCard {
   private divElement: HTMLDivElement;
 
-  constructor(private authorImg: string = '/authors/default-author.webp', private authorName: string = 'No Author', private recipeDate: string = 'No Date') {
+  constructor(private authorImg: string = defaultAuthor, private authorName: string = 'No Author', private recipeDate: string = 'No Date') {
     this.divElement = this.createCard();
   }
 
@@ -21,6 +23,7 @@ export class AuthorCard {
     const authorIcon = document.createElement('img');
     authorIcon.classList.add('recipes__author-icon');
     authorIcon.src = this.authorImg;
+    authorIcon.onerror = () => (authorIcon.src = defaultAuthor);
     return authorIcon;
   }
 

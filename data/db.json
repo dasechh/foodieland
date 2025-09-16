@@ -4,9 +4,9 @@
       "imgSrc": "/recipe-images/fruit-salad.jpg",
       "name": "Mixed Tropical Fruit Salad with Superfood Boosts",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" },
-        { "tag": "Featured" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
       ],
       "description": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "authorName": "John Doe",
@@ -30,9 +30,9 @@
       "imgSrc": "/recipe-images/beef-cheeseburger.jpg",
       "name": "Big and Juicy Wagyu Beef Cheeseburger",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" },
-        { "tag": "Featured" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
       ],
       "description": "A mouthwatering wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
       "authorName": "John Doe",
@@ -55,8 +55,8 @@
       "imgSrc": "/recipe-images/fried-rice.jpg",
       "name": "Health Japanese Fried Rice",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A quick and healthy Japanese fried rice dish featuring tender asparagus and a medley of vegetables, perfect for a nutritious lunch or dinner.",
       "authorName": "John Smith",
@@ -111,8 +111,8 @@
       "imgSrc": "/recipe-images/taco-meat.jpg",
       "name": "Cauliflower Walnut Vegetarian Taco Meat",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A delicious and hearty vegetarian taco meat made from cauliflower and walnuts, seasoned with spices, perfect for tacos or as a filling in wraps.",
       "authorName": "John Doe",
@@ -135,8 +135,8 @@
       "imgSrc": "/recipe-images/chicken-salad.jpg",
       "name": "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A colorful and nutritious rainbow chicken salad topped with a delightful almond honey mustard dressing, ideal for a light lunch or dinner.",
       "authorName": "John Doe",
@@ -181,8 +181,8 @@
       "imgSrc": "/recipe-images/spicy-sandwiches.jpg",
       "name": "Barbeque Spicy Sandwiches with Chips",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Spicy barbeque sandwiches served with crispy chips, perfect for a quick snack or a casual meal with friends.",
       "authorName": "John Doe",
@@ -205,8 +205,8 @@
       "imgSrc": "/recipe-images/vegan-lettuce.jpg",
       "name": "Firecracker Vegan Lettuce Wraps",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Spicy firecracker vegan lettuce wraps filled with a flavorful mix of vegetables and spices, perfect for a light and healthy meal.",
       "authorName": "John Doe",
@@ -229,8 +229,8 @@
       "imgSrc": "/recipe-images/ramen-soup.jpg",
       "name": "Chicken Ramen Soup with Mushroom",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A comforting chicken ramen soup with mushrooms, packed with flavor and ready in just 30 minutes, perfect for a quick dinner.",
       "authorName": "John Doe",
@@ -253,8 +253,8 @@
       "imgSrc": "/recipe-images/wagyu-beef.jpg",
       "name": "Big and Juicy Wagyu Beef Cheeseburger",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A succulent wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
       "authorName": "John Doe",
@@ -277,8 +277,8 @@
       "imgSrc": "/recipe-images/roasted-salmon.jpg",
       "name": "Fresh Lime Roasted Salmon with Ginger Sauce",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Freshly roasted salmon served with a tangy ginger sauce, perfect for a light and flavorful meal.",
       "authorName": "John Doe",
@@ -301,8 +301,8 @@
       "imgSrc": "/recipe-images/oatmeal-pancake.jpg",
       "name": "Strawberry Oatmeal Pancake with Honey Syrup",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A delicious strawberry oatmeal pancake topped with a sweet and creamy honey syrup, perfect for a healthy and satisfying breakfast.",
       "authorName": "John Doe",
@@ -325,8 +325,8 @@
       "imgSrc": "/recipe-images/mayonnaise-salad.jpg",
       "name": "Fresh and Healthy Mixed Mayonnaise Salad",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A fresh and healthy mixed mayonnaise salad, perfect for a light lunch or side dish.",
       "authorName": "John Doe",
@@ -349,8 +349,8 @@
       "imgSrc": "/recipe-images/chicken-meatballs.jpg",
       "name": "Chicken Meatballs with Cream Cheese",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Tender chicken meatballs filled with cream cheese, seasoned to perfection, ideal for a quick and delicious meal.",
       "authorName": "John Doe",
@@ -373,8 +373,8 @@
       "imgSrc": "/recipe-images/fruity-pancake.jpg",
       "name": "Fruity Pancake with Orange & Blueberry",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A delicious fruity pancake topped with fresh orange and blueberry, perfect for a healthy breakfast.",
       "authorName": "John Doe",
@@ -397,8 +397,8 @@
       "imgSrc": "/recipe-images/chicken-rice.jpg",
       "name": "The Best Easy One Pot Chicken and Rice",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A simple and flavorful one pot chicken and rice dish, perfect for a quick and satisfying meal.",
       "authorName": "John Doe",
@@ -421,8 +421,8 @@
       "imgSrc": "/recipe-images/chicken-bacon-pasta.jpg",
       "name": "The Creamiest Creamy Chicken and Bacon Pasta",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A rich and creamy chicken and bacon pasta dish, bursting with flavor and ready in just 30 minutes, perfect for a comforting dinner.",
       "authorName": "John Doe",
@@ -445,9 +445,9 @@
       "imgSrc": "/recipe-images/chicken-wings.jpeg",
       "name": "Spicy delicious chicken wings",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" },
-        { "tag": "Featured" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
       ],
       "description": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
       "authorName": "John Doe",
@@ -472,9 +472,9 @@
       "imgSrc": "/recipe-images/fruit-salad.jpg",
       "name": "Mixed Tropical Fruit Salad with Superfood Boosts",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" },
-        { "tag": "Featured" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
       ],
       "description": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "authorName": "John Doe",
@@ -498,9 +498,9 @@
       "imgSrc": "/recipe-images/beef-cheeseburger.jpg",
       "name": "Big and Juicy Wagyu Beef Cheeseburger",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" },
-        { "tag": "Featured" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
       ],
       "description": "A mouthwatering wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
       "authorName": "John Doe",
@@ -523,8 +523,8 @@
       "imgSrc": "/recipe-images/fried-rice.jpg",
       "name": "Health Japanese Fried Rice",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A quick and healthy Japanese fried rice dish featuring tender asparagus and a medley of vegetables, perfect for a nutritious lunch or dinner.",
       "authorName": "John Smith",
@@ -579,8 +579,8 @@
       "imgSrc": "/recipe-images/taco-meat.jpg",
       "name": "Cauliflower Walnut Vegetarian Taco Meat",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A delicious and hearty vegetarian taco meat made from cauliflower and walnuts, seasoned with spices, perfect for tacos or as a filling in wraps.",
       "authorName": "John Doe",
@@ -603,8 +603,8 @@
       "imgSrc": "/recipe-images/chicken-salad.jpg",
       "name": "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A colorful and nutritious rainbow chicken salad topped with a delightful almond honey mustard dressing, ideal for a light lunch or dinner.",
       "authorName": "John Doe",
@@ -649,8 +649,8 @@
       "imgSrc": "/recipe-images/spicy-sandwiches.jpg",
       "name": "Barbeque Spicy Sandwiches with Chips",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Spicy barbeque sandwiches served with crispy chips, perfect for a quick snack or a casual meal with friends.",
       "authorName": "John Doe",
@@ -673,8 +673,8 @@
       "imgSrc": "/recipe-images/vegan-lettuce.jpg",
       "name": "Firecracker Vegan Lettuce Wraps",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Spicy firecracker vegan lettuce wraps filled with a flavorful mix of vegetables and spices, perfect for a light and healthy meal.",
       "authorName": "John Doe",
@@ -697,8 +697,8 @@
       "imgSrc": "/recipe-images/ramen-soup.jpg",
       "name": "Chicken Ramen Soup with Mushroom",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A comforting chicken ramen soup with mushrooms, packed with flavor and ready in just 30 minutes, perfect for a quick dinner.",
       "authorName": "John Doe",
@@ -721,8 +721,8 @@
       "imgSrc": "/recipe-images/wagyu-beef.jpg",
       "name": "Big and Juicy Wagyu Beef Cheeseburger",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A succulent wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
       "authorName": "John Doe",
@@ -745,8 +745,8 @@
       "imgSrc": "/recipe-images/roasted-salmon.jpg",
       "name": "Fresh Lime Roasted Salmon with Ginger Sauce",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Freshly roasted salmon served with a tangy ginger sauce, perfect for a light and flavorful meal.",
       "authorName": "John Doe",
@@ -769,8 +769,8 @@
       "imgSrc": "/recipe-images/oatmeal-pancake.jpg",
       "name": "Strawberry Oatmeal Pancake with Honey Syrup",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A delicious strawberry oatmeal pancake topped with a sweet and creamy honey syrup, perfect for a healthy and satisfying breakfast.",
       "authorName": "John Doe",
@@ -793,8 +793,8 @@
       "imgSrc": "/recipe-images/mayonnaise-salad.jpg",
       "name": "Fresh and Healthy Mixed Mayonnaise Salad",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A fresh and healthy mixed mayonnaise salad, perfect for a light lunch or side dish.",
       "authorName": "John Doe",
@@ -817,8 +817,8 @@
       "imgSrc": "/recipe-images/chicken-meatballs.jpg",
       "name": "Chicken Meatballs with Cream Cheese",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Tender chicken meatballs filled with cream cheese, seasoned to perfection, ideal for a quick and delicious meal.",
       "authorName": "John Doe",
@@ -841,8 +841,8 @@
       "imgSrc": "/recipe-images/fruity-pancake.jpg",
       "name": "Fruity Pancake with Orange & Blueberry",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A delicious fruity pancake topped with fresh orange and blueberry, perfect for a healthy breakfast.",
       "authorName": "John Doe",
@@ -865,8 +865,8 @@
       "imgSrc": "/recipe-images/chicken-rice.jpg",
       "name": "The Best Easy One Pot Chicken and Rice",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A simple and flavorful one pot chicken and rice dish, perfect for a quick and satisfying meal.",
       "authorName": "John Doe",
@@ -889,8 +889,8 @@
       "imgSrc": "/recipe-images/chicken-bacon-pasta.jpg",
       "name": "The Creamiest Creamy Chicken and Bacon Pasta",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A rich and creamy chicken and bacon pasta dish, bursting with flavor and ready in just 30 minutes, perfect for a comforting dinner.",
       "authorName": "John Doe",
@@ -913,9 +913,9 @@
       "imgSrc": "/recipe-images/chicken-wings.jpeg",
       "name": "Spicy delicious chicken wings",
       "tags": [
-        { "tag": "30 Minutes", "tagIconSrc": "/icons/tags/timer.svg" },
-        { "tag": "Healthy", "tagIconSrc": "/icons/tags/fork-and-knife.svg" },
-        { "tag": "Featured" }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
       ],
       "description": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
       "authorName": "John Doe",
