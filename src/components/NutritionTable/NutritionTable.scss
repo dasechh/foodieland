@@ -5,7 +5,6 @@
   flex: 1 1 auto;
   flex-direction: column;
   background-color: $background-primary;
-  gap: $gap-small-medium;
   border-radius: $border-radius-large;
   padding: 2rem;
   box-sizing: border-box;
@@ -51,4 +50,5 @@
   color: $text-dark;
   line-height: normal;
   letter-spacing: $letter-spacing;
+  margin-bottom: 0.5rem;
 }
