@@ -23,9 +23,10 @@ const sections = [
       new IngredientsSection(data.ingredients, thisId).element,
       new DirectionsSection(data.steps, thisId).element,
     ],
-    [new RecSection(4, 'small').element]
+    [new RecSection(3, 'small').element]
   ),
   new NewsletterSection(),
+  new RecSection(4, 'big'),
 ];
 
 sections.forEach((section) => {

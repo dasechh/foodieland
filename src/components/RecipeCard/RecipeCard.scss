@@ -102,3 +102,54 @@
   flex-direction: row;
   gap: $gap-small-medium;
 }
+
+.other__block {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-small-medium;
+}
+
+.other__card {
+  display: flex;
+  flex-direction: row;
+  gap: $gap-small-medium;
+  width: $card-width-medium;
+  height: 7.5rem;
+
+  .card__texts {
+    width: 12.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-small;
+    align-self: center;
+  }
+}
+
+.other__card-image {
+  border-radius: 1.25rem;
+  object-fit: cover;
+  width: 11.25rem;
+  height: 100%;
+}
+
+.other__card-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: $letter-spacing;
+  font-weight: $font-weight-semi-bold;
+  text-wrap: balance;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  min-height: 2.5rem;
+}
+
+.recipes__card-author{
+  font-size: $font-size-small;
+  letter-spacing: $letter-spacing * 0.5;
+  font-weight: $font-weight-medium;
+  color: rgba($text-dark, $opacity-muted);
+}

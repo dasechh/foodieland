@@ -61,7 +61,7 @@ export class RecipeCard {
     if (this.size === 'small') {
       const { author } = RecipeCard.selectors.small;
       const authorEl = document.createElement('span');
-      authorEl.textContent = this.authorName;
+      this.authorName == 'No Author' || this.authorName ? (authorEl.textContent = `By ${this.authorName}`) : 'No Author';
       authorEl.classList.add(author);
 
       div.append(authorEl);

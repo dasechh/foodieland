@@ -2,7 +2,7 @@
 
 .recommendations {
   width: 100%;
-  margin: $margin-vertical 0;
+  margin-bottom: $margin-vertical;
   max-width: $width-maximized;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,7 @@
 }
 
 .recommendations__header {
+  padding-top: $margin-vertical;
   display: flex;
   font-size: 2.25rem;
   flex-direction: row;
@@ -28,4 +29,10 @@
   h2 {
     width: 48.4375%;
   }
+}
+
+.other__heading {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: $font-weight-semi-bold;
 }
