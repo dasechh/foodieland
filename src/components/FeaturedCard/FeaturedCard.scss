@@ -1,4 +1,4 @@
-@use "../../styles/_variables" as *;
+@use '../../styles/_variables' as *;
 
 .recipes__image {
   width: 51.5625%;
@@ -16,6 +16,13 @@
 
 .recipes__description {
   margin-bottom: 0.875rem;
+  min-height: 5.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .featured-recipes__tags {
