@@ -1,20 +1,21 @@
-import { Nutrition } from '../../types/interfaces';
+import { defaultNutrition, Nutrition } from '../../types/interfaces';
 
 export class NutritionTable {
   private divElement: HTMLDivElement;
 
-  constructor(private options: Nutrition) {
+  constructor(private options: Nutrition = defaultNutrition) {
     this.divElement = this.createCard();
   }
 
-  private createNutritionItem(key: string, value: string, name: string): HTMLLIElement {
+  private createNutritionItem(key: string, value: string, unit: string): HTMLLIElement {
     const li = document.createElement('li');
 
     const keySpan = document.createElement('span');
     keySpan.textContent = key;
+    keySpan.classList.add('recipe-details__nutrition-key');
 
     const valueSpan = document.createElement('span');
-    valueSpan.textContent = `${value} ${name}`;
+    valueSpan.textContent = `${value} ${unit}`;
 
     li.append(keySpan, valueSpan);
     return li;
@@ -24,15 +25,18 @@ export class NutritionTable {
     const tempDiv = document.createElement('div');
     tempDiv.classList.add('recipe-details__nutrition');
 
-    const header = document.createElement('h4');
+    const header: HTMLParagraphElement = document.createElement('p');
+    header.classList.add('recipe-details__nutrition-header');
     header.textContent = 'Nutrition Information';
 
-    const ul = document.createElement('ul');
+    const ul: HTMLUListElement = document.createElement('ul');
     ul.classList.add('recipe-details__nutrition-list');
 
-    Object.entries(this.options).forEach(([key, { value, name }]) => {
-      ul.appendChild(this.createNutritionItem(key, value, name));
-    });
+    const nutritionItems = Object.entries(this.options);
+
+    ul.append(
+      ...nutritionItems.map(([key, { value, unit }]) => this.createNutritionItem(key, value, unit))
+    );
 
     tempDiv.append(header, ul);
     return tempDiv;

@@ -1,4 +1,8 @@
 import { Section } from "../../Section";
+import logoSrc from '../../../assets/icons/navigation/Foodieland-high.svg'
+import fbIcon from '../../../assets/icons/navigation/001-facebook.svg'
+import twIcon from '../../../assets/icons/navigation/003-twitter.svg'
+import igIcon from '../../../assets/icons/navigation/004-instagram.svg'
 
 export class FooterSection extends Section {
   constructor() {
@@ -7,7 +11,7 @@ export class FooterSection extends Section {
     <div class="footer__top-left">
       <a class="logo" href="#home">
         <img
-          src="icons/header/Foodieland-high.svg"
+          src="${logoSrc}"
           alt="Foodieland logo"
           width="110"
           height="30"
@@ -31,13 +35,13 @@ export class FooterSection extends Section {
     </p>
     <div class="social-icons">
       <a href="#">
-        <img src="icons/header/001-facebook.svg" alt="facebook page" />
+        <img src="${fbIcon}" alt="facebook page" />
       </a>
       <a href="#">
-        <img src="icons/header/003-twitter.svg" alt="twitter page" />
+        <img src="${twIcon}" alt="twitter page" />
       </a>
       <a href="#">
-        <img src="icons/header/004-instagram.svg" alt="instagram page" />
+        <img src="${igIcon}" alt="instagram page" />
       </a>
     </div>
   </div>`;

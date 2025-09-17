@@ -1,17 +1,17 @@
-import { loadCardsData } from '../../../utils/fetch-data';
-import { LargeCardData } from '../../../types/interfaces';
-import { FeaturedCard } from '../../../components/FeaturedCard';
+import { loadRecipeData } from '../../../utils/fetchData';
+import { defaultSmallData, SmallRecipeData } from '../../../types/interfaces';
+import { FeaturedCard } from '../../../components';
 import { Section } from '../../Section';
 import Splide from '@splidejs/splide';
 
 export class FeaturedSection extends Section {
-  private data: LargeCardData[] = [];
+  private data: SmallRecipeData[] = [defaultSmallData()];
 
   constructor() {
     const template: string = `
-  <div class="splide__track">
-    <ul class="splide__list"></ul>
-  </div>`;
+    <div class="splide__track">
+      <ul class="splide__list"></ul>
+    </div>`;
 
     super('section', ['splide'], template);
 
@@ -24,8 +24,7 @@ export class FeaturedSection extends Section {
   }
 
   private async init() {
-    this.data = (await loadCardsData(['Featured'], [], 3, 'recipes')) as LargeCardData[];
-    console.log(this.data);
+    this.data = (await loadRecipeData(['Featured'], [], 3, 'smallCardInfo')) as SmallRecipeData[];
     this.addContent();
 
     new Splide(this.sectionEl, {
@@ -38,7 +37,7 @@ export class FeaturedSection extends Section {
       fixedWidth: '100%',
       pagination: false,
       autoplay: true,
-      interval: 6000,
+      interval: 60000,
     }).mount();
   }
 }

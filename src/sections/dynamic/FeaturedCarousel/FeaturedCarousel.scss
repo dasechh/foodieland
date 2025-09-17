@@ -1,1 +1,7 @@
 @use '@splidejs/splide/css';
+@use '../../../styles/_variables' as *;
+
+
+.splide {
+    margin-bottom: $margin-vertical;
+}

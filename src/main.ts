@@ -1,16 +1,14 @@
 import '/src/styles/styles.scss';
-import { loadSection } from './utils/load-section';
 import { HeaderSection, MainSection, FooterSection } from './sections';
 
-async function main() {
-  await loadSection(HeaderSection, 'body');
-  await loadSection(MainSection, 'body');
-  await loadSection(FooterSection, 'body');
+const headerSection = await new HeaderSection().element;
+const mainSection = await new MainSection().element;
+const footerSection = await new FooterSection().element;
 
-  const path = window.location.pathname;
-  const page = path.split('/').pop()?.split('.')[1] || 'index';
+const body = document.querySelector('body') as HTMLBodyElement;
+body.append(headerSection, mainSection, footerSection);
 
-  await import(`./pages/${page}.ts`);
-}
+const path = window.location.pathname;
+const page = path.split('/').at(-1)?.split('.')[0] || 'index';
 
-main().catch(console.error);
+await import(`./pages/${page}.ts`);

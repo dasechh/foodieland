@@ -1,703 +1,936 @@
 {
-  "recipes": [
+  "mediumCardInfo": [
     {
-      "imgSrc": "/recipe-images/fruit_salad.jpg",
+      "imgSrc": "/recipe-images/fruit-salad.jpg",
       "name": "Mixed Tropical Fruit Salad with Superfood Boosts",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        },
-        {
-          "tag": "Featured"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
       ],
       "description": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "videoSrc": "https://rutube.ru/play/embed/ee1070a4f2d27356f9df8736ec90ca60/",
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 1
     },
     {
-      "imgSrc": "/recipe-images/beef_cheeseburger.jpg",
+      "imgSrc": "/recipe-images/beef-cheeseburger.jpg",
       "name": "Big and Juicy Wagyu Beef Cheeseburger",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        },
-        {
-          "tag": "Featured"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
       ],
       "description": "A mouthwatering wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 2
     },
     {
-      "imgSrc": "/recipe-images/fried_rice.jpg",
-      "name": "Healthy Japanese Fried Rice with Asparagus",
+      "imgSrc": "/recipe-images/fried-rice.jpg",
+      "name": "Health Japanese Fried Rice",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
-      "description": "A quick and healthy Japanese fried rice dish featuring tender asparagus and a medley of vegetables, perfect for a nutritious lunch or dinner.",
-      "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "authorName": "John Smith",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
       },
+      "ingredients": {
+        "For main dish": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ],
+        "For the sauce": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+      "steps": [
+        {
+          "stepTitle": "1. Lorem ipsum dolor sit amet",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+            { "imgSrc": "directions/cooking-woman.webp", "alt": "Cooking woman" },
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
+        },
+        {
+          "stepTitle": "2. Lorem ipsum dolor sit amet",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
+        },
+        {
+          "stepTitle": "3. Lorem ipsum dolor sit amet ",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
+        }
+      ],
       "id": 3
     },
     {
-      "imgSrc": "/recipe-images/taco_meat.jpg",
+      "imgSrc": "/recipe-images/taco-meat.jpg",
       "name": "Cauliflower Walnut Vegetarian Taco Meat",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A delicious and hearty vegetarian taco meat made from cauliflower and walnuts, seasoned with spices, perfect for tacos or as a filling in wraps.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 4
     },
     {
-      "imgSrc": "/recipe-images/chicken_salad.jpg",
+      "imgSrc": "/recipe-images/chicken-salad.jpg",
       "name": "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A colorful and nutritious rainbow chicken salad topped with a delightful almond honey mustard dressing, ideal for a light lunch or dinner.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "steps": [
+        {
+          "stepTitle": "1. Lorem ipsum dolor sit amet",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+            { "imgSrc": "directions/cooking-woman.webp", "alt": "Cooking woman" },
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
+        },
+        {
+          "stepTitle": "2. Lorem ipsum dolor sit amet",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
+        },
+        {
+          "stepTitle": "3. Lorem ipsum dolor sit amet ",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
+        }
+      ],
       "id": 5
     },
     {
-      "imgSrc": "/recipe-images/spicy_sandwiches.jpg",
+      "imgSrc": "/recipe-images/spicy-sandwiches.jpg",
       "name": "Barbeque Spicy Sandwiches with Chips",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Spicy barbeque sandwiches served with crispy chips, perfect for a quick snack or a casual meal with friends.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 6
     },
     {
-      "imgSrc": "/recipe-images/vegan_lettuce.jpg",
+      "imgSrc": "/recipe-images/vegan-lettuce.jpg",
       "name": "Firecracker Vegan Lettuce Wraps",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Spicy firecracker vegan lettuce wraps filled with a flavorful mix of vegetables and spices, perfect for a light and healthy meal.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 7
     },
     {
-      "imgSrc": "/recipe-images/ramen_soup.jpg",
+      "imgSrc": "/recipe-images/ramen-soup.jpg",
       "name": "Chicken Ramen Soup with Mushroom",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A comforting chicken ramen soup with mushrooms, packed with flavor and ready in just 30 minutes, perfect for a quick dinner.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 8
     },
     {
-      "imgSrc": "/recipe-images/wagyu_beef.jpg",
+      "imgSrc": "/recipe-images/wagyu-beef.jpg",
       "name": "Big and Juicy Wagyu Beef Cheeseburger",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A succulent wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 9
     },
     {
-      "imgSrc": "/recipe-images/roasted_salmon.jpg",
+      "imgSrc": "/recipe-images/roasted-salmon.jpg",
       "name": "Fresh Lime Roasted Salmon with Ginger Sauce",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Freshly roasted salmon served with a tangy ginger sauce, perfect for a light and flavorful meal.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 10
     },
     {
-      "imgSrc": "/recipe-images/oatmeal_pancake.jpg",
+      "imgSrc": "/recipe-images/oatmeal-pancake.jpg",
       "name": "Strawberry Oatmeal Pancake with Honey Syrup",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A delicious strawberry oatmeal pancake topped with a sweet and creamy honey syrup, perfect for a healthy and satisfying breakfast.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 11
     },
     {
-      "imgSrc": "/recipe-images/mayonnaise_salad.jpg",
+      "imgSrc": "/recipe-images/mayonnaise-salad.jpg",
       "name": "Fresh and Healthy Mixed Mayonnaise Salad",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A fresh and healthy mixed mayonnaise salad, perfect for a light lunch or side dish.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 12
     },
     {
-      "imgSrc": "/recipe-images/chicken_meatballs.jpg",
+      "imgSrc": "/recipe-images/chicken-meatballs.jpg",
       "name": "Chicken Meatballs with Cream Cheese",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "Tender chicken meatballs filled with cream cheese, seasoned to perfection, ideal for a quick and delicious meal.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 13
     },
     {
-      "imgSrc": "/recipe-images/fruity_pancake.jpg",
+      "imgSrc": "/recipe-images/fruity-pancake.jpg",
       "name": "Fruity Pancake with Orange & Blueberry",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A delicious fruity pancake topped with fresh orange and blueberry, perfect for a healthy breakfast.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 14
     },
     {
-      "imgSrc": "/recipe-images/chicken_and_rice.jpg",
+      "imgSrc": "/recipe-images/chicken-rice.jpg",
       "name": "The Best Easy One Pot Chicken and Rice",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A simple and flavorful one pot chicken and rice dish, perfect for a quick and satisfying meal.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 15
     },
     {
-      "imgSrc": "/recipe-images/chicken_and_bacon_pasta.jpg",
+      "imgSrc": "/recipe-images/chicken-bacon-pasta.jpg",
       "name": "The Creamiest Creamy Chicken and Bacon Pasta",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
       ],
       "description": "A rich and creamy chicken and bacon pasta dish, bursting with flavor and ready in just 30 minutes, perfect for a comforting dinner.",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
-        },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
-        },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
-        }
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 16
     },
     {
-      "imgSrc": "/tg_image_2147082613.jpeg",
+      "imgSrc": "/recipe-images/chicken-wings.jpeg",
       "name": "Spicy delicious chicken wings",
       "tags": [
-        {
-          "tag": "30 Minutes",
-          "tagIconSrc": "/icons/tags/Timer.svg"
-        },
-        {
-          "tag": "Healthy",
-          "tagIconSrc": "/icons/tags/ForkKnife.svg"
-        },
-        {
-          "tag": "Featured"
-        }
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
       ],
       "description": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
       "authorName": "John Doe",
-      "authorImg": "tg_image_528061146.jpeg",
+      "authorImg": "/authors/john-smith.jpeg",
       "recipeDate": "15 March 2022",
-      "largeDescription": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
       "nutrition": {
-        "Calories": {
-          "value": 219.9,
-          "unit": "kcal"
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 17
+    }
+  ],
+  "smallCardInfo": [
+    {
+      "imgSrc": "/recipe-images/fruit-salad.jpg",
+      "name": "Mixed Tropical Fruit Salad with Superfood Boosts",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
+      ],
+      "description": "A vibrant and refreshing tropical fruit salad packed with superfoods like chia seeds and goji berries, perfect for a healthy snack or breakfast.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "videoSrc": "https://rutube.ru/play/embed/ee1070a4f2d27356f9df8736ec90ca60/",
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 1
+    },
+    {
+      "imgSrc": "/recipe-images/beef-cheeseburger.jpg",
+      "name": "Big and Juicy Wagyu Beef Cheeseburger",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
+      ],
+      "description": "A mouthwatering wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 2
+    },
+    {
+      "imgSrc": "/recipe-images/fried-rice.jpg",
+      "name": "Health Japanese Fried Rice",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A quick and healthy Japanese fried rice dish featuring tender asparagus and a medley of vegetables, perfect for a nutritious lunch or dinner.",
+      "authorName": "John Smith",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ],
+        "For the sauce": [
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet",
+          "Lorem ipsum dolor sit amet"
+        ]
+      },
+      "steps": [
+        {
+          "stepTitle": "1. Lorem ipsum dolor sit amet",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+            { "imgSrc": "directions/cooking-woman.webp", "alt": "Cooking woman" },
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
         },
-        "Total Fat": {
-          "value": 10.7,
-          "unit": "g"
+        {
+          "stepTitle": "2. Lorem ipsum dolor sit amet",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
         },
-        "Protein": {
-          "value": 7.9,
-          "unit": "g"
-        },
-        "Carbohydrate": {
-          "value": 22.3,
-          "unit": "g"
-        },
-        "Cholesterol": {
-          "value": 37.4,
-          "unit": "mg"
+        {
+          "stepTitle": "3. Lorem ipsum dolor sit amet ",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
         }
+      ],
+      "id": 3
+    },
+    {
+      "imgSrc": "/recipe-images/taco-meat.jpg",
+      "name": "Cauliflower Walnut Vegetarian Taco Meat",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A delicious and hearty vegetarian taco meat made from cauliflower and walnuts, seasoned with spices, perfect for tacos or as a filling in wraps.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 4
+    },
+    {
+      "imgSrc": "/recipe-images/chicken-salad.jpg",
+      "name": "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A colorful and nutritious rainbow chicken salad topped with a delightful almond honey mustard dressing, ideal for a light lunch or dinner.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "steps": [
+        {
+          "stepTitle": "1. Lorem ipsum dolor sit amet",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+            { "imgSrc": "directions/cooking-woman.webp", "alt": "Cooking woman" },
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
+        },
+        {
+          "stepTitle": "2. Lorem ipsum dolor sit amet",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
+        },
+        {
+          "stepTitle": "3. Lorem ipsum dolor sit amet ",
+          "description": [
+            "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+          ]
+        }
+      ],
+      "id": 5
+    },
+    {
+      "imgSrc": "/recipe-images/spicy-sandwiches.jpg",
+      "name": "Barbeque Spicy Sandwiches with Chips",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "Spicy barbeque sandwiches served with crispy chips, perfect for a quick snack or a casual meal with friends.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 6
+    },
+    {
+      "imgSrc": "/recipe-images/vegan-lettuce.jpg",
+      "name": "Firecracker Vegan Lettuce Wraps",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "Spicy firecracker vegan lettuce wraps filled with a flavorful mix of vegetables and spices, perfect for a light and healthy meal.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 7
+    },
+    {
+      "imgSrc": "/recipe-images/ramen-soup.jpg",
+      "name": "Chicken Ramen Soup with Mushroom",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A comforting chicken ramen soup with mushrooms, packed with flavor and ready in just 30 minutes, perfect for a quick dinner.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 8
+    },
+    {
+      "imgSrc": "/recipe-images/wagyu-beef.jpg",
+      "name": "Big and Juicy Wagyu Beef Cheeseburger",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A succulent wagyu beef cheeseburger, grilled to perfection and served with fresh toppings, ideal for a quick and satisfying meal.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 9
+    },
+    {
+      "imgSrc": "/recipe-images/roasted-salmon.jpg",
+      "name": "Fresh Lime Roasted Salmon with Ginger Sauce",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "Freshly roasted salmon served with a tangy ginger sauce, perfect for a light and flavorful meal.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 10
+    },
+    {
+      "imgSrc": "/recipe-images/oatmeal-pancake.jpg",
+      "name": "Strawberry Oatmeal Pancake with Honey Syrup",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A delicious strawberry oatmeal pancake topped with a sweet and creamy honey syrup, perfect for a healthy and satisfying breakfast.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 11
+    },
+    {
+      "imgSrc": "/recipe-images/mayonnaise-salad.jpg",
+      "name": "Fresh and Healthy Mixed Mayonnaise Salad",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A fresh and healthy mixed mayonnaise salad, perfect for a light lunch or side dish.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 12
+    },
+    {
+      "imgSrc": "/recipe-images/chicken-meatballs.jpg",
+      "name": "Chicken Meatballs with Cream Cheese",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "Tender chicken meatballs filled with cream cheese, seasoned to perfection, ideal for a quick and delicious meal.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 13
+    },
+    {
+      "imgSrc": "/recipe-images/fruity-pancake.jpg",
+      "name": "Fruity Pancake with Orange & Blueberry",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A delicious fruity pancake topped with fresh orange and blueberry, perfect for a healthy breakfast.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 14
+    },
+    {
+      "imgSrc": "/recipe-images/chicken-rice.jpg",
+      "name": "The Best Easy One Pot Chicken and Rice",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A simple and flavorful one pot chicken and rice dish, perfect for a quick and satisfying meal.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 15
+    },
+    {
+      "imgSrc": "/recipe-images/chicken-bacon-pasta.jpg",
+      "name": "The Creamiest Creamy Chicken and Bacon Pasta",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" }
+      ],
+      "description": "A rich and creamy chicken and bacon pasta dish, bursting with flavor and ready in just 30 minutes, perfect for a comforting dinner.",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
+      },
+      "id": 16
+    },
+    {
+      "imgSrc": "/recipe-images/chicken-wings.jpeg",
+      "name": "Spicy delicious chicken wings",
+      "tags": [
+        { "tag": "30 Minutes", "tagIcon": "timer" },
+        { "tag": "Healthy", "tagIcon": "forkKnife" },
+        { "tag": "Featured", "tagIcon": "star" }
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim ",
+      "authorName": "John Doe",
+      "authorImg": "/authors/john-smith.jpeg",
+      "recipeDate": "15 March 2022",
+      "nutrition": {
+        "Calories": { "value": 219.9, "unit": "kcal" },
+        "Total Fat": { "value": 10.7, "unit": "g" },
+        "Protein": { "value": 7.9, "unit": "g" },
+        "Carbohydrate": { "value": 22.3, "unit": "g" },
+        "Cholesterol": { "value": 37.4, "unit": "mg" }
+      },
+      "ingredients": {
+        "For main dish": ["1/2 pound ground beef", "1/2 cup shredded Cheddar cheese"],
+        "For the sauce": ["Lettuce", "Tomato", "Onion", "Pickles"]
       },
       "id": 17
     }

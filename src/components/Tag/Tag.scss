@@ -1,13 +1,23 @@
-@use "../../styles/_variables" as *;
+@use '../../styles/_variables' as *;
+@use 'sass:color';
 
 .recipes__tag {
   padding: 0.5rem 1rem;
+  height: 2.5rem;
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   gap: $gap-xsmall;
   border-radius: $border-radius-large;
   background-color: rgba($background-dark, $opacity-ultra-low);
   color: rgba($text-dark, $opacity-muted);
+
+  &:hover {
+    transform: scale(1.03);
+    background-color: rgba($background-dark, $opacity-ultra-low * 2);
+    box-shadow: 0.25rem 0.25rem 1rem rgba($background-dark, $opacity-ultra-low),
+      inset 0 0 1rem rgba($background-dark, $opacity-ultra-low);
+  }
 }
 
 .recommendations__card-tag {
@@ -16,6 +26,10 @@
   gap: $gap-xsmall;
   font-weight: $font-weight-medium;
   color: rgba($text-dark, $opacity-muted);
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .recipes__badge {
@@ -33,5 +47,25 @@
 
 .tag {
   font-size: $font-size-small;
-  letter-spacing: calc($letter-spacing / 2);
+}
+
+.recipes-summary__tag {
+  padding-left: 2rem;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: $gap-xsmall;
+  color: rgba($text-dark, $opacity-muted);
+
+  &:hover {
+    svg,
+    span {
+      transform: scale(1.03);
+      color: $text-link;
+    }
+
+    svg {
+      fill: $text-link;
+    }
+  }
 }

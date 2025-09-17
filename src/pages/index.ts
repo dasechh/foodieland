@@ -1,5 +1,3 @@
-import { loadSection } from '../utils/load-section';
-
 import {
   FeaturedSection,
   CategoriesSection,
@@ -10,16 +8,22 @@ import {
   NewsletterSection,
 } from '../sections';
 
-async function init() {
-  await Promise.allSettled([
-    loadSection(FeaturedSection, 'main'),
-    loadSection(CategoriesSection, 'main'),
-    loadSection(FeedSection, 'main'),
-    loadSection(CourseAdSection, 'main'),
-    loadSection(InstaAdSection, 'main'),
-    loadSection(RecSection, 'main'),
-    loadSection(NewsletterSection, 'main'),
-  ]);
-}
+const main = document.querySelector('main') as HTMLElement;
 
-init().catch(console.error);
+const sections = [
+  new FeaturedSection(),
+  new CategoriesSection(),
+  new FeedSection(),
+  new CourseAdSection(),
+  new InstaAdSection(),
+  new RecSection(8, 'bigWithDescription'),
+  new NewsletterSection(),
+];
+
+sections.forEach((section) => {
+  try {
+    main.appendChild(section.element);
+  } catch (error) {
+    console.log(`Error loading ${section} section: ${error}`);
+  }
+});

@@ -1,0 +1,10 @@
+@use "../../../styles/variables" as *;
+
+.ingredients {
+    width: 100%;
+    max-width: $width-minimized;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-self: center;
+}

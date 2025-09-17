@@ -1,27 +1,19 @@
 @use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
 
 .categories {
   width: 100%;
+  margin: $margin-vertical 0;
   max-width: $width-maximized;
   display: flex;
   flex-direction: column;
   justify-self: center;
-  box-sizing: border-box;
-  padding: 0 $padding-horizontal;
+  align-self: center;
 }
 
 .categories__header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5rem;
-
-  h3 {
-    margin: 0;
-  }
-}
-
-.categories__button {
-  @include button($button-width-base, $button-height, $background-primary, $text-dark);
-  font-size: $font-size-regular;
+  gap: $gap-small-medium;
+  flex-wrap: wrap;
 }

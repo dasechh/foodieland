@@ -1,0 +1,23 @@
+@use '../../../styles/_variables' as *;
+
+.directions {
+  max-width: $width-minimized;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.directions__fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+  border: none;
+  margin: $margin-vertical 0;
+  padding: 0;
+}
+
+.directions__fieldset-legend {
+  font-size: 2.25rem;
+  transform: translateY(1rem);
+  margin: 0;
+}

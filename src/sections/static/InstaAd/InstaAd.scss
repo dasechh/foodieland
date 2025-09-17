@@ -1,9 +1,8 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use '../../../styles/variables' as *;
 
 .instagram {
   width: 100%;
-  padding: 0 $padding-horizontal 5rem;
+  padding: 5rem 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -12,6 +11,7 @@
   text-align: center;
   gap: 5rem;
   overflow: hidden;
+  margin: $margin-vertical 0;
 }
 
 .instagram__header {
@@ -28,7 +28,6 @@
   width: $card-width-regular;
 }
 
-.instagram__button {
-  @include button($button-width-base * 1.15, $button-height, $background-dark, $text-bright);
-  gap: $gap-small;
+.instagram__title {
+  margin-bottom: 1.5rem;
 }

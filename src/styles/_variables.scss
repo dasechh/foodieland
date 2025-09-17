@@ -4,7 +4,7 @@ $background-dark: #000000;
 
 $text-bright: #ffffff;
 $text-dark: #000000;
-$text-link: #0052ff;
+$text-link: #0045db;
 
 $opacity-ultra-low: 0.05;
 $opacity-muted: 0.6;
@@ -16,22 +16,23 @@ $font-weight-semi-bold: 600;
 $font-size-small: 0.875rem;
 $font-size-regular: 1rem;
 $font-size-medium: 1.125rem;
+$font-size-large: 1.5rem;
 
-$letter-spacing: -0.04rem;
+$letter-spacing: -0.004em;
 
 $border-radius-large: 1.875rem;
 
 $main-gradient: linear-gradient(180deg, $background-bright 0%, $background-primary 100%);
 
-$gap-main: 10rem;
+$gap-main: 5rem;
 $gap-small-medium: 1.5rem;
 $gap-small: 1rem;
 $gap-xsmall: 0.625rem;
 
-$width-maximized: 90rem;
-$width-maximized-small: 80rem;
+$width-maximized: 80rem;
+$width-minimized: 52.5rem;
 
-$padding-horizontal: 5rem;
+$margin-vertical: 2.5rem;
 
 $button-height: 3.75rem;
 $button-width-base: 12.5rem;

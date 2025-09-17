@@ -1,13 +1,19 @@
-import { SmallCardData } from '../../types/interfaces';
-import { createTag } from '../Tag';
-import { LikeButton } from '../LikeButton';
-
-type cardSize = 'medium' | 'large';
+import { tagData, cardSize } from '../../types/interfaces';
+import { createTag, createButton } from '../../components';
+import { toggleState, setStorageState } from '../../utils/stateManager';
+import defaultImage from '../../assets/images/image-placeholder.webp';
 
 export class RecipeCard {
   private divElement: HTMLDivElement;
 
-  constructor(private options: SmallCardData, private size: cardSize) {
+  constructor(
+    private imgSrc: string = defaultImage,
+    private name: string = 'No name',
+    private tags: tagData[] = [],
+    private id: number = -1,
+    private size: cardSize = 'small',
+    private authorName: string = 'No Author'
+  ) {
     this.divElement = this.createCard();
   }
 
@@ -19,7 +25,7 @@ export class RecipeCard {
       title: 'card__title',
       tagClass: 'recipes__tag',
       tagsClass: 'recipes__tags',
-      tagsCount: 3
+      tagsCount: 3,
     },
     medium: {
       container: 'recommendations__card',
@@ -28,15 +34,22 @@ export class RecipeCard {
       title: 'recommendations__card-title',
       tagClass: 'recommendations__card-tag',
       tagsClass: 'recommendations__card-tags',
-      tagsCount: 2
+      tagsCount: 2,
+    },
+    small: {
+      container: 'other__card',
+      image: 'other__card-image',
+      title: 'other__card-title',
+      author: 'recipes__card-author',
     },
   };
 
   private createImage(): HTMLImageElement {
     const { image } = RecipeCard.selectors[this.size];
     const img = document.createElement('img');
-    img.src = this.options.imgSrc;
-    img.alt = this.options.name;
+    img.src = this.imgSrc;
+    img.onerror = () => (img.src = defaultImage);
+    img.alt = this.name;
     img.classList.add(image);
     return img;
   }
@@ -45,50 +58,71 @@ export class RecipeCard {
     const div = document.createElement('div');
     div.classList.add('card__texts');
 
-    div.append(this.createHeader(), this.createTagsWrapper());
+    if (this.size === 'small') {
+      const { author } = RecipeCard.selectors.small;
+      const authorEl = document.createElement('span');
+      this.authorName == 'No Author' || this.authorName ? (authorEl.textContent = `By ${this.authorName}`) : 'No Author';
+      authorEl.classList.add(author);
+
+      div.append(authorEl);
+    } else {
+      const tags = this.createTagsWrapper();
+      if (tags) div.appendChild(tags);
+    }
+    div.prepend(this.createHeader());
 
     return div;
   }
 
-  private createTagsWrapper(): HTMLDivElement {
-    const { tagsClass, tagClass, tagsCount } = RecipeCard.selectors[this.size];
-    const div = document.createElement('div');
-    div.classList.add(tagsClass);
+  private createTagsWrapper(): HTMLDivElement | null {
+    if (this.size !== 'small') {
+      const { tagsClass, tagClass, tagsCount } = RecipeCard.selectors[this.size];
+      const div = document.createElement('div');
+      div.classList.add(tagsClass);
 
-    div.append(
-      ...this.options.tags.slice(0, tagsCount).map((tagItem) => createTag(tagItem.tag, tagItem.tagIconSrc, tagClass))
-    );
-
-    return div;
+      div.append(
+        ...this.tags
+          .slice(0, tagsCount)
+          .map((tagItem) => createTag(tagItem.tag, tagItem.tagIcon, tagClass))
+      );
+      return div;
+    } else {
+      return null;
+    }
   }
 
-  private createHeader(): HTMLHeadingElement {
+  private createHeader(): HTMLAnchorElement {
     const { title } = RecipeCard.selectors[this.size];
-    const headerLevel = this.size === 'large' ? 'h4' : 'h5';
 
-    const headerEl = document.createElement(headerLevel);
-    const a = document.createElement('a');
+    const headerEl = document.createElement('a');
+    headerEl.textContent = this.name;
+    headerEl.classList.add(title);
+    headerEl.href = `recipe-details.html?id=${this.id.toString()}`;
 
-    a.textContent = this.options.name;
-    a.classList.add(title);
-    a.href = `recipe-details.html?id=${this.options.id.toString()}`;
-
-    headerEl.appendChild(a);
     return headerEl;
   }
 
   private createCard(): HTMLDivElement {
-    const { container, like } = RecipeCard.selectors[this.size];
+    const { container, like } = RecipeCard.selectors[this.size] as {
+      container: string;
+      like?: string;
+    };
 
     const div = document.createElement('div');
-    div.dataset.cardId = this.options.id.toString();
+    div.dataset.cardId = this.id.toString();
     div.classList.add(container, 'card');
 
-    const likeButton = new LikeButton(this.options.id.toString());
+    const elements: HTMLElement[] = [this.createImage(), this.createTextsElement()];
 
-    div.append(this.createImage(), likeButton.element, this.createTextsElement());
-
-    likeButton.element.classList.add(like);
+    if (like) {
+      const likeButton = createButton('like-button', 'like', () => {
+        toggleState(likeButton, 'likes', this.id.toString(), 'liked');
+      }) as HTMLButtonElement;
+      setStorageState(likeButton, 'likes', this.id.toString(), 'liked');
+      likeButton.classList.add(like);
+      elements.splice(1, 0, likeButton);
+    }
+    div.append(...elements);
 
     return div;
   }

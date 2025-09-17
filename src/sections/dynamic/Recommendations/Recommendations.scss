@@ -1,27 +1,38 @@
-@use "../../../styles/variables" as *;
+@use '../../../styles/variables' as *;
 
 .recommendations {
   width: 100%;
+  margin-bottom: $margin-vertical;
   max-width: $width-maximized;
-  padding: 0 $padding-horizontal;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  align-self: center;
 }
 
 .recommendations__text {
   width: 48.4375%;
+  line-height: 1.75rem;
+  font-size: $font-size-regular;
 }
 
 .recommendations__header {
+  padding-top: $margin-vertical;
   display: flex;
+  font-size: 2.25rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  margin-bottom: 6rem;
+  margin: 0 auto 5rem;
+  text-wrap: balance;
 
-  h3 {
-    margin: 0;
+  h2 {
+    width: 48.4375%;
   }
+}
+
+.other__heading {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: $font-weight-semi-bold;
 }
