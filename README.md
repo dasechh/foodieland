@@ -64,7 +64,7 @@ This project is under active development. Some features are still being implemen
 
 - [ ] Responsive layout for mobile and tablet
 - [ ] UI polish and accessibility improvements
-- [ ] Individual recipe pages with full details (ingredients, steps, nutrition, etc.)
+- [x] Individual recipe pages with full details (ingredients, steps, nutrition, etc.)
 - [ ] Category pages for browsing recipes by tags, authors, cuisine, or other properties
 - [ ] Blog section for articles, tips, and news
 - [ ] Contact Us page with form and relevant information
