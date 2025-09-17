@@ -16,6 +16,8 @@ export class NewsletterSection extends Section {
       type="email"
       class="newsletter__input"
       placeholder="Your email address..."
+      autocomplete="email"
+      name="email"
       required
     />
   </form>
